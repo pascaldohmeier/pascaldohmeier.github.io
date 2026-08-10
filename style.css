@@ -1,31 +1,31 @@
 /* Pathfinder Memory — Website
-   Dieselbe Bildsprache wie die App: Papier-Look, eine Tuschelinie als einziges
-   Tiefenmittel, Serifen-Schrift. Keine Schatten, keine Verläufe.
-   Farben 1:1 aus Assets.xcassets, damit Seite und App zusammengehören. */
+   Dieselbe Bildsprache wie die App: eine Tuschelinie als einziges Tiefenmittel,
+   Serifen-Schrift, Akzentfarben aus Assets.xcassets. Keine Schatten, keine
+   Verläufe.
+
+   ABSICHTLICH NUR HELL, entschieden am 2026-08-10. Die App darf dunkel werden,
+   eine Rechtstext-Seite muss es nicht: das Papier-Beige der App wirkt im Browser
+   auf einer ganzen Bildschirmbreite schmutzig, und die dunkle Fassung sah nach
+   Fehler aus. Deshalb weißes Blatt, und die Karten tragen ihre Kontur statt
+   einer Füllung — genau die Regel, nach der auch das Chrome der App gebaut ist.
+
+   `color-scheme: light` ist nicht Deko: ohne die Angabe färben manche Browser
+   (Chrome auf Android, Safari-Leseansichten) eine Seite ohne Dark-Variante
+   selbsttätig ein, und dann wäre das Beige durch etwas Unvorhersehbares
+   ersetzt statt durch Weiß. Kein `prefers-color-scheme`-Block mehr — bewusst. */
 
 :root {
-  --bg: #EEEACC;
+  color-scheme: light;
+
+  --bg: #FFFFFF;
   --surface: #FFFFFF;
+  --tint: #F5F2E4;        /* Papier-Anklang, nur für Tabellenköpfe */
   --ink: #1A1A1A;
-  --muted: #5A5852;
   --line: #1A1A1A;
   --accent: #B7C1D8;
   --mint: #B9D5C2;
   --warn: #DEA8A8;
   --radius: 20px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #403E3B;
-    --surface: #BBB7AE;
-    --ink: #23221F;
-    --muted: #4A4843;
-    --line: #23221F;
-    --accent: #919CB6;
-    --mint: #8AAA94;
-    --warn: #C38687;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -91,7 +91,7 @@ a { color: var(--ink); text-underline-offset: 3px; }
 
 table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.94rem; }
 th, td { border: 1px solid var(--line); padding: 9px 11px; text-align: left; vertical-align: top; }
-th { background: var(--surface); font-weight: 700; }
+th { background: var(--tint); font-weight: 700; }
 
 .meta {
   font-family: ui-monospace, "SF Mono", Menlo, monospace;

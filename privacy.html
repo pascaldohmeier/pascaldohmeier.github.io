@@ -1,5 +1,16 @@
 <!doctype html>
-<!-- ⚠️ DRAFT — replace before deploying. See datenschutz.html for the process. -->
+<!--
+  FINAL VERSION, 2026-08-10. Faithful mirror of datenschutz.html — the German
+  text is the authoritative one (German law, German supervisory authority), this
+  is the same substance in English for non-German players and for the English
+  App Store localisation.
+
+  Keep the two in sync. If you change a fact here, change it there in the same
+  edit; a privacy policy that says two different things in two languages is
+  worse than one that only exists in German.
+
+  ⚠️ Re-upload to the Pages repo after every change. This folder is the source.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -25,86 +36,254 @@
 </nav>
 
 <h2>Privacy Policy</h2>
-<p class="meta">Last updated: 2026-08-10</p>
+<p class="meta">Last updated: 10 August 2026 · covers the “Pathfinder Memory” app and this website</p>
 
-<div class="todo">
-  <strong>Draft — not yet reviewed</strong><br><br>
-  Accurate about what the app does, but not yet checked by a generator or a
-  lawyer. Replace before publishing and delete this block.
+<div class="card mint">
+  <h3 style="margin-top:0">In short</h3>
+  <p>Pathfinder Memory needs <strong>no account</strong>, no email address and no
+  password. You only pick a display name for the leaderboards. We never learn who
+  you are.</p>
+  <p>The app shows <strong>ads</strong> through Google AdMob and is funded by
+  them. Ads can be removed permanently with a one-time in-app purchase.</p>
+  <p>For <strong>personalised</strong> ads we ask first — through Google’s consent
+  dialog and, on iOS, Apple’s tracking prompt. Decline and you still see ads, just
+  not personalised ones. Everything else works unchanged.</p>
+  <p><strong>We run no tracking of our own</strong> and use no third-party
+  analytics service — no Firebase, no Google Analytics.</p>
 </div>
 
-<h3>Controller</h3>
-<p>See <a href="impressum.html">Impressum</a>.<br>
-Email: <a href="mailto:pascal.dohmeier1999@gmail.com">pascal.dohmeier1999@gmail.com</a></p>
+<h3>1 · Controller</h3>
+<p>
+  Pascal Dohmeier<br>
+  Gustav-Müller-Straße 20A<br>
+  10829 Berlin, Germany<br>
+  Email: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  Phone: <a href="tel:+4916096861111">+49 160 96861111</a>
+</p>
+<p>No data protection officer has been appointed; the thresholds of Art. 37 GDPR
+and § 38 BDSG are not met. Reach me directly with any privacy matter using the
+details above.</p>
 
-<h3>Summary</h3>
-<p>Pathfinder Memory needs no account, no email address and no password — just a
-display name for the leaderboards. The app shows <strong>ads</strong> via Google
-AdMob and is funded by them; ads can be removed permanently with a one-time
-in-app purchase. For <strong>personalised</strong> ads we ask first, through
-Google's consent dialog and, on iOS, Apple's tracking prompt. Decline and you
-still see ads, just less relevant ones; everything else works unchanged.</p>
+<h3>2 · Data that never leaves your device</h3>
+<p>Progress, statistics, streaks, a paused run, your settings (language,
+appearance, sound, haptics, reminder) and your list of blocked players. All of it
+is stored <strong>locally</strong> in the app’s settings. This data is
+<strong>never transmitted</strong> and disappears when you delete the app.</p>
+<p>Keeping the block list local is deliberate: blocking is a personal “I don’t
+want to see this”, not a verdict on anyone — so it works offline and cannot hide
+a player from everybody else.</p>
 
-<h3>1 · Data that never leaves your device</h3>
-<p>Progress, statistics, streaks, a paused run, your settings and your list of
-blocked players. Stored in the app's preferences and deleted with the app.</p>
+<h3>3 · Data on our server</h3>
+<p>So that leaderboards, the friends list and moderation can work at all, the
+following is transmitted and stored:</p>
+<div class="scroll">
+<table>
+  <tr><th>Data</th><th>Purpose</th><th>Legal basis</th></tr>
+  <tr><td>Random installation identifier (UUID), generated on first launch</td>
+      <td>Ties your results to your installation. <strong>No</strong> device name, <strong>no</strong> advertising ID, <strong>no</strong> hardware identifier — it is randomly generated and linked to nothing outside this app</td>
+      <td>Art. 6(1)(b) GDPR</td></tr>
+  <tr><td>Display name you choose</td>
+      <td>Shown in the public leaderboards</td>
+      <td>Art. 6(1)(b) GDPR</td></tr>
+  <tr><td>Results (date, levels cleared, streak)</td>
+      <td>Leaderboards and streak display</td>
+      <td>Art. 6(1)(b) GDPR</td></tr>
+  <tr><td>Friendships (identifiers only)</td>
+      <td>Friends leaderboard</td>
+      <td>Art. 6(1)(b) GDPR</td></tr>
+  <tr><td>Reports about display names</td>
+      <td>Moderating offensive names — the App Store requires reporting and filtering for public name lists</td>
+      <td>Art. 6(1)(f) GDPR</td></tr>
+  <tr><td>Product events (round started, level cleared or failed, tutorial finished) with your identifier</td>
+      <td>Solely to find out where the app is too hard or unclear</td>
+      <td>Art. 6(1)(f) GDPR</td></tr>
+  <tr><td><strong>IP address</strong>, for the duration of the request</td>
+      <td>Technically unavoidable for any server access; processed to operate the service and prevent abuse, and not stored against your profile</td>
+      <td>Art. 6(1)(f) GDPR</td></tr>
+</table>
+</div>
+<p><strong>Processor:</strong> Supabase Pte. Ltd, 65 Chulia Street #38-02/03,
+OCBC Centre, Singapore 049513. The database runs in region
+<code>eu-central-1</code> — <strong>Frankfurt am Main, Germany</strong>. A data
+processing agreement under Art. 28 GDPR forms part of Supabase’s terms of service
+and is therefore in place; it incorporates the EU Standard Contractual Clauses
+(see section 9).</p>
+<p><strong>No third-party analytics.</strong> The product events sit on our own
+server and are shared with nobody.</p>
 
-<h3>2 · Data on our server (Supabase, Frankfurt, Germany)</h3>
-<p>A random installation identifier (UUID) created on first launch; the display
-name you choose (shown publicly on the leaderboards); your results (date, levels
-cleared, streak); friendships (identifiers only); reports about display names;
-and product events (round started, level cleared or missed, tutorial finished)
-linked to that identifier, used only to see where the app is too hard or
-unclear.</p>
-<p>Processor: Supabase, region <code>eu-central-1</code>.
-<strong>No third-party analytics</strong> — no Firebase, no Google Analytics.</p>
+<h3>4 · Advertising (Google AdMob)</h3>
+<p>Provider for the European Economic Area: Google Ireland Limited, Gordon House,
+Barrow Street, Dublin 4, Ireland.</p>
+<p>To serve, measure and protect ads against fraud, Google processes among other
+things:</p>
+<ul>
+  <li>your device’s <strong>advertising ID (IDFA)</strong> — <strong>only</strong>
+      if you agreed to both the consent dialog and Apple’s tracking prompt</li>
+  <li>a <strong>coarse location estimate</strong> from your IP address (country,
+      region — no GPS data; the app never asks for location access)</li>
+  <li><strong>device and usage signals</strong> as well as <strong>crash and
+      performance data</strong> of the ad SDK</li>
+  <li><strong>advertising data</strong>: which ads you were shown and how you
+      reacted</li>
+</ul>
+<p>Google may also use this <strong>across apps</strong> to build profiles. That
+is exactly why we ask first.</p>
+<p><strong>Your consent can be withdrawn at any time</strong> and without giving
+reasons, through the privacy options in Google’s consent dialog. Apple’s tracking
+permission is changed under iOS Settings → Privacy &amp; Security → Tracking.
+Withdrawal takes effect going forward; processing carried out beforehand remains
+lawful.</p>
+<p><strong>Turning ads off entirely:</strong> the one-time in-app purchase “Remove
+ads”. After that the ad SDK is no longer loaded and no advertising data is
+collected.</p>
+<p>More information:
+<a href="https://policies.google.com/privacy" rel="noopener">Google’s Privacy Policy</a>,
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">“How Google uses information from sites or apps that use our services”</a>
+and
+<a href="https://policies.google.com/privacy/frameworks" rel="noopener">Google’s data transfer frameworks</a>.</p>
 
-<h3>3 · Advertising (Google AdMob)</h3>
-<p>Provider: Google Ireland Limited, Dublin. For serving and measuring ads Google
-processes your device's <strong>advertising identifier (IDFA)</strong> — only if
-you agreed to both the consent dialog and Apple's tracking prompt — a
-<strong>coarse location estimate</strong> from your IP address, <strong>device
-and usage signals</strong>, <strong>crash and performance data</strong> from the
-ad SDK, and <strong>advertising data</strong> (which ads you were shown and how
-you reacted). Google may use this across apps to build a profile, which is why
-we ask first.</p>
-<p>You can withdraw consent at any time via the privacy options in the consent
-dialog; Apple's tracking permission is changed in iOS Settings → Privacy &amp;
-Security → Tracking. The one-time in-app purchase “Remove ads” stops the ad SDK
-from loading at all.</p>
+<h3>5 · In-app purchase</h3>
+<p>The “Remove ads” purchase is handled by <strong>Apple</strong> (Apple
+Distribution International Ltd., Hollyhill Industrial Estate, Cork, Ireland). We
+receive <strong>no</strong> payment details and no personal data about you — the
+app only asks Apple whether a purchase exists for this Apple Account. What Apple
+itself processes is described in Apple’s privacy policy.</p>
 
-<h3>4 · Not collected</h3>
-<p>Name, email, phone number, contacts, GPS location, photos, health data,
-payment details. Apple handles the in-app purchase; we receive no personal data
-from it.</p>
+<h3>6 · Notifications and permissions</h3>
+<p>The app requests only two permissions, each at the moment it is needed, and
+each one can be declined:</p>
+<div class="scroll">
+<table>
+  <tr><th>Permission</th><th>What for</th><th>If you decline</th></tr>
+  <tr><td><strong>Notifications</strong></td>
+      <td>An optional daily reminder at 10:00 for the daily puzzle</td>
+      <td>Everything keeps working, just without the reminder. The reminder is
+      scheduled <strong>locally on the device</strong> — nothing is sent to any
+      server for it, not even to Apple</td></tr>
+  <tr><td><strong>Tracking</strong> (Apple’s advertising-ID prompt)</td>
+      <td>Personalised ads</td>
+      <td>You still see ads, just not personalised ones. The advertising ID is
+      then not accessed</td></tr>
+</table>
+</div>
+<p>Camera, microphone, photos, contacts, location and health data are
+<strong>never</strong> requested and cannot be accessed by the app.</p>
 
-<h3>5 · Legal bases</h3>
-<p>Art. 6(1)(b) GDPR for leaderboards, friends and profile; Art. 6(1)(f) GDPR for
-moderation and product events; <strong>Art. 6(1)(a) GDPR (consent) plus § 25(1)
-TDDDG for personalised ads and access to the advertising identifier</strong>;
-Art. 6(1)(f) for non-personalised ads.</p>
+<h3>7 · If you write to us</h3>
+<p>If you email the address above, we process your message and sender address in
+order to answer it (Art. 6(1)(f) GDPR, or (b) for contractual matters). Such
+messages are deleted once the matter is settled and no retention obligation
+applies. Mail is handled by Google (Gmail) as our email provider.</p>
 
-<h3>6 · Retention</h3>
-<p>Leaderboard and profile data until you delete your profile; product events for
-at most 12 months. Google applies its own retention periods to advertising data.</p>
+<h3>8 · This website</h3>
+<p>This site is static — <strong>no cookies, no login, no analytics, no ads, no
+embedded third-party fonts or scripts</strong>. It is hosted on <strong>GitHub
+Pages</strong> (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA
+94107, USA). For technical reasons GitHub logs a visitor’s <strong>IP
+address</strong> for security and operational purposes; we have no influence over
+this and no access to it. Legal basis for running the site: Art. 6(1)(f) GDPR
+(legitimate interest in a reachable information page, which § 5 DDG obliges us to
+provide anyway). Details in
+<a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener">GitHub’s privacy statement</a>.</p>
 
-<h3>7 · Your rights</h3>
-<p>Delete your profile any time in the app: Settings → “Delete profile”. This
-removes your display name, all leaderboard entries, streaks and friendships from
-the server and releases the name. You also have the rights of access,
-rectification, erasure, restriction, portability and objection (Art. 15–21 GDPR)
-and may lodge a complaint with a supervisory authority.</p>
+<h3>9 · Transfers to third countries</h3>
+<div class="scroll">
+<table>
+  <tr><th>Recipient</th><th>Country</th><th>Safeguard</th></tr>
+  <tr><td>Google (advertising)</td><td>USA</td>
+      <td>European Commission adequacy decision for the EU-US Data Privacy
+      Framework, in which Google participates, <strong>and additionally</strong>
+      EU Standard Contractual Clauses under Art. 46(2)(c) GDPR</td></tr>
+  <tr><td>Supabase (database)</td><td>Singapore (contracting entity); storage in Frankfurt am Main, Germany</td>
+      <td>EU Standard Contractual Clauses under Art. 46(2)(c) GDPR, part of the data processing agreement</td></tr>
+  <tr><td>GitHub (hosting of this website)</td><td>USA</td>
+      <td>EU-US Data Privacy Framework and EU Standard Contractual Clauses</td></tr>
+  <tr><td>Apple (in-app purchase)</td><td>Ireland, EU</td>
+      <td>No third-country transfer by us</td></tr>
+</table>
+</div>
+<p>We deliberately name <strong>both</strong> safeguards for the USA. The
+adequacy decision for the Data Privacy Framework is in force but is the subject of
+pending proceedings before the European courts; the Standard Contractual Clauses
+carry the transfer even if it were to fall away.</p>
 
-<h3>8 · Children</h3>
-<p>The app is not directed at children. Display names are filtered automatically
-and can be reported by anyone; blocked players no longer appear on any
-leaderboard.</p>
+<h3>10 · What we do not do</h3>
+<ul>
+  <li>We collect <strong>no name, no email address, no phone number</strong>, no
+      address book, no GPS location, no photos, no health data and no payment
+      data.</li>
+  <li>We <strong>do not sell data</strong> and pass it to nobody beyond the
+      recipients named in sections 3, 4, 5 and 8.</li>
+  <li>There is <strong>no automated decision-making</strong> and no profiling
+      within the meaning of Art. 22 GDPR. A leaderboard position follows purely
+      from the number of levels cleared.</li>
+  <li>We operate <strong>no cross-app tracking</strong> of our own.</li>
+</ul>
+
+<h3>11 · Retention</h3>
+<div class="scroll">
+<table>
+  <tr><th>Data</th><th>Kept for</th></tr>
+  <tr><td>Profile, display name, results, streaks, friendships</td>
+      <td>Until you delete your profile (section 13). Without deletion: for as long as the app is operated</td></tr>
+  <tr><td>Product events</td>
+      <td>12 months at the most; on profile deletion the link to you is removed immediately</td></tr>
+  <tr><td>Reports about display names</td>
+      <td>Until the case is handled, at most 12 months</td></tr>
+  <tr><td>IP address at the server</td>
+      <td>Only for the duration of the request, or in short-lived operational logs</td></tr>
+  <tr><td>Data on your device</td>
+      <td>Until you delete the app</td></tr>
+  <tr><td>Advertising data at Google</td>
+      <td>According to Google’s own retention periods — see Google’s privacy policy</td></tr>
+</table>
+</div>
+
+<h3>12 · Is providing data required?</h3>
+<p>You are <strong>not obliged</strong> to provide any data, and there is no legal
+or contractual requirement to do so. The game itself works entirely without a
+server connection. Providing nothing simply means doing without the leaderboards
+and the friends list — both of which, by their nature, require a result to reach
+our server. For advertising: without consent you see non-personalised ads, and
+without ads there is the “Remove ads” purchase.</p>
+
+<h3>13 · Your rights</h3>
+<p><strong>Delete your profile — right in the app, without asking us:</strong>
+Settings → “Delete profile”. Your display name, all leaderboard entries, streaks
+and friendships are removed from the server and the name becomes available again.
+You continue playing as a new, anonymous player.</p>
+<p>Beyond that you have the right to <strong>access</strong> (Art. 15),
+<strong>rectification</strong> (Art. 16), <strong>erasure</strong> (Art. 17),
+<strong>restriction of processing</strong> (Art. 18), <strong>data
+portability</strong> (Art. 20) and <strong>objection</strong> to processing based
+on legitimate interests (Art. 21), as well as to <strong>withdraw</strong>
+consent you have given (Art. 7(3)).</p>
+<p>One practical note: we know you only by the random installation identifier. For
+an access or erasure request we therefore need your display name — otherwise we
+cannot locate your profile, and we will not try to guess it from other traits.</p>
+<p>You may also lodge a <strong>complaint with a supervisory authority</strong> at
+any time (Art. 77 GDPR). The competent authority is:</p>
+<p>Berliner Beauftragte für Datenschutz und Informationsfreiheit<br>
+Alt-Moabit 59–61, 10555 Berlin, Germany<br>
+Phone: +49 30 13889-0 · Email:
+<a href="mailto:mailbox@datenschutz-berlin.de">mailbox@datenschutz-berlin.de</a></p>
+
+<h3>14 · Children</h3>
+<p>The app is not directed at children and is not classified as a kids’ app in the
+App Store sense. It asks for no age and collects no data from which an age could
+be inferred. Display names are filtered automatically and can be reported by
+anyone; blocked players no longer appear in any leaderboard.</p>
+
+<h3>15 · Changes to this policy</h3>
+<p>We update this policy when the processing changes — for instance because a
+service is added or dropped. The date above shows the current version. Material
+changes are announced in the app.</p>
 
 <footer>
   <a href="./">Start</a>
   <a href="datenschutz.html">Datenschutz (DE)</a>
   <a href="impressum.html">Impressum</a>
-  <a href="mailto:pascal.dohmeier1999@gmail.com">Contact</a>
+  <a href="mailto:pathfindermemory.support@gmail.com">Contact</a>
 </footer>
 
 </div>

@@ -1,8 +1,15 @@
 # app-ads.txt — Pathfinder Memory
 #
-# ⚠️ NOCH AUSFÜLLEN: pub-XXXXXXXXXXXXXXXX durch deine AdMob-Publisher-ID
-# ersetzen (AdMob → Einstellungen → Konto → Publisher-ID) und diesen
-# Kommentarblock löschen.
+# Noch keine Einträge: die AdMob-Publisher-ID gibt es erst, wenn das AdMob-Konto
+# steht (RELEASE_TODO.md A1). Die Datei liegt trotzdem schon hier, weil sie im
+# Root der Domain liegen MUSS und dieser Pfad damit belegt und geprüft ist.
+#
+# Wenn die ID da ist: die Zeile unten einkommentieren, XXXX ersetzen
+# (AdMob → Einstellungen → Konto → Publisher-ID) und neu hochladen.
+#
+# Absichtlich AUSKOMMENTIERT statt mit Platzhalter aktiv: eine Zeile mit einer
+# erfundenen pub-ID ist ein ungültiger Eintrag, den Googles Crawler liest und
+# als Fehler verbucht. Eine Datei mit null Einträgen ist der harmlose Zustand.
 #
 # Bedingungen, damit Google die Datei findet:
 #   • sie muss unter https://<deine-domain>/app-ads.txt liegen — im Root
@@ -11,4 +18,4 @@
 # Optional, aber empfohlen: weist dich als autorisierten Verkäufer deines
 # Inventars aus und verbessert die Füllrate.
 
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
