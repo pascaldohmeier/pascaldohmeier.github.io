@@ -1,0 +1,14 @@
+# app-ads.txt — Pathfinder Memory
+#
+# ⚠️ NOCH AUSFÜLLEN: pub-XXXXXXXXXXXXXXXX durch deine AdMob-Publisher-ID
+# ersetzen (AdMob → Einstellungen → Konto → Publisher-ID) und diesen
+# Kommentarblock löschen.
+#
+# Bedingungen, damit Google die Datei findet:
+#   • sie muss unter https://<deine-domain>/app-ads.txt liegen — im Root
+#   • dieselbe Domain muss im App-Store-Eintrag als Entwickler-Website stehen
+#
+# Optional, aber empfohlen: weist dich als autorisierten Verkäufer deines
+# Inventars aus und verbessert die Füllrate.
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

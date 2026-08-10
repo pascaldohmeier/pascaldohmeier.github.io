@@ -1,0 +1,170 @@
+<!doctype html>
+<!--
+  ⚠️ ENTWURF — vor dem Deployen ersetzen.
+
+  Der Text unten beschreibt inhaltlich korrekt, was die App tut (Stand
+  2026-08-10, Fassung MIT Werbung). Er ist aber KEINE geprüfte
+  Datenschutzerklärung. Vorgehen:
+
+    1. Generator mit Aktualisierungsservice abonnieren (eRecht24,
+       datenschutz-generator.de, IT-Recht Kanzlei) oder Anwalt beauftragen.
+    2. Dort ankreuzen: Google AdMob. NICHT Firebase, NICHT Google Analytics.
+    3. Das eigene Backend als Auftragsverarbeiter eintragen — Textbaustein in
+       Abschnitt 2 unten.
+    4. Das Ergebnis hier hineinkopieren und diesen Kommentar löschen.
+
+  Details: LAUNCH_GUIDE.md Kapitel 1.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung — Pathfinder Memory</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Pathfinder</h1>
+    <div class="sub">Memory</div>
+  </a>
+</header>
+
+<nav>
+  <a href="./">Start</a>
+  <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+  <a href="impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<h2>Datenschutzerklärung</h2>
+<p class="meta">Stand: 2026-08-10</p>
+
+<div class="todo">
+  <strong>Entwurf — noch nicht geprüft</strong><br><br>
+  Dieser Text beschreibt korrekt, was die App tut, ist aber noch nicht durch
+  einen Generator oder eine Anwältin gegangen. Vor der Veröffentlichung
+  ersetzen und diesen Block löschen. Anleitung: LAUNCH_GUIDE.md Kapitel 1.
+</div>
+
+<h3>Verantwortlicher</h3>
+<p>Siehe <a href="impressum.html">Impressum</a>.<br>
+E-Mail: <a href="mailto:pascal.dohmeier1999@gmail.com">pascal.dohmeier1999@gmail.com</a></p>
+
+<h3>Kurzfassung</h3>
+<p>Pathfinder Memory braucht <strong>kein Benutzerkonto</strong>, keine
+E-Mail-Adresse und kein Passwort. Du wählst nur einen Anzeigenamen für die
+Ranglisten.</p>
+<p>Die App zeigt <strong>Werbung</strong> über Google AdMob und finanziert sich
+darüber. Werbung lässt sich per einmaligem In-App-Kauf dauerhaft entfernen.</p>
+<p>Für <strong>personalisierte</strong> Werbung fragen wir dich vorher um
+Erlaubnis — über den Einwilligungsdialog von Google und, unter iOS, zusätzlich
+über Apples Tracking-Abfrage. Lehnst du ab, siehst du weiterhin Werbung, nur
+nicht personalisierte. Alles andere funktioniert unverändert.</p>
+
+<h3>1 · Daten, die dein Gerät nicht verlassen</h3>
+<p>Spielstände, Statistiken, Streaks, ein pausierter Spielstand, deine
+Einstellungen (Sprache, Erscheinungsbild, Ton, Vibration, Erinnerung) und die
+Liste der von dir blockierten Spieler. Gespeichert in den App-Einstellungen.
+Diese Daten werden <strong>nicht übertragen</strong> und verschwinden, wenn du
+die App löschst.</p>
+
+<h3>2 · Daten auf unserem Server (Supabase, Frankfurt am Main)</h3>
+<div class="scroll">
+<table>
+  <tr><th>Daten</th><th>Zweck</th></tr>
+  <tr><td>Zufällige Installations-Kennung (UUID), beim ersten Start erzeugt</td>
+      <td>Ordnet deine Ergebnisse deiner Installation zu. Kein Gerätename, keine Werbe-ID, keine Hardware-Kennung</td></tr>
+  <tr><td>Selbst gewählter Anzeigename</td><td>Anzeige in den öffentlichen Ranglisten</td></tr>
+  <tr><td>Ergebnisse (Datum, geschaffte Stufen, Streak)</td><td>Ranglisten und Streak-Anzeige</td></tr>
+  <tr><td>Freundschaften (nur Kennungen)</td><td>Freundes-Rangliste</td></tr>
+  <tr><td>Meldungen zu Anzeigenamen</td><td>Moderation anstößiger Namen</td></tr>
+  <tr><td>Produktereignisse (Runde gestartet, Stufe geschafft oder verfehlt, Tutorial abgeschlossen) mit deiner Kennung</td>
+      <td>Ausschließlich, um zu erkennen, wo die App zu schwer oder unverständlich ist</td></tr>
+</table>
+</div>
+<p><strong>Auftragsverarbeiter:</strong> Supabase, Datenbank in der Region
+<code>eu-central-1</code> (Frankfurt am Main).</p>
+<p><strong>Kein Analyse-Dienst eines Drittanbieters.</strong> Kein Firebase, kein
+Google Analytics, keine Tracking-Pixel. Die Produktereignisse liegen auf unserem
+eigenen Server.</p>
+
+<h3>3 · Werbung (Google AdMob)</h3>
+<p>Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
+Irland.</p>
+<p>Für die Auslieferung und Messung von Werbung verarbeitet Google unter anderem:</p>
+<ul>
+  <li>die <strong>Werbe-ID (IDFA)</strong> deines Geräts — <strong>nur</strong>,
+      wenn du sowohl dem Einwilligungsdialog als auch Apples Tracking-Abfrage
+      zugestimmt hast</li>
+  <li>eine <strong>grobe Standortschätzung</strong> aus deiner IP-Adresse
+      (Land/Region, keine GPS-Daten)</li>
+  <li><strong>Geräte- und Nutzungssignale</strong> sowie <strong>Absturz- und
+      Leistungsdaten</strong> des Werbe-SDKs</li>
+  <li><strong>Werbedaten</strong>: welche Anzeigen dir gezeigt wurden und wie du
+      darauf reagiert hast</li>
+</ul>
+<p>Diese Daten können von Google auch app-übergreifend zur Profilbildung genutzt
+werden — das ist der Grund, weshalb wir dich vorher fragen.</p>
+<p><strong>Deine Einwilligung ist jederzeit widerrufbar</strong> über die
+Datenschutz-Optionen im Einwilligungsdialog; Apples Tracking-Zustimmung änderst
+du unter iOS-Einstellungen → Datenschutz &amp; Sicherheit → Tracking.</p>
+<p><strong>Werbung ganz abschalten:</strong> einmaliger In-App-Kauf „Werbung
+entfernen". Danach wird das Werbe-SDK nicht mehr geladen.</p>
+<p>Weitere Informationen:
+<a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a> und
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen"</a>.</p>
+
+<h3>4 · Was wir nicht erheben</h3>
+<p>Name, E-Mail-Adresse, Telefonnummer, Adressbuch, GPS-Standort, Fotos,
+Gesundheitsdaten, Zahlungsdaten. Den In-App-Kauf wickelt Apple ab; wir erhalten
+davon keine personenbezogenen Daten.</p>
+
+<h3>5 · Rechtsgrundlagen</h3>
+<div class="scroll">
+<table>
+  <tr><th>Verarbeitung</th><th>Grundlage</th></tr>
+  <tr><td>Ranglisten, Freundesliste, Profil</td><td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
+  <tr><td>Moderation, Produktereignisse zur Verbesserung</td><td>Art. 6 Abs. 1 lit. f DSGVO</td></tr>
+  <tr><td><strong>Personalisierte Werbung, Zugriff auf die Werbe-ID</strong></td>
+      <td>Art. 6 Abs. 1 lit. a DSGVO (<strong>Einwilligung</strong>) sowie § 25 Abs. 1 TDDDG</td></tr>
+  <tr><td>Nicht-personalisierte Werbung</td><td>Art. 6 Abs. 1 lit. f DSGVO</td></tr>
+</table>
+</div>
+
+<h3>6 · Speicherdauer</h3>
+<p>Ranglisten- und Profildaten bleiben gespeichert, bis du dein Profil löschst.
+Produktereignisse werden nach spätestens 12 Monaten gelöscht; bei Profillöschung
+wird die Verknüpfung zu dir sofort entfernt. Für Werbedaten gelten Googles
+eigene Fristen.</p>
+
+<h3>7 · Deine Rechte</h3>
+<p><strong>Profil löschen — direkt in der App:</strong> Einstellungen → „Profil
+löschen". Anzeigename, alle Ranglisten-Einträge, Streaks und Freundschaften
+werden auf dem Server entfernt, der Name wird wieder frei. Du spielst
+anschließend als neuer, anonymer Spieler weiter.</p>
+<p>Darüber hinaus: Auskunft, Berichtigung, Löschung, Einschränkung,
+Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie Beschwerde bei
+einer Aufsichtsbehörde. Kontakt über die E-Mail-Adresse oben.</p>
+
+<h3>8 · Kinder</h3>
+<p>Die App richtet sich nicht gezielt an Kinder und ist nicht als Kinder-App
+eingestuft. Anzeigenamen werden automatisch gefiltert und können von jedem
+gemeldet werden; blockierte Spieler erscheinen in keiner Rangliste mehr.</p>
+
+<h3>9 · Änderungen</h3>
+<p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert. Das
+Datum oben zeigt den letzten Stand.</p>
+
+<footer>
+  <a href="./">Start</a>
+  <a href="impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="mailto:pascal.dohmeier1999@gmail.com">Kontakt</a>
+</footer>
+
+</div>
+</body>
+</html>

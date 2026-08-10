@@ -1,0 +1,113 @@
+/* Pathfinder Memory — Website
+   Dieselbe Bildsprache wie die App: Papier-Look, eine Tuschelinie als einziges
+   Tiefenmittel, Serifen-Schrift. Keine Schatten, keine Verläufe.
+   Farben 1:1 aus Assets.xcassets, damit Seite und App zusammengehören. */
+
+:root {
+  --bg: #EEEACC;
+  --surface: #FFFFFF;
+  --ink: #1A1A1A;
+  --muted: #5A5852;
+  --line: #1A1A1A;
+  --accent: #B7C1D8;
+  --mint: #B9D5C2;
+  --warn: #DEA8A8;
+  --radius: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #403E3B;
+    --surface: #BBB7AE;
+    --ink: #23221F;
+    --muted: #4A4843;
+    --line: #23221F;
+    --accent: #919CB6;
+    --mint: #8AAA94;
+    --warn: #C38687;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+/* Kopf */
+header { padding: 48px 0 8px; }
+.brand { display: block; text-decoration: none; color: inherit; }
+.brand h1 { font-size: 2rem; margin: 0; letter-spacing: -0.01em; }
+.brand .sub {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+  opacity: 0.55; margin-top: 2px;
+}
+
+nav { margin: 24px 0 40px; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  font-size: 0.9rem; text-decoration: none; color: var(--ink);
+  padding: 7px 14px; border: 1.5px solid var(--line); border-radius: 999px;
+  background: var(--surface);
+}
+nav a[aria-current="page"] { background: var(--accent); }
+
+/* Inhalt */
+h2 { font-size: 1.35rem; margin: 40px 0 12px; }
+h3 { font-size: 1.05rem; margin: 28px 0 8px; }
+p, li { color: var(--ink); }
+a { color: var(--ink); text-underline-offset: 3px; }
+
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+.card.mint { background: var(--mint); }
+
+/* Sichtbarer Platzhalter: fällt auf der LIVE-Seite sofort auf, damit ein
+   versehentliches Deployen mit unausgefüllten Feldern nicht still passiert. */
+.todo {
+  background: var(--warn);
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 20px 0;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.85rem;
+}
+.todo strong { text-transform: uppercase; letter-spacing: 0.08em; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.94rem; }
+th, td { border: 1px solid var(--line); padding: 9px 11px; text-align: left; vertical-align: top; }
+th { background: var(--surface); font-weight: 700; }
+
+.meta {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.78rem; opacity: 0.6;
+}
+
+footer {
+  margin-top: 64px; padding-top: 20px;
+  border-top: 1.5px solid var(--line);
+  font-size: 0.85rem; display: flex; flex-wrap: wrap; gap: 16px;
+}
+
+/* Tabellen dürfen scrollen, die Seite nie */
+.scroll { overflow-x: auto; }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .brand h1 { font-size: 1.6rem; }
+}
