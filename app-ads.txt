@@ -1,16 +1,1 @@
-# app-ads.txt — Pathfinder Memory
-#
-# Weist Pathfinder Memory als autorisiertes Inventar des AdMob-Kontos
-# pub-8803185800848639 aus. Optional, aber empfohlen: verbessert die Füllrate und
-# schützt davor, dass jemand fremdes Inventar unter deinem Namen verkauft.
-#
-# Damit Google die Datei akzeptiert, müssen ZWEI Dinge stimmen:
-#   • sie liegt unter https://pascaldohmeier.github.io/app-ads.txt — im Root ✅
-#   • dieselbe Domain steht im App-Store-Eintrag als Entwickler-Website
-#     ⚠️ noch offen, passiert mit RELEASE_TODO.md A4
-#
-# Bis der Store-Eintrag steht, findet Googles Crawler die Datei nicht — das ist
-# erwartet und kein Fehler. Prüfen kannst du es später in AdMob unter
-# Anwendungen → app-ads.txt.
-
 google.com, pub-8803185800848639, DIRECT, f08c47fec0942fa0
