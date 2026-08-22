@@ -1,77 +1,85 @@
 <!doctype html>
 <!--
-  FERTIGE FASSUNG, Stand 2026-08-10 (App-Version 1.0, MIT Werbung).
-  Keine Rechtsberatung — aber gegen die Pflichtangaben abgeglichen und in den
-  tatsächlichen Datenflüssen des Codes verifiziert, nicht aus einer Vorlage
-  übernommen. Was dabei geprüft wurde:
+  Shingoki — Datenschutzerklärung. Stand 2026-08-21, App-Version 1.0 (MIT Werbung).
 
-    • Art. 13 DSGVO vollständig: Verantwortlicher MIT Telefon, je Datenart
-      Zweck + Rechtsgrundlage + Empfänger + Speicherdauer, Freiwilligkeit,
-      Drittlandübermittlung mit Mechanismus, keine automatisierte
-      Entscheidungsfindung, alle Rechte inkl. benannter Aufsichtsbehörde.
-    • App-Spezifisches, das Vorlagen regelmäßig auslassen: Betriebssystem-
-      Berechtigungen, Werbe-ID, IP-Adresse im Serverlog, lokal vs. Server,
-      Mitteilungen, E-Mail-Kontakt, Kontolöschung.
-    • Diese Website selbst (GitHub Pages protokolliert Besucher-IPs) — eine
-      App-Erklärung allein deckt die Seite nicht ab, auf der sie steht.
-    • Supabase: der DPA ist über die ToS automatisch Vertragsbestandteil,
-      Vertragspartner ist Supabase Pte. Ltd (Singapur), die SCC gelten als
-      unterzeichnet. Kein separater Vertrag mehr zu schließen.
+  Keine Rechtsberatung. Aufgebaut auf der geprüften Fassung für Pathfinder Memory
+  (../datenschutz.html) und Absatz für Absatz gegen SHINGOKIS tatsächliche
+  Datenflüsse abgeglichen, nicht kopiert. Die inhaltlichen Unterschiede zu jener
+  App, alle im Code nachgesehen:
+
+    • KEINE Freundesliste — es gibt in dieser App keine Freundschaften.
+    • KEINE Produktereignisse. Shingoki hat keine `events`-Tabelle und keinen
+      Analyse-Dienst. Der Abschnitt "Produktereignisse" von Pathfinder entfällt
+      hier ersatzlos, und Abschnitt 10 sagt es ausdrücklich.
+    • Gewertet wird die ZEIT plus die Zahl benutzter Tipps, nicht "geschaffte
+      Stufen".
+    • Zusätzlich zum Tagesrätsel gibt es Übungsbretter, die über den teilbaren
+      Rätsel-Code (Seed) gruppiert werden — deshalb eine eigene Zeile in
+      Abschnitt 3.
+    • KEIN automatischer Löschjob. Pathfinder erzwingt 12 Monate per pg_cron;
+      Shingoki hat keinen solchen Job, also steht hier auch keine Frist, die
+      niemand einhält. Kommt der Job, muss dieser Text mitgeändert werden.
 
   ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
-    1. „Produktereignisse … spätestens nach 12 Monaten gelöscht" und „Meldungen
-       … längstens 12 Monate" sind seit 2026-08-10 DURCHGESETZT: pg_cron ruft
-       täglich 03:17 UTC `public.purge_expired_data()` auf (Migration
-       20260810202954). Wer die Frist im Text ändert, muss den Job mitändern —
-       und umgekehrt. Ein Satz hier, den die Datenbank nicht einhält, ist eine
-       falsche Angabe.
-    2. Die Werbe-Abschnitte beschreiben den Zustand MIT eingebautem SDK
-       (RELEASE_TODO.md A3). Sie müssen zum Release stimmen, was sie tun.
+    1. "kein Analyse-Dienst, keine Produktereignisse" gilt nur, solange niemand
+       eine Ereignistabelle einbaut.
+    2. Die Werbe-Abschnitte beschreiben den Zustand MIT eingebautem SDK. Sie
+       müssen zum Release stimmen, was sie tun.
+    3. "Profil löschen entfernt alles" hängt an `delete_profile` und den
+       `on delete cascade`-Fremdschlüsseln. Am 2026-08-21 gegen die Live-API
+       geprüft: Profil angelegt, Ergebnis eingereicht, gelöscht, Brett wieder leer.
 
-  ⚠️ Nach jeder Änderung: Datei erneut ins Pages-Repo hochladen. Dieser Ordner
-  ist die Quelle, das Repo eine Kopie.
+  ⚠️ Die Support-Adresse fehlt noch (todo-Block). Sie muss identisch sein mit der
+  in `SupportConfig.email` der App und mit der im Impressum.
 -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Datenschutzerklärung — Pathfinder Memory</title>
-<link rel="stylesheet" href="style.css">
+<title>Datenschutzerklärung — Shingoki</title>
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <a class="brand" href="pathfinder-memory/">
-    <h1>Pathfinder</h1>
-    <div class="sub">Memory</div>
+  <a class="brand" href="./">
+    <h1>Shingoki</h1>
+    <div class="sub">Eine Schleife</div>
   </a>
 </header>
 
 <nav>
-  <a href="./">Alle Apps</a>
-  <a href="pathfinder-memory/">Pathfinder Memory</a>
+  <a href="../">Alle Apps</a>
+  <a href="./">Shingoki</a>
   <a href="datenschutz.html" aria-current="page">Datenschutz</a>
-  <a href="impressum.html">Impressum</a>
+  <a href="../impressum.html">Impressum</a>
   <a href="privacy.html">English</a>
 </nav>
 
 <h2>Datenschutzerklärung</h2>
-<p class="meta">Stand: 10. August 2026 · gilt für die App „Pathfinder Memory" und für diese Website</p>
+<p class="meta">Stand: 21. August 2026 · gilt für die App „Shingoki“</p>
+
+<div class="todo">
+  <strong>Noch offen vor der Veröffentlichung:</strong> die Support- und
+  Datenschutz-Adresse für Shingoki. Sie muss an drei Stellen dieselbe sein —
+  hier, im Impressum und in <code>SupportConfig.email</code> der App.
+</div>
 
 <div class="card mint">
   <h3 style="margin-top:0">Kurzfassung</h3>
-  <p>Pathfinder Memory braucht <strong>kein Benutzerkonto</strong>, keine
-  E-Mail-Adresse und kein Passwort. Du wählst nur einen Anzeigenamen für die
-  Ranglisten. Wer du bist, erfahren wir nicht.</p>
+  <p>Shingoki braucht <strong>kein Benutzerkonto</strong>, keine E-Mail-Adresse
+  und kein Passwort. Du wählst nur einen Anzeigenamen für die Ranglisten. Wer du
+  bist, erfahren wir nicht.</p>
   <p>Die App zeigt <strong>Werbung</strong> über Google AdMob und finanziert sich
   darüber. Werbung lässt sich per einmaligem In-App-Kauf dauerhaft entfernen.</p>
   <p>Für <strong>personalisierte</strong> Werbung fragen wir dich vorher um
   Erlaubnis — über den Einwilligungsdialog von Google und, unter iOS, zusätzlich
   über Apples Tracking-Abfrage. Lehnst du ab, siehst du weiterhin Werbung, nur
   nicht personalisierte. Alles andere funktioniert unverändert.</p>
-  <p><strong>Wir betreiben kein eigenes Tracking</strong> und setzen keinen
-  Analyse-Dienst eines Drittanbieters ein — kein Firebase, kein Google Analytics.</p>
+  <p><strong>Wir betreiben kein Tracking und keine Nutzungsanalyse.</strong> Kein
+  Firebase, kein Google Analytics, und auch keine eigenen Produktereignisse: die
+  App zeichnet nicht auf, wie du spielst.</p>
 </div>
 
 <h3>1 · Verantwortlicher</h3>
@@ -79,7 +87,7 @@
   Pascal Dohmeier<br>
   Gustav-Müller-Straße 20A<br>
   10829 Berlin, Deutschland<br>
-  E-Mail: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  E-Mail: <span class="todo" style="display:inline-block;padding:2px 8px;margin:0">Adresse folgt</span><br>
   Telefon: <a href="tel:+4916096861111">+49 160 96861111</a>
 </p>
 <p>Ein Datenschutzbeauftragter ist nicht bestellt; die Voraussetzungen des
@@ -87,18 +95,19 @@ Art. 37 DSGVO und des § 38 BDSG liegen nicht vor. Für alle Anliegen zum
 Datenschutz erreichst du mich direkt unter den Angaben oben.</p>
 
 <h3>2 · Daten, die dein Gerät nicht verlassen</h3>
-<p>Spielstände, Statistiken, Streaks, ein pausierter Spielstand, deine
-Einstellungen (Sprache, Erscheinungsbild, Ton, Vibration, Erinnerung) und die
-Liste der von dir blockierten Spieler. Gespeichert bleibt das ausschließlich
-lokal in den App-Einstellungen deines Geräts. Diese Daten werden
-<strong>nicht übertragen</strong> und verschwinden, wenn du die App löschst.</p>
+<p>Deine Statistiken, deine Streak, ein pausierter Spielstand samt gezeichneten
+Linien und Undo-Verlauf, deine Einstellungen (Sprache, Erscheinungsbild, Ton,
+Vibration, Erinnerung, Fehleranzeige) und die Liste der von dir blockierten
+Spieler. Gespeichert bleibt das ausschließlich lokal in den App-Einstellungen
+deines Geräts. Diese Daten werden <strong>nicht übertragen</strong> und
+verschwinden, wenn du die App löschst.</p>
 <p>Dass die Blockierliste lokal bleibt, ist Absicht: Blockieren ist ein
-persönliches „das will ich nicht sehen" und niemandes Bewertung — es funktioniert
+persönliches „das will ich nicht sehen“ und niemandes Bewertung — es funktioniert
 darum offline und verbirgt niemanden vor anderen Spielern.</p>
 
 <h3>3 · Daten auf unserem Server</h3>
-<p>Damit Ranglisten, Freundesliste und Moderation überhaupt funktionieren können,
-werden folgende Daten übertragen und gespeichert:</p>
+<p>Damit die Ranglisten und die Moderation überhaupt funktionieren können, werden
+folgende Daten übertragen und gespeichert:</p>
 <div class="scroll">
 <table>
   <tr><th>Daten</th><th>Zweck</th><th>Rechtsgrundlage</th></tr>
@@ -108,36 +117,41 @@ werden folgende Daten übertragen und gespeichert:</p>
   <tr><td>Selbst gewählter Anzeigename</td>
       <td>Anzeige in den öffentlichen Ranglisten</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
-  <tr><td>Ergebnisse (Datum, geschaffte Stufen, Streak)</td>
-      <td>Ranglisten und Streak-Anzeige</td>
+  <tr><td>Ergebnis eines Tagesrätsels: Datum, Brettgröße, <strong>benötigte Zeit</strong>, Zahl benutzter Tipps</td>
+      <td>Tages-, Wochen- und Monatsrangliste</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
-  <tr><td>Freundschaften (nur Kennungen)</td>
-      <td>Freundes-Rangliste</td>
+  <tr><td>Ergebnis eines Übungsrätsels: der teilbare Rätsel-Code, Brettgröße, Zeit, Zahl benutzter Tipps</td>
+      <td>Die Rangliste zu genau diesem Rätsel — erreichbar nur aus dessen eigenem Endbildschirm</td>
+      <td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
+  <tr><td>Streak (aktuelle und beste Serie gelöster Tage)</td>
+      <td>Streak-Rangliste und Anzeige in der App</td>
       <td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
   <tr><td>Meldungen zu Anzeigenamen</td>
       <td>Moderation anstößiger Namen — der App Store verlangt für öffentliche Namenslisten eine Melde- und Filterfunktion</td>
-      <td>Art. 6 Abs. 1 lit. f DSGVO</td></tr>
-  <tr><td>Produktereignisse (Runde gestartet, Stufe geschafft oder verfehlt, Tutorial abgeschlossen) mit deiner Kennung</td>
-      <td>Ausschließlich, um zu erkennen, wo die App zu schwer oder unverständlich ist</td>
       <td>Art. 6 Abs. 1 lit. f DSGVO</td></tr>
   <tr><td><strong>IP-Adresse</strong>, für die Dauer der Anfrage</td>
       <td>Technisch unvermeidbar bei jedem Serverzugriff; wird für Betrieb und Abwehr von Missbrauch verarbeitet und nicht zu deinem Profil gespeichert</td>
       <td>Art. 6 Abs. 1 lit. f DSGVO</td></tr>
 </table>
 </div>
+<p><strong>Was hier nicht steht, erheben wir auch nicht:</strong> die App
+überträgt <strong>nicht</strong>, wie lange du an einem Rätsel gesessen hast,
+ohne es zu lösen, welche Linien du gezogen hast, wie oft du neu gestartet hast
+oder wann du die App öffnest. Ein Rätsel, das du nicht löst, hinterlässt auf dem
+Server keine Spur.</p>
 <p><strong>Auftragsverarbeiter:</strong> Supabase Pte. Ltd, 65 Chulia Street
 #38-02/03, OCBC Centre, Singapur 049513. Die Datenbank läuft in der Region
 <code>eu-central-1</code> — <strong>Frankfurt am Main</strong>. Ein
 Auftragsverarbeitungsvertrag nach Art. 28 DSGVO ist Bestandteil der
 Nutzungsbedingungen von Supabase und damit geschlossen; er schließt die
 EU-Standardvertragsklauseln ein (siehe Abschnitt 9).</p>
-<p><strong>Kein Analyse-Dienst eines Drittanbieters.</strong> Die
-Produktereignisse liegen auf unserem eigenen Server und werden mit niemandem
-geteilt.</p>
 
 <h3>4 · Werbung (Google AdMob)</h3>
 <p>Anbieter für den europäischen Wirtschaftsraum: Google Ireland Limited, Gordon
 House, Barrow Street, Dublin 4, Irland.</p>
+<p>Werbung erscheint an genau zwei Stellen: einmal nach dem Verlassen des
+Endbildschirms eines gelösten Tagesrätsels, und als freiwilliges Video, wenn du
+einen Tipp anforderst. Im Übungsmodus gibt es keine erzwungene Werbung.</p>
 <p>Für die Auslieferung, Messung und Betrugsabwehr von Werbung verarbeitet Google
 unter anderem:</p>
 <ul>
@@ -159,20 +173,20 @@ Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
 Sicherheit → Tracking. Ein Widerruf gilt ab dem Zeitpunkt des Widerrufs; bis
 dahin erfolgte Verarbeitung bleibt rechtmäßig.</p>
 <p><strong>Werbung ganz abschalten:</strong> einmaliger In-App-Kauf „Werbung
-entfernen". Danach wird das Werbe-SDK nicht mehr geladen, und es werden keine
-Werbedaten mehr erhoben.</p>
+entfernen“. Danach wird das Werbe-SDK nicht mehr geladen, und es werden keine
+Werbedaten mehr erhoben. Tipps bekommst du dann ohne Video.</p>
 <p>Weitere Informationen:
 <a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a>,
-<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen"</a>
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen“</a>
 und
 <a href="https://policies.google.com/privacy/frameworks" rel="noopener">Googles Rahmenbedingungen für Datenübermittlungen</a>.</p>
 
 <h3>5 · In-App-Kauf</h3>
-<p>Den Kauf „Werbung entfernen" wickelt <strong>Apple</strong> ab (Apple
+<p>Den Kauf „Werbung entfernen“ wickelt <strong>Apple</strong> ab (Apple
 Distribution International Ltd., Hollyhill Industrial Estate, Cork, Irland). Wir
-erhalten dabei <strong>keine</strong> Zahlungsdaten und keine
-personenbezogenen Daten über dich — die App fragt Apple nur, ob für dieses Apple-Konto
-ein Kauf vorliegt. Welche Daten Apple selbst verarbeitet, steht in Apples
+erhalten dabei <strong>keine</strong> Zahlungsdaten und keine personenbezogenen
+Daten über dich — die App fragt Apple nur, ob für dieses Apple-Konto ein Kauf
+vorliegt. Welche Daten Apple selbst verarbeitet, steht in Apples
 Datenschutzrichtlinie.</p>
 
 <h3>6 · Mitteilungen und Berechtigungen</h3>
@@ -196,11 +210,11 @@ wird, und jede ablehnbar:</p>
 <strong>nicht</strong> an und kann darauf nicht zugreifen.</p>
 
 <h3>7 · Wenn du uns schreibst</h3>
-<p>Schreibst du an die E-Mail-Adresse oben, verarbeiten wir deine
-Nachricht samt Absenderadresse, um sie zu beantworten (Art. 6 Abs. 1 lit. f
-DSGVO, bei Vertragsfragen lit. b). Wir löschen solche Nachrichten, sobald der
-Anlass erledigt ist und keine Aufbewahrungspflicht entgegensteht. Der Versand
-läuft über Google (Gmail) als E-Mail-Anbieter.</p>
+<p>Schreibst du an die E-Mail-Adresse oben, verarbeiten wir deine Nachricht samt
+Absenderadresse, um sie zu beantworten (Art. 6 Abs. 1 lit. f DSGVO, bei
+Vertragsfragen lit. b). Wir löschen solche Nachrichten, sobald der Anlass
+erledigt ist und keine Aufbewahrungspflicht entgegensteht. Der Versand läuft über
+Google (Gmail) als E-Mail-Anbieter.</p>
 
 <h3>8 · Diese Website</h3>
 <p>Diese Seite ist statisch — <strong>keine Cookies, keine Anmeldung, keine
@@ -232,20 +246,24 @@ DDG ohnehin verpflichtet). Einzelheiten in der
 </div>
 <p>Wir nennen bewusst <strong>beide</strong> Grundlagen für die USA. Der
 Angemessenheitsbeschluss zum Data Privacy Framework gilt, ist aber Gegenstand
-laufender Verfahren vor den europäischen Gerichten; die
-Standardvertragsklauseln tragen die Übermittlung auch dann, wenn er wegfallen
-sollte.</p>
+laufender Verfahren vor den europäischen Gerichten; die Standardvertragsklauseln
+tragen die Übermittlung auch dann, wenn er wegfallen sollte.</p>
 
 <h3>10 · Was wir nicht tun</h3>
 <ul>
   <li>Wir erheben <strong>keinen Namen, keine E-Mail-Adresse, keine
       Telefonnummer</strong>, kein Adressbuch, keinen GPS-Standort, keine Fotos,
       keine Gesundheits- und keine Zahlungsdaten.</li>
+  <li>Wir führen <strong>keine Nutzungsanalyse</strong>. Es gibt in dieser App
+      keine Produktereignisse, keinen Analyse-Dienst und keine Statistik darüber,
+      wie du spielst. Zum Server geht nur das <em>Ergebnis</em> eines gelösten
+      Rätsels.</li>
   <li>Wir <strong>verkaufen keine Daten</strong> und geben sie über die in
       Abschnitt 3, 4, 5 und 8 genannten Stellen hinaus an niemanden weiter.</li>
   <li>Es findet <strong>keine automatisierte Entscheidungsfindung</strong> und
       kein Profiling im Sinne des Art. 22 DSGVO statt. Die Ranglistenplatzierung
-      folgt allein aus der Zahl geschaffter Stufen.</li>
+      folgt allein aus der benötigten Zeit, bei Woche und Monat aus der Zahl
+      gelöster Tage und der Gesamtzeit.</li>
   <li>Wir setzen <strong>kein eigenes app-übergreifendes Tracking</strong> ein.</li>
 </ul>
 
@@ -253,12 +271,10 @@ sollte.</p>
 <div class="scroll">
 <table>
   <tr><th>Daten</th><th>Dauer</th></tr>
-  <tr><td>Profil, Anzeigename, Ergebnisse, Streaks, Freundschaften</td>
+  <tr><td>Profil, Anzeigename, Ergebnisse, Streak</td>
       <td>Bis du dein Profil löschst (siehe Abschnitt 13). Ohne Löschung: solange die App betrieben wird</td></tr>
-  <tr><td>Produktereignisse</td>
-      <td>Spätestens 12 Monate; bei Profillöschung wird die Verknüpfung zu dir sofort entfernt</td></tr>
   <tr><td>Meldungen zu Anzeigenamen</td>
-      <td>Bis der Fall bearbeitet ist, längstens 12 Monate</td></tr>
+      <td>Bis der Fall bearbeitet ist; danach werden sie gelöscht</td></tr>
   <tr><td>IP-Adresse am Server</td>
       <td>Nur für die Dauer der Anfrage bzw. in kurzlebigen Betriebsprotokollen</td></tr>
   <tr><td>Daten auf deinem Gerät</td>
@@ -271,17 +287,17 @@ sollte.</p>
 <h3>12 · Freiwilligkeit</h3>
 <p>Du bist <strong>nicht verpflichtet</strong>, Daten bereitzustellen, und es
 besteht keine gesetzliche oder vertragliche Pflicht dazu. Das Spiel selbst
-funktioniert vollständig ohne Serververbindung. Wer keine Daten übermitteln
-möchte, verzichtet lediglich auf die Ranglisten und die Freundesliste — beides
-setzt naturgemäß voraus, dass ein Ergebnis unser Server erreicht. Für Werbung
-gilt: ohne Einwilligung siehst du nicht-personalisierte Anzeigen; ohne Werbung
-gibt es den Kauf „Werbung entfernen".</p>
+funktioniert vollständig ohne Serververbindung — die Rätsel werden auf deinem
+Gerät erzeugt, nicht heruntergeladen. Wer keine Daten übermitteln möchte,
+verzichtet lediglich auf die Ranglisten. Für Werbung gilt: ohne Einwilligung
+siehst du nicht-personalisierte Anzeigen; ohne Werbung gibt es den Kauf „Werbung
+entfernen“.</p>
 
 <h3>13 · Deine Rechte</h3>
 <p><strong>Profil löschen — direkt in der App, ohne uns zu fragen:</strong>
-Einstellungen → „Profil löschen". Anzeigename, alle Ranglisten-Einträge, Streaks
-und Freundschaften werden auf dem Server entfernt, der Name wird wieder frei. Du
-spielst anschließend als neuer, anonymer Spieler weiter.</p>
+Einstellungen → „Profil löschen“. Anzeigename, alle Ranglisten-Einträge, deine
+Streak und deine Meldungen werden auf dem Server entfernt, der Name wird wieder
+frei. Du spielst anschließend als neuer, anonymer Spieler weiter.</p>
 <p>Darüber hinaus stehen dir zu: <strong>Auskunft</strong> (Art. 15),
 <strong>Berichtigung</strong> (Art. 16), <strong>Löschung</strong> (Art. 17),
 <strong>Einschränkung der Verarbeitung</strong> (Art. 18),
@@ -292,8 +308,8 @@ gegen Verarbeitungen auf Grundlage berechtigten Interesses (Art. 21) sowie der
 Installations-Kennung. Für eine Auskunft oder Löschung brauchen wir daher deinen
 Anzeigenamen — sonst können wir dein Profil nicht zuordnen, und wir wollen es
 auch nicht anhand anderer Merkmale erraten.</p>
-<p>Du kannst dich außerdem jederzeit bei einer
-<strong>Aufsichtsbehörde</strong> beschweren (Art. 77 DSGVO). Zuständig ist:</p>
+<p>Du kannst dich außerdem jederzeit bei einer <strong>Aufsichtsbehörde</strong>
+beschweren (Art. 77 DSGVO). Zuständig ist:</p>
 <p>Berliner Beauftragte für Datenschutz und Informationsfreiheit<br>
 Alt-Moabit 59–61, 10555 Berlin<br>
 Telefon: 030 13889-0 · E-Mail:
@@ -312,11 +328,10 @@ weil ein Dienst hinzukommt oder wegfällt. Das Datum oben zeigt den letzten Stan
 Wesentliche Änderungen kündigen wir in der App an.</p>
 
 <footer>
-  <a href="./">Alle Apps</a>
-  <a href="pathfinder-memory/">Pathfinder Memory</a>
-  <a href="impressum.html">Impressum</a>
+  <a href="../">Alle Apps</a>
+  <a href="./">Shingoki</a>
+  <a href="../impressum.html">Impressum</a>
   <a href="privacy.html">Privacy (EN)</a>
-  <a href="mailto:pathfindermemory.support@gmail.com">Kontakt</a>
 </footer>
 
 </div>
