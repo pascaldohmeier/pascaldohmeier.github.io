@@ -1,0 +1,179 @@
+<!doctype html>
+<!--
+  Hakoro — Datenschutzerklärung. Stand 2026-09-12, App-Version 1.0.
+
+  Keine Rechtsberatung. Aufgebaut auf der geprüften Fassung für Shingoki und
+  Absatz für Absatz gegen HAKOROS tatsächliche Datenflüsse abgeglichen, nicht
+  kopiert. Und der Abgleich ist diesmal kurz ausgefallen, weil es keine gibt:
+
+    • KEIN Server. Hakoro hat kein Backend, keine API, keinen Supabase-Eintrag.
+    • KEIN Konto, kein Anzeigename, keine Rangliste, keine Moderation.
+    • KEINE Werbung, kein AdMob, kein Einwilligungsdialog, kein IDFA.
+    • KEIN In-App-Kauf.
+    • KEIN Analyse-Dienst, keine Ereignistabelle, kein Crash-Reporter.
+    • KEIN Netzwerkcode überhaupt. Die App importiert kein URLSession-basiertes
+      Modul und öffnet keine Verbindung.
+
+  Ganze Abschnitte der Shingoki-Fassung (Server, Werbung, In-App-Kauf,
+  Drittländer, Löschjob) entfallen hier deshalb ERSATZLOS statt leer
+  mitgeschleppt zu werden. Ein Abschnitt "Werbung: keine" lädt nur dazu ein, ihn
+  eines Tages zu füllen, ohne den Rest zu prüfen.
+
+  ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
+    1. "verlässt dein Gerät nie" gilt, solange die App keinen Netzwerkcode hat.
+       Kommt ein Leaderboard, ein Cloud-Sync oder ein Crash-Reporter, muss diese
+       Seite IM SELBEN SCHRITT geändert werden — zusammen mit dem
+       PrivacyInfo.xcprivacy im Repo und der App-Privacy-Auskunft in App Store
+       Connect. Alle drei müssen dasselbe sagen.
+    2. Die Aufzählung in Abschnitt 2 ist die vollständige Schlüsselliste aus
+       PROJECT_STATE.md §4. Ein neuer UserDefaults-Schlüssel gehört hier hinein.
+    3. "Zurücksetzen löscht X und behält Y" hängt an AppServices.resetProgress()
+       und den beiden resetAll()-Methoden.
+
+  ⚠️ Support-Adresse ist vorerst dieselbe wie bei Pathfinder Memory. Sie muss
+  identisch sein mit der im Impressum.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hakoro — Datenschutzerklärung</title>
+<meta name="description" content="Datenschutzerklärung für die iPhone-App Hakoro. Die App erhebt keine Daten und hat keine Netzwerkverbindung.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Hakoro</h1>
+    <div class="sub">Block-Puzzle</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./">Hakoro</a>
+  <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<h2>Datenschutzerklärung</h2>
+<p class="meta">Stand: 12. September 2026 · gilt für Hakoro ab Version 1.0</p>
+
+<div class="card mint">
+  <h3 style="margin-top:0">Kurzfassung</h3>
+  <p><strong>Hakoro erhebt keine personenbezogenen Daten und hat überhaupt keine
+  Netzwerkverbindung.</strong> Es gibt keinen Server, kein Konto, keine Werbung,
+  keine Analyse und keinen Kauf. Dein Spielstand liegt ausschließlich auf deinem
+  iPhone und wird nirgendwohin übertragen — er kann es gar nicht, weil die App
+  keine Möglichkeit hat, etwas zu senden.</p>
+  <p>Die App funktioniert im Flugmodus vollständig. Das ist kein Zufall, sondern
+  die Bauweise: Level werden auf dem Gerät berechnet, nicht geladen.</p>
+</div>
+
+<h3>1 · Verantwortlicher</h3>
+<p>
+  Pascal Dohmeier<br>
+  Gustav-Müller-Straße 20A<br>
+  10829 Berlin, Deutschland<br>
+  E-Mail: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  Telefon: <a href="tel:+4916095861111">+49 160 95861111</a>
+</p>
+<p>Ein Datenschutzbeauftragter ist nicht bestellt; die Voraussetzungen des
+Art. 37 DSGVO und des § 38 BDSG liegen nicht vor. Für alle Anliegen zum
+Datenschutz erreichst du mich direkt unter den Angaben oben.</p>
+
+<h3>2 · Daten, die dein Gerät nicht verlassen</h3>
+<p>Die App speichert in den App-Einstellungen deines Geräts (Apples
+<em>UserDefaults</em>) genau Folgendes — das ist die vollständige Liste, nicht
+eine Auswahl:</p>
+<ul>
+  <li>zu jedem gelösten Level die beste Zugzahl, die Sterne und das Datum;</li>
+  <li>die höchste Levelnummer, die du je geöffnet hast;</li>
+  <li>dieselben Ergebnisse für die Level des Expertenmodus;</li>
+  <li>welche Erklärkarten dir schon gezeigt wurden;</li>
+  <li>die Historie des Tagesrätsels (höchstens 90 Einträge) sowie deine
+  laufende und deine beste Serie;</li>
+  <li>drei Einstellungen: Ton, Vibration und Darstellung (hell / dunkel /
+  systemabhängig).</li>
+</ul>
+<p>Mehr wird nicht gespeichert. Insbesondere gibt es <strong>keine Kennung</strong>
+— keine Nutzer-ID, keine Geräte-ID, keine Werbe-ID — und nichts davon ist mit
+deiner Person verknüpfbar. Diese Daten werden <strong>nicht übertragen</strong>
+und verschwinden vollständig, wenn du die App löschst.</p>
+<p>Auch die Level selbst werden nicht geladen: Level 890 ist auf jedem iPhone
+dasselbe Brett, weil es aus seiner Nummer berechnet wird. Deshalb braucht die App
+weder eine Verbindung noch einen Download.</p>
+
+<h3>3 · Daten löschen</h3>
+<p>Zwei Wege, beide vollständig:</p>
+<ul>
+  <li><strong>In der App:</strong> Statistik → „Fortschritt zurücksetzen“.
+  Entfernt Level-Ergebnisse, Sterne, Abzeichen, die Expertenlevel, die gezeigten
+  Erklärkarten, die Tagesrätsel-Historie und beide Serien. Die drei Einstellungen
+  bleiben erhalten — sie sind kein Fortschritt, und eine App, die nach einem
+  Zurücksetzen ungefragt wieder hell leuchtet, wirkt kaputt statt gründlich.</li>
+  <li><strong>App löschen:</strong> entfernt restlos alles, auch die
+  Einstellungen.</li>
+</ul>
+<p>Ein Auskunfts- oder Löschersuchen an uns ist dafür nicht nötig und würde auch
+nichts finden: es liegen hier keine Daten von dir.</p>
+
+<h3>4 · Berechtigungen</h3>
+<p>Die App fragt <strong>keine</strong> Systemberechtigung ab. Kein Standort,
+keine Kontakte, keine Fotos, kein Mikrofon, keine Kamera, keine Mitteilungen und
+kein Tracking-Dialog. Ton und Vibration nutzen keine Berechtigung.</p>
+
+<h3>5 · Wenn du uns schreibst</h3>
+<p>Schreibst du an die oben genannte Adresse, verarbeiten wir deine E-Mail-Adresse
+und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f
+DSGVO — berechtigtes Interesse an der Beantwortung von Anfragen). Der Postfach-
+Anbieter ist Google; die Nachricht liegt dort so lange, wie sie für Rückfragen
+gebraucht wird, und wird danach gelöscht.</p>
+
+<h3>6 · Diese Website</h3>
+<p>Diese Seiten liegen bei GitHub Pages (GitHub, Inc.). Beim Aufruf überträgt
+dein Browser technisch notwendige Daten — IP-Adresse, Zeitpunkt, aufgerufene
+Seite, User-Agent — die GitHub in Server-Logs verarbeitet. Wir setzen auf diesen
+Seiten <strong>keine Cookies</strong>, binden keine Schriften oder Skripte von
+Dritten ein und führen keine Reichweitenmessung durch.</p>
+
+<h3>7 · Was wir nicht tun</h3>
+<p>Der Vollständigkeit halber, weil die Abwesenheit hier die eigentliche Aussage
+ist. Hakoro hat <strong>keinen Server</strong>, <strong>kein Konto</strong>,
+<strong>keine Rangliste</strong>, <strong>keine Werbung</strong>, <strong>keinen
+In-App-Kauf</strong>, <strong>keinen Analyse- oder Absturzberichts-Dienst</strong>
+und <strong>keine Netzwerkverbindung</strong>. Es findet kein Tracking statt und
+es werden keine Daten an Dritte weitergegeben oder verkauft — es gibt keine.</p>
+
+<h3>8 · Deine Rechte</h3>
+<p>Dir stehen die Rechte aus Art. 15 bis 21 DSGVO zu: Auskunft, Berichtigung,
+Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, außerdem das Recht
+auf Beschwerde bei einer Aufsichtsbehörde. Zuständig ist für uns die Berliner
+Beauftragte für Datenschutz und Informationsfreiheit.</p>
+<p>Praktisch betreffen diese Rechte hier nur eine etwaige E-Mail von dir
+(Abschnitt 5). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
+nicht haben — er liegt auf deinem Gerät, und nur dort.</p>
+
+<h3>9 · Kinder</h3>
+<p>Die App richtet sich an alle Altersgruppen. Sie fragt kein Alter ab, erhebt
+keine Daten und enthält keine Werbung, keine Käufe und keine Möglichkeit, mit
+anderen Menschen in Kontakt zu treten.</p>
+
+<h3>10 · Änderungen dieser Erklärung</h3>
+<p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert — etwa,
+weil ein Dienst hinzukommt. Das Datum oben zeigt den letzten Stand. Wesentliche
+Änderungen kündigen wir in der App an.</p>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="./">Hakoro</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</footer>
+
+</div>
+</body>
+</html>

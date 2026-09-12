@@ -1,0 +1,176 @@
+<!doctype html>
+<!--
+  Hakoro — Hilfe und häufige Fragen. Die App-eigene Startseite; die Übersicht
+  über alle Apps liegt eine Ebene höher.
+
+  ⚠️ Die Antworten beschreiben, was die App WIRKLICH tut. Jede Zahl hier steht
+  so auch im Code — wer eine davon ändert, ändert sie hier mit:
+
+    • Sternregel: <= par = 3, < par × 2 = 2, sonst 1  (Engine/LevelCurve.swift,
+      `Scoring.stars`)
+    • Kapitel = 30 Level                              (Core/ProgressStore.swift,
+      `chapterSize`)
+    • Tagesrätsel immer mittelschwer                  (LevelFactory.daily)
+    • Ein Sturz kostet nichts                         (BlockGame.recoverFromFall)
+
+  ⚠️ NAMENSFRAGE. Das Genre ist alt und die Regeln sind nicht geschützt, die
+  konkreten Level und die Optik anderer Spiele aber schon. Auf dieser Seite wird
+  deshalb KEIN fremder Produktname genannt — weder als Vergleich noch als
+  Suchbegriff. Siehe RESEARCH.md §2 im App-Repo.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hakoro — Hilfe &amp; Support</title>
+<meta name="description" content="Hakoro: Block-Puzzle für iPhone. Roll den Klotz hochkant ins Loch. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Hakoro</h1>
+    <div class="sub">Block-Puzzle</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Hakoro</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Ein Klotz, doppelt so hoch wie breit. Ein Loch, genau eine Zelle groß. Der
+Klotz muss <strong>hochkant</strong> hineinfallen — liegend passt er nicht.</p>
+
+<p><strong>Hakoro</strong> ist ein Block-Puzzle für iPhone. Der Name kommt aus
+dem Japanischen: 箱 <em>hako</em> ist die Kiste, ころ <em>koro</em> heißt
+rollend. Eine rollende Kiste also.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Hakoro geht. Ich antworte in der
+  Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Die Regeln, vollständig</h2>
+
+<div class="card">
+  <p>Der Klotz <strong>rollt über seine Kanten</strong>. Er rutscht nicht und er
+  springt nicht: ein Wisch kippt ihn um genau eine Kante.</p>
+  <ul>
+    <li>Steht er <strong>aufrecht</strong>, belegt er eine Zelle. Kippt er,
+    <strong>liegt</strong> er über zwei.</li>
+    <li>Ragt auch nur eine belegte Zelle ins Leere, fällt er.</li>
+    <li><strong>Das Loch schluckt ihn nur aufrecht.</strong> Quer darüber zu
+    liegen ist völlig ungefährlich — und meistens der Weg dorthin.</li>
+  </ul>
+
+  <h3>Die Felder</h3>
+  <ul>
+    <li><strong>Brüchig</strong> (mit einem Riss): trägt den liegenden Klotz,
+    bricht aber unter dem aufrechten weg. Sein volles Gewicht steht dann auf
+    einer Zelle.</li>
+    <li><strong>Brücke</strong>: eine Fläche, die erst da ist, wenn sie
+    eingeschaltet wurde. Vorher ist sie nicht etwa ausgegraut — sie ist
+    <em>nicht da</em>. Wo eine Brücke erscheinen wird, ist die halbe Frage.</li>
+    <li><strong>Runder Schalter</strong> (ein Ring): reagiert auf jede Berührung,
+    liegend wie stehend.</li>
+    <li><strong>Kreuz-Schalter</strong> (ein X): reagiert nur, wenn der Klotz
+    <em>aufrecht</em> darauf steht. Quer darüber zu liegen tut nichts.</li>
+    <li>Ein Punkt in der Mitte eines Schalters heißt: er <strong>schaltet
+    um</strong>. Was offen war, ist dann zu.</li>
+    <li>Ein Schalter und die Brücke, die er meint, haben <strong>dieselbe
+    Farbe</strong>. Bei zwei Brücken ist das die einzige Auskunft darüber, welche
+    gemeint ist.</li>
+  </ul>
+  <p class="meta">Jedes Feld wird beim ersten Mal mit einer eigenen Karte
+  erklärt. Über den Info-Knopf im Level siehst du jederzeit, was auf
+  <em>diesem</em> Brett liegt.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Brauche ich ein Konto? Internet?</h3>
+  <p>Weder noch. Hakoro hat keine Anmeldung, keinen Server und keine
+  Netzwerkverbindung. Die App funktioniert im Flugmodus genauso wie sonst, und
+  es gibt nichts, was sie senden könnte.</p>
+
+  <h3>Was kostet mich ein Sturz?</h3>
+  <p>Nichts außer Zeit. Keine Leben, keine Strafzüge, kein Neustart des
+  Kapitels — der Klotz steht wieder am Anfang des Levels, und das war es. Das ist
+  Absicht: fast jeder zweite mögliche Zug ist ein Sturz, und dafür zu bestrafen
+  hieße, das Ausprobieren zu bestrafen. Genau daraus besteht dieses Spiel aber.</p>
+
+  <h3>Wie kommen die Sterne zustande?</h3>
+  <p>Sie sind eine Aussage, keine Skala:</p>
+  <ul>
+    <li><strong>Drei Sterne</strong> — du hast es in der kürzestmöglichen
+    Zugzahl geschafft.</li>
+    <li><strong>Zwei Sterne</strong> — du hast weniger als das Doppelte
+    gebraucht.</li>
+    <li><strong>Ein Stern</strong> — geschafft ist geschafft.</li>
+  </ul>
+  <p>Die kürzeste Lösung ist keine Schätzung: jedes Level wird beim Bauen
+  vollständig durchgerechnet, deshalb steht die Zahl fest. Und weil die meisten
+  Level <em>genau eine</em> kürzeste Lösung haben, heißt „drei Sterne“ fast
+  immer, dass du <em>die</em> Linie gefunden hast.</p>
+
+  <h3>Sind die Level für alle gleich?</h3>
+  <p>Ja. Level 890 ist auf jedem iPhone dasselbe Brett — die Level werden aus
+  ihrer Nummer berechnet, nicht zufällig gewürfelt. „Ich bin bei 312“ bedeutet
+  also für dein Gegenüber dasselbe wie für dich.</p>
+
+  <h3>Wann wird es schwer?</h3>
+  <p>Die ersten elf Level sind alle leicht, das erste mittelschwere ist Level 12,
+  und <strong>das erste schwere ist Level 40</strong>. Danach kommen leichte,
+  mittlere und schwere gemischt, mit wachsendem Anteil schwerer — aber nie zwei
+  schwere direkt hintereinander, und jedes Kapitel fängt mit einem
+  Durchschnaufer an. Ab Level 180 wachsen die Bretter nicht mehr; die
+  Abwechslung kommt dann aus der Form des Levels, nicht aus seiner Größe.</p>
+
+  <h3>Was ist der Expertenmodus?</h3>
+  <p>Von Hand gebaute Level statt berechneter. Sie sind deutlich schwerer, es
+  gibt eine feste Reihenfolge, und jedes setzt voraus, was das davor beigebracht
+  hat. Dort taucht auch das <strong>Teilungsfeld</strong> auf: der Klotz zerfällt
+  in zwei Würfel, die du einzeln steuerst und wieder zusammensetzen musst.</p>
+
+  <h3>Was ist das Tagesrätsel?</h3>
+  <p>Ein Level pro Kalendertag, weltweit dasselbe für alle, immer
+  mittelschwer — damit es an keinem Tag am Zufall liegt. Die Serie zählt, wie
+  viele Tage du in Folge gelöst hast.</p>
+
+  <h3>Wofür sind die Abzeichen?</h3>
+  <p>Für ein vollständiges Kapitel: alle dreißig Level darin gelöst. Das
+  Abzeichen wird aus deinen Ergebnissen berechnet und nicht getrennt
+  gespeichert — es kann also nie etwas anderes behaupten als die Level selbst.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Statistik → ganz unten „Fortschritt zurücksetzen“. Gelöscht werden
+  Level-Ergebnisse, Sterne, Abzeichen, die Tagesrätsel-Historie und beide
+  Serien. <strong>Erhalten</strong> bleiben Ton, Vibration und die Darstellung —
+  das sind Einstellungen, kein Fortschritt. Rückgängig machen lässt sich das
+  nicht, deshalb die Nachfrage.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a> —
+  sie ist kurz, weil es wenig zu erklären gibt.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,139 +1,103 @@
 <!doctype html>
 <!--
-  Shingoki — Hilfe und häufige Fragen. Die App-eigene Startseite; die
-  Übersicht über alle Apps liegt eine Ebene höher.
+  Die Startseite ist seit 2026-08-21 eine ÜBERSICHT über alle Apps, nicht mehr
+  die Seite einer einzelnen. Was hier steht, muss für jede App gelten; alles
+  App-Spezifische gehört in deren Unterordner.
 
-  ⚠️ Die Antworten beschreiben, was die App WIRKLICH tut. Jede Zahl hier
-  (drei Tipps, ein Versuch, ein Fehltag pro Monat) steht so auch im Code —
-  wer eine davon ändert, ändert sie hier mit.
+  ⚠️ Diese Seite ist zugleich die **Support-URL** in App Store Connect. Die
+  Kontaktadresse muss deshalb ohne Scrollen und ohne Umweg zu finden sein — ein
+  Reviewer, der sie nicht sieht, meldet die Support-URL als unbrauchbar.
 -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shingoki — Hilfe &amp; Support</title>
-<meta name="description" content="Shingoki: tägliches Schleifenrätsel für iPhone. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
-<link rel="stylesheet" href="../style.css">
+<title>Apps von Pascal Dohmeier — Support &amp; Datenschutz</title>
+<meta name="description" content="Support, Datenschutzerklärungen und Impressum zu den iPhone-Apps von Pascal Dohmeier: Pathfinder Memory, Shingoki und Hakoro.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
 
 <header>
   <a class="brand" href="./">
-    <h1>Shingoki</h1>
-    <div class="sub">Eine Schleife</div>
+    <h1>Pascal Dohmeier</h1>
+    <div class="sub">iPhone-Apps</div>
   </a>
 </header>
 
 <nav>
-  <a href="../">Alle Apps</a>
-  <a href="./" aria-current="page">Shingoki</a>
-  <a href="datenschutz.html">Datenschutz</a>
-  <a href="../impressum.html">Impressum</a>
-  <a href="privacy.html">English</a>
+  <a href="./" aria-current="page">Übersicht</a>
+  <a href="impressum.html">Impressum</a>
 </nav>
 
-<p>Ein Punktgitter, ein paar Kreise mit Zahlen. Finde die eine geschlossene
-Schleife, die zu allen passt.</p>
+<p>Kleine, ruhige Rätselspiele fürs iPhone. Jede App hat unten ihre eigene
+Seite mit Hilfe, häufigen Fragen und ihrer Datenschutzerklärung — die
+Erklärungen sind bewusst getrennt, weil die Apps unterschiedliche Daten
+verarbeiten.</p>
 
-<p><strong>Shingoki</strong> ist ein Schleifenrätsel für iPhone. Jeden Tag ein
-neues Tagesrätsel, weltweit dasselbe für alle, dazu unbegrenztes Üben in drei
-Größen. Gewertet wird die Zeit — keine Punkte, keine Level.</p>
+<h2>Die Apps</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Pathfinder Memory</h3>
+  <p>Ein Raster, versteckte Spiegel, eine Kugel. Präg dir ein, wo die Spiegel
+  liegen — dann verschwinden sie, und du sagst voraus, an welchem Tor die Kugel
+  wieder herauskommt. Jeden Tag ein neues Rätsel, weltweit dasselbe für alle.</p>
+  <p>
+    <a href="pathfinder-memory/">Hilfe &amp; häufige Fragen</a> ·
+    <a href="datenschutz.html">Datenschutz</a> ·
+    <a href="privacy.html">Privacy (EN)</a>
+  </p>
+  <p class="meta">Im App Store seit August 2026</p>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">Shingoki</h3>
+  <p>Ein Schleifenrätsel auf einem Punktgitter. Weiße Kreise durchläuft die
+  Schleife geradeaus, schwarze mit einem Knick, und die Zahl sagt, wie lang die
+  beiden geraden Arme zusammen sind. Ein Tagesrätsel für alle, dazu unbegrenztes
+  Üben in drei Größen. Gewertet wird die Zeit.</p>
+  <p>
+    <a href="shingoki/">Hilfe &amp; häufige Fragen</a> ·
+    <a href="shingoki/datenschutz.html">Datenschutz</a> ·
+    <a href="shingoki/privacy.html">Privacy (EN)</a>
+  </p>
+  <p class="meta">Noch nicht veröffentlicht</p>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">Hakoro</h3>
+  <p>Ein Klotz, doppelt so hoch wie breit, rollt über seine Kanten. Er muss
+  hochkant in ein Loch fallen, das genau eine Zelle groß ist — liegend passt er
+  nicht. Endlos viele Level, für alle dieselben, dazu ein Tagesrätsel und ein
+  Expertenmodus mit von Hand gebauten Brettern.</p>
+  <p>
+    <a href="hakoro/">Hilfe &amp; häufige Fragen</a> ·
+    <a href="hakoro/datenschutz.html">Datenschutz</a> ·
+    <a href="hakoro/privacy.html">Privacy (EN)</a>
+  </p>
+  <p class="meta">Noch nicht veröffentlicht</p>
+</div>
 
 <div class="card mint">
   <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
   <p>Fragen, Fehler, ein Vorschlag oder eine Meldung zu einem Anzeigenamen —
-  schreib einfach:</p>
+  schreib einfach. Bitte nenne dabei, um welche App es geht.</p>
   <p><strong><a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a></strong></p>
   <p class="meta">Ich antworte in der Regel innerhalb weniger Tage.</p>
 </div>
 
-<h2>Die Regeln, vollständig</h2>
-
-<div class="card">
-  <p>Das Feld ist ein Gitter aus <strong>Punkten</strong>. Kanten laufen nur
-  waagerecht und senkrecht zwischen direkt benachbarten Punkten. Gesucht ist
-  <strong>genau eine geschlossene Schleife</strong>.</p>
-  <ul>
-    <li>Jeder Punkt trägt <strong>0 oder genau 2</strong> Schleifenkanten — keine
-    Verzweigung, keine Kreuzung.</li>
-    <li>Alle gezeichneten Kanten gehören zu <strong>einer</strong> Schleife. Zwei
-    getrennte Schleifen sind falsch.</li>
-    <li><strong>Alle Kreise werden durchlaufen.</strong> Punkte ohne Kreis dürfen
-    frei bleiben.</li>
-    <li><strong>Weißer Kreis:</strong> die Schleife läuft dort geradeaus durch.</li>
-    <li><strong>Schwarzer Kreis:</strong> die Schleife macht dort einen Knick.</li>
-    <li><strong>Die Zahl</strong> ist die Summe der Längen der beiden geraden
-    Arme, jeweils bis zum nächsten Knick, in Kanten gezählt. Beim weißen Kreis ist
-    das die Gesamtlänge der Geraden, auf der er liegt; beim schwarzen Arm A plus
-    Arm B. Kleinste mögliche Zahl ist 2.</li>
-    <li>Ein Kreis darf auch <strong>ohne Zahl</strong> auftreten — dann gilt nur
-    die Formbedingung.</li>
-  </ul>
-  <p class="meta">Das ist die vollständige Liste. Shingoki ist nicht Masyu: es
-  gibt keine Zusatzregel für Nachbarfelder eines Kreises.</p>
-</div>
-
-<h2>Häufige Fragen</h2>
-
-<div class="card">
-  <h3 style="margin-top:0">Brauche ich ein Konto?</h3>
-  <p>Nein. Keine E-Mail, kein Passwort. Beim ersten Start wird automatisch ein
-  anonymes Profil angelegt; du wählst nur einen Anzeigenamen für die Ranglisten.</p>
-
-  <h3>Warum kann ich das Tagesrätsel nur einmal spielen?</h3>
-  <p>Weil alle weltweit dasselbe Rätsel bekommen — ein Versuch pro Tag hält den
-  Vergleich fair. Die Uhr startet erst mit der ersten gezeichneten Linie, du
-  kannst dir das Rätsel also in Ruhe ansehen, ohne dass es zählt. Zum
-  Weiterspielen gibt es das Üben, das unbegrenzt ist.</p>
-
-  <h3>Ich habe das Tagesrätsel gelöst und kann es nicht noch einmal öffnen.</h3>
-  <p>Doch — du siehst dann deine aufgezeichnete Zeit statt eines neuen Bretts.
-  Ein zweiter Durchgang würde bedeuten, dass sich die Bestzeit beliebig oft neu
-  würfeln lässt, und dann wäre die Rangliste nichts wert.</p>
-
-  <h3>Ich habe meine Streak verloren, obwohl ich nur einen Tag verpasst habe.</h3>
-  <p>Einen verpassten Tag pro Kalendermonat repariert die App automatisch. Zwei
-  oder mehr Tage am Stück beenden die Streak — sonst wäre die Zahl nicht
-  ehrlich.</p>
-
-  <h3>Warum kostet ein Tipp ein Video?</h3>
-  <p>Weil die App sich über Werbung finanziert und es sonst keinen Grund gäbe,
-  sie überhaupt zu zeigen. Fair ist das nur wegen einer zweiten Entscheidung:
-  <strong>die Uhr steht, während die Anzeige läuft</strong> — ein Video kostet
-  dich nie die Zeit, für die du es angesehen hast. Mehr als drei Tipps pro Rätsel
-  gibt es nicht.</p>
-
-  <h3>Die Werbung ließ sich nicht laden und ich habe den Tipp trotzdem bekommen.</h3>
-  <p>Richtig so. Ein kaputter Anzeigen-Abruf ist unser Problem, nicht deins.</p>
-
-  <h3>Wie werde ich die Werbung los?</h3>
-  <p>Einstellungen → „Werbung entfernen“. Einmaliger Kauf, danach wird kein
-  Werbe-SDK mehr geladen und Tipps kommen ohne Video. Der Tipp-Zähler läuft
-  weiter und die Obergrenze von drei gilt auch dann — sonst wäre es ein gekaufter
-  Vorteil. Über „Käufe wiederherstellen“ holst du den Kauf auf ein neues Gerät.</p>
-
-  <h3>Wie ändere ich meine Werbe-Einwilligung?</h3>
-  <p>Die Einwilligung für personalisierte Werbung lässt sich jederzeit über die
-  Datenschutz-Optionen im Einwilligungsdialog widerrufen. Apples
-  Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
-  Sicherheit → Tracking.</p>
-
-  <h3>Wie lösche ich meine Daten?</h3>
-  <p>Einstellungen → „Profil löschen“. Anzeigename, Ranglisten-Einträge und
-  Streak werden vom Server entfernt und der Name wird wieder frei. Du spielst
-  danach als neuer, anonymer Spieler weiter.</p>
-
-  <h3>Jemand nutzt einen anstößigen Namen.</h3>
-  <p>Halte die Zeile in der Rangliste gedrückt → „Namen melden“ oder „Spieler
-  blockieren“. Blockierte Spieler erscheinen in keiner Rangliste mehr.</p>
-</div>
+<h2>Rechtliches</h2>
+<p>Das <a href="impressum.html">Impressum</a> nach § 5 DDG gilt für alle Apps und
+für diese Website. Die Datenschutzerklärungen sind je App getrennt und stehen bei
+der jeweiligen App oben.</p>
 
 <footer>
-  <a href="../">Alle Apps</a>
-  <a href="datenschutz.html">Datenschutz</a>
-  <a href="privacy.html">Privacy (EN)</a>
-  <a href="../impressum.html">Impressum</a>
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutz (Pathfinder Memory)</a>
+  <a href="shingoki/datenschutz.html">Datenschutz (Shingoki)</a>
+  <a href="hakoro/datenschutz.html">Datenschutz (Hakoro)</a>
+  <a href="mailto:pathfindermemory.support@gmail.com">Kontakt</a>
 </footer>
 
 </div>
