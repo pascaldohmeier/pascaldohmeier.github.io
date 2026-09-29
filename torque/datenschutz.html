@@ -1,0 +1,226 @@
+<!doctype html>
+<!--
+  Torque — Datenschutzerklärung. Stand 2026-09-29, App-Version 1.0.
+
+  Keine Rechtsberatung. Aufbau wie Hakoro, Absatz für Absatz gegen TORQUES
+  tatsächliche Datenflüsse abgeglichen (Repo ~/Torque).
+
+  Was Torque hat und Hakoro nicht:
+    • GAME CENTER: Bestenlisten über Apple (TorqueApp/GameCenter.swift). Abschnitt 5.
+    • MITTEILUNGEN: lokal geplant, nach Erlaubnis (TorqueApp/Benachrichtigungen.swift). Abschnitt 6.
+    • WERBUNG NUR FREIWILLIG: belohnte Videos, keine Interstitials, keine Banner. Abschnitt 4.
+  Was Torque nicht hat: keinen In-App-Kauf, keinen Server, kein Konto, keine Analyse.
+
+  ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
+    1. Abschnitt 2 ist die vollständige Liste: save.json (+ drei Sicherungen) in
+       Application Support/Torque, dazu drei UserDefaults-Schlüssel
+       (gameCenter.gesendet, benachrichtigungen.geplant, benachrichtigungen.zuletztZugestellt).
+    2. „Zurücksetzen behält die Einstellungen“ hängt an GameStore.spielstandZuruecksetzen().
+    3. Die Bestenlisten in Abschnitt 5 sind Bestenliste.allCases (TorqueCore/Content/Bestenlisten.swift).
+    4. Kommt Cloud-Sync, Analyse oder ein Crash-Reporter dazu, ändern sich im selben
+       Schritt: diese Seite, privacy.html, PrivacyInfo.xcprivacy und die App-Privacy-Auskunft
+       in App Store Connect.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torque — Datenschutzerklärung</title>
+<meta name="description" content="Datenschutzerklärung für das iPhone-Spiel Torque: kein Konto, kein Server, freiwillige Werbung über Google AdMob mit Einwilligung.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Torque</h1>
+    <div class="sub">Idle-Getriebespiel</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./">Torque</a>
+  <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<h2>Datenschutzerklärung</h2>
+<p class="meta">Stand: 29. September 2026 · gilt für Torque ab Version 1.0</p>
+
+<div class="card mint">
+  <h3 style="margin-top:0">Kurzfassung</h3>
+  <p><strong>Torque braucht kein Benutzerkonto</strong>, keine E-Mail-Adresse und
+  kein Passwort. Es gibt keinen eigenen Server und keine Analyse. Dein Spielstand
+  liegt ausschließlich auf deinem iPhone.</p>
+  <p><strong>Werbung siehst du nur, wenn du sie selbst startest</strong>: ein
+  Video gegen einen Boost im Spiel. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Für <strong>personalisierte</strong>
+  Werbung fragen wir vorher um Erlaubnis — über Googles Einwilligungsdialog und
+  Apples Tracking-Abfrage.</p>
+  <p>Wenn du bei <strong>Game Center</strong> angemeldet bist, schickt das Spiel
+  deine Bestwerte an Apples Bestenlisten. Mitteilungen gibt es nur, wenn du sie
+  erlaubst.</p>
+</div>
+
+<h3>1 · Verantwortlicher</h3>
+<p>
+  Pascal Dohmeier<br>
+  Gustav-Müller-Straße 20A<br>
+  10829 Berlin, Deutschland<br>
+  E-Mail: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  Telefon: <a href="tel:+4916095861111">+49 160 95861111</a>
+</p>
+<p>Ein Datenschutzbeauftragter ist nicht bestellt; die Voraussetzungen des
+Art. 37 DSGVO und des § 38 BDSG liegen nicht vor. Für alle Anliegen zum
+Datenschutz erreichst du mich direkt unter den Angaben oben.</p>
+
+<h3>2 · Daten, die dein Gerät nicht verlassen</h3>
+<p>Die App speichert auf deinem Gerät genau Folgendes — das ist die vollständige
+Liste, nicht eine Auswahl:</p>
+<ul>
+  <li><strong>den Spielstand</strong> als Datei im App-Speicher, mit drei
+  automatischen Sicherungskopien: deine Fortschritte in allen Bereichen des
+  Spiels, Erfolge, Spielstatistik (etwa Spielzeit, Zeit abwesend, Anzahl der
+  Käufe) und ein kurzes Protokoll deiner letzten Spielsitzungen, das nur im Spiel
+  selbst angezeigt wird;</li>
+  <li><strong>deine Einstellungen</strong> in derselben Datei: Sprache,
+  Darstellung, Zahlenformat, Werkstatt-Radio, Haptik, Nachfragen und welche
+  Mitteilungen du abgeschaltet hast;</li>
+  <li>in den App-Einstellungen (Apples <em>UserDefaults</em>): welche Werte schon
+  an Game Center gemeldet wurden, damit nichts doppelt gesendet wird, und wann
+  welche Mitteilung geplant bzw. zuletzt zugestellt wurde.</li>
+</ul>
+<p>Es gibt <strong>keine Kennung</strong> von uns — keine Nutzer-ID, keine
+Geräte-ID — und nichts davon ist mit deiner Person verknüpft. Diese Daten werden
+von uns <strong>nicht übertragen</strong>.</p>
+<p>„Exportieren“ in den Einstellungen kopiert den Spielstand als Text in die
+Zwischenablage. Wohin du ihn einfügst, entscheidest du; „Importieren“ liest ihn
+von dort wieder ein. Die App liest die Zwischenablage nur, wenn du auf
+„Importieren“ tippst.</p>
+
+<h3>3 · Daten löschen</h3>
+<ul>
+  <li><strong>In der App:</strong> Einstellungen → „Spielstand zurücksetzen“.
+  Löscht den gesamten Spielfortschritt, Erfolge und Statistik. Deine
+  Einstellungen bleiben erhalten.</li>
+  <li><strong>App löschen:</strong> entfernt restlos alles auf dem Gerät.</li>
+  <li><strong>Game Center:</strong> bereits gemeldete Bestwerte liegen bei Apple
+  und werden über deinen Game-Center-Account verwaltet (Abschnitt 5).</li>
+</ul>
+<p>Ein Löschersuchen an uns ist dafür nicht nötig und würde auch nichts finden:
+es liegen hier keine Daten von dir.</p>
+
+<h3>4 · Werbung (Google AdMob)</h3>
+<p>Anbieter für den europäischen Wirtschaftsraum: Google Ireland Limited, Gordon
+House, Barrow Street, Dublin 4, Irland.</p>
+<p>Werbung erscheint <strong>nur, wenn du sie selbst startest</strong>: als Video
+gegen eine Belohnung im Spiel (doppeltes Tempo für einige Stunden, zusätzliche
+Überstunden oder eine verdoppelte Auftragsbelohnung), höchstens 20-mal am Tag.
+Es gibt keine Werbung zwischen Spielabschnitten und keine Banner. Googles
+Werbe-SDK startet frühestens nach 90 Sekunden Spielzeit oder wenn du vorher ein
+Werbeangebot öffnest.</p>
+<p>Für die Auslieferung, Messung und Betrugsabwehr von Werbung verarbeitet Google
+unter anderem:</p>
+<ul>
+  <li>die <strong>Werbe-ID (IDFA)</strong> deines Geräts — <strong>nur</strong>,
+      wenn du sowohl dem Einwilligungsdialog als auch Apples Tracking-Abfrage
+      zugestimmt hast</li>
+  <li>eine <strong>grobe Standortschätzung</strong> aus deiner IP-Adresse
+      (Land, Region — keine GPS-Daten; die App fragt keine Ortungsberechtigung an)</li>
+  <li><strong>Geräte- und Nutzungssignale</strong> sowie <strong>Absturz- und
+      Leistungsdaten</strong> des Werbe-SDKs</li>
+  <li><strong>Werbedaten</strong>: welche Anzeigen dir gezeigt wurden und wie du
+      darauf reagiert hast</li>
+</ul>
+<p>Diese Daten können von Google auch <strong>app-übergreifend</strong> zur
+Profilbildung genutzt werden. Genau deshalb fragen wir vorher. Rechtsgrundlage
+ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); ohne sie zeigt Google nur
+nicht personalisierte Werbung.</p>
+<p><strong>Deine Einwilligung ist jederzeit widerrufbar</strong>, ohne Angabe von
+Gründen: über „Werbe-Einwilligung ändern“ in den Einstellungen des Spiels. Apples
+Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
+Sicherheit → Tracking. Ein Widerruf gilt ab dem Zeitpunkt des Widerrufs; bis
+dahin erfolgte Verarbeitung bleibt rechtmäßig.</p>
+<p>Weitere Informationen:
+<a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a>,
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen“</a>
+und
+<a href="https://policies.google.com/privacy/frameworks" rel="noopener">Googles Rahmenbedingungen für Datenübermittlungen</a>.</p>
+
+<h3>5 · Game Center</h3>
+<p>Beim Start meldet sich das Spiel über Apples Game Center an, sofern du auf
+deinem iPhone bei Game Center angemeldet bist. Dann sendet es deine Bestwerte an
+Apples Bestenlisten: größte Zahl an Umdrehungen, Anzahl der Erfolge, schnellste
+Zeit bis zur Belastungsgrenze, Zeit bis zum Sieg, meiste Patente, meistes
+Kapital, höchster Firmenwert und Anzahl der Härtungen. Andere Spieler sehen
+diese Werte zusammen mit deinem Game-Center-Namen.</p>
+<p>Game Center ist ein Dienst von Apple; es gilt
+<a href="https://www.apple.com/de/legal/privacy/" rel="noopener">Apples Datenschutzrichtlinie</a>.
+Wir erhalten dabei keine Daten über dich. Wer das nicht möchte, meldet sich in
+den iOS-Einstellungen unter Game Center ab; das Spiel funktioniert ohne Game
+Center vollständig, nur die Bestenlisten fehlen dann.</p>
+
+<h3>6 · Berechtigungen und Mitteilungen</h3>
+<p>Nach deinem ersten Umrüsten fragt die App, ob sie <strong>Mitteilungen</strong>
+senden darf — etwa, wenn sich Umrüsten lohnt, wenn ein Boost abgelaufen ist, oder
+nach drei Tagen Pause. Diese Mitteilungen werden <strong>auf deinem Gerät</strong>
+geplant, nicht von einem Server geschickt. Du kannst sie in den Einstellungen des
+Spiels einzeln oder in den iOS-Einstellungen ganz abschalten.</p>
+<p>Weitere Abfragen gibt es nur für Apples <strong>Tracking-Dialog</strong>, der
+zur Werbung gehört (Abschnitt 4). Die App fragt keine Berechtigung für Standort,
+Kontakte, Fotos, Mikrofon oder Kamera an.</p>
+
+<h3>7 · Wenn du uns schreibst</h3>
+<p>Schreibst du an die oben genannte Adresse, verarbeiten wir deine E-Mail-Adresse
+und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f
+DSGVO — berechtigtes Interesse an der Beantwortung von Anfragen). Der Postfach-
+Anbieter ist Google; die Nachricht liegt dort so lange, wie sie für Rückfragen
+gebraucht wird, und wird danach gelöscht.</p>
+
+<h3>8 · Diese Website</h3>
+<p>Diese Seiten liegen bei GitHub Pages (GitHub, Inc.). Beim Aufruf überträgt
+dein Browser technisch notwendige Daten — IP-Adresse, Zeitpunkt, aufgerufene
+Seite, User-Agent — die GitHub in Server-Logs verarbeitet. Wir setzen auf diesen
+Seiten <strong>keine Cookies</strong>, binden keine Schriften oder Skripte von
+Dritten ein und führen keine Reichweitenmessung durch.</p>
+
+<h3>9 · Was wir nicht tun</h3>
+<p>Torque hat <strong>keinen eigenen Server</strong>, <strong>kein
+Konto</strong>, <strong>keine In-App-Käufe</strong> und <strong>keinen Analyse-
+oder Absturzberichts-Dienst</strong>. Wir selbst erheben keine personenbezogenen
+Daten, geben keine weiter und verkaufen keine. Was Google im Rahmen der Werbung
+verarbeitet, steht in Abschnitt 4, was Apple über Game Center verarbeitet, in
+Abschnitt 5.</p>
+
+<h3>10 · Deine Rechte</h3>
+<p>Dir stehen die Rechte aus Art. 15 bis 21 DSGVO zu: Auskunft, Berichtigung,
+Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, außerdem das Recht
+auf Beschwerde bei einer Aufsichtsbehörde. Zuständig ist für uns die Berliner
+Beauftragte für Datenschutz und Informationsfreiheit.</p>
+<p>Praktisch betreffen diese Rechte hier nur eine etwaige E-Mail von dir
+(Abschnitt 7). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
+nicht haben — er liegt auf deinem Gerät, und nur dort.</p>
+
+<h3>11 · Kinder</h3>
+<p>Das Spiel richtet sich an alle Altersgruppen. Es fragt kein Alter ab, erhebt
+selbst keine Daten und bietet keine Möglichkeit, mit anderen Menschen in Kontakt
+zu treten. Es enthält freiwillige <strong>Werbung</strong> (Abschnitt 4); das ist
+in der Altersfreigabe im App Store ausgewiesen.</p>
+
+<h3>12 · Änderungen dieser Erklärung</h3>
+<p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert — etwa,
+weil ein Dienst hinzukommt. Das Datum oben zeigt den letzten Stand.</p>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="./">Torque</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</footer>
+
+</div>
+</body>
+</html>

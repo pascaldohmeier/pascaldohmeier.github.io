@@ -1,34 +1,42 @@
 <!doctype html>
 <!--
-  Hakoro — Datenschutzerklärung. Stand 2026-09-12, App-Version 1.0.
+  Hakoro — Datenschutzerklärung. Stand 2026-09-15, App-Version 1.0.
 
   Keine Rechtsberatung. Aufgebaut auf der geprüften Fassung für Shingoki und
   Absatz für Absatz gegen HAKOROS tatsächliche Datenflüsse abgeglichen, nicht
-  kopiert. Und der Abgleich ist diesmal kurz ausgefallen, weil es keine gibt:
+  kopiert.
+
+  ⚠️ AM 2026-09-15 HAT SICH DAS GEÄNDERT, UND ZWAR GENAU IN DEM PUNKT, DEN DIE
+  VORIGE FASSUNG ALS IHREN KERN BESCHRIEB. Sie sagte „es gibt keine Datenflüsse"
+  und strich alle Werbe-Abschnitte ersatzlos. Seit dem Einbau des Werbe-SDK
+  stimmt das nicht mehr:
+
+    • WERBUNG über Google AdMob, mit Einwilligungsdialog (UMP) und Apples
+      Tracking-Abfrage. Abschnitt 4.
+    • EIN IN-APP-KAUF, „Werbung entfernen“, über Apples App Store. Abschnitt 5.
+    • Und damit ein NETZWERKZUGRIFF — nicht von unserem Code, aber vom SDK.
+
+  Weiterhin NICHT vorhanden, und das ist der Teil, der gelten bleibt:
 
     • KEIN Server. Hakoro hat kein Backend, keine API, keinen Supabase-Eintrag.
     • KEIN Konto, kein Anzeigename, keine Rangliste, keine Moderation.
-    • KEINE Werbung, kein AdMob, kein Einwilligungsdialog, kein IDFA.
-    • KEIN In-App-Kauf.
     • KEIN Analyse-Dienst, keine Ereignistabelle, kein Crash-Reporter.
-    • KEIN Netzwerkcode überhaupt. Die App importiert kein URLSession-basiertes
-      Modul und öffnet keine Verbindung.
-
-  Ganze Abschnitte der Shingoki-Fassung (Server, Werbung, In-App-Kauf,
-  Drittländer, Löschjob) entfallen hier deshalb ERSATZLOS statt leer
-  mitgeschleppt zu werden. Ein Abschnitt "Werbung: keine" lädt nur dazu ein, ihn
-  eines Tages zu füllen, ohne den Rest zu prüfen.
+    • KEIN eigener Netzwerkcode. Der Spielstand verlässt das Gerät nicht.
 
   ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
-    1. "verlässt dein Gerät nie" gilt, solange die App keinen Netzwerkcode hat.
-       Kommt ein Leaderboard, ein Cloud-Sync oder ein Crash-Reporter, muss diese
-       Seite IM SELBEN SCHRITT geändert werden — zusammen mit dem
+    1. "der Spielstand verlässt dein Gerät nie" gilt, solange die App keinen
+       eigenen Netzwerkcode hat. Kommt ein Leaderboard, ein Cloud-Sync oder ein
+       Crash-Reporter, muss diese Seite IM SELBEN SCHRITT geändert werden —
+       zusammen mit dem
        PrivacyInfo.xcprivacy im Repo und der App-Privacy-Auskunft in App Store
        Connect. Alle drei müssen dasselbe sagen.
     2. Die Aufzählung in Abschnitt 2 ist die vollständige Schlüsselliste aus
        PROJECT_STATE.md §4. Ein neuer UserDefaults-Schlüssel gehört hier hinein.
     3. "Zurücksetzen löscht X und behält Y" hängt an AppServices.resetProgress()
        und den beiden resetAll()-Methoden.
+    4. Die Werbe-Abschnitte beschreiben den Zustand MIT eingebautem SDK. Fällt
+       die Werbung je wieder weg, gehen sie mit — und zwar ersatzlos, nicht als
+       leerer Abschnitt "Werbung: keine".
 
   ⚠️ Support-Adresse ist vorerst dieselbe wie bei Pathfinder Memory. Sie muss
   identisch sein mit der im Impressum.
@@ -38,7 +46,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hakoro — Datenschutzerklärung</title>
-<meta name="description" content="Datenschutzerklärung für die iPhone-App Hakoro. Die App erhebt keine Daten und hat keine Netzwerkverbindung.">
+<meta name="description" content="Datenschutzerklärung für die iPhone-App Hakoro: kein Konto, kein Server, Werbung über Google AdMob mit Einwilligung.">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -60,17 +68,21 @@
 </nav>
 
 <h2>Datenschutzerklärung</h2>
-<p class="meta">Stand: 12. September 2026 · gilt für Hakoro ab Version 1.0</p>
+<p class="meta">Stand: 15. September 2026 · gilt für Hakoro ab Version 1.0</p>
 
 <div class="card mint">
   <h3 style="margin-top:0">Kurzfassung</h3>
-  <p><strong>Hakoro erhebt keine personenbezogenen Daten und hat überhaupt keine
-  Netzwerkverbindung.</strong> Es gibt keinen Server, kein Konto, keine Werbung,
-  keine Analyse und keinen Kauf. Dein Spielstand liegt ausschließlich auf deinem
-  iPhone und wird nirgendwohin übertragen — er kann es gar nicht, weil die App
-  keine Möglichkeit hat, etwas zu senden.</p>
-  <p>Die App funktioniert im Flugmodus vollständig. Das ist kein Zufall, sondern
-  die Bauweise: Level werden auf dem Gerät berechnet, nicht geladen.</p>
+  <p><strong>Hakoro braucht kein Benutzerkonto</strong>, keine E-Mail-Adresse und
+  kein Passwort. Es gibt keinen Server, keine Rangliste und keine Analyse. Dein
+  Spielstand liegt ausschließlich auf deinem iPhone.</p>
+  <p>Die App zeigt <strong>Werbung</strong> über Google AdMob und finanziert sich
+  darüber. Werbung lässt sich per einmaligem In-App-Kauf dauerhaft entfernen.</p>
+  <p>Für <strong>personalisierte</strong> Werbung fragen wir dich vorher um
+  Erlaubnis — über den Einwilligungsdialog von Google und, unter iOS, zusätzlich
+  über Apples Tracking-Abfrage. Lehnst du ab, siehst du weiterhin Werbung, nur
+  nicht personalisierte. Alles andere funktioniert unverändert.</p>
+  <p>Das Spiel selbst läuft offline: Level werden auf dem Gerät berechnet, nicht
+  geladen. Ohne Netz erscheint schlicht keine Werbung.</p>
 </div>
 
 <h3>1 · Verantwortlicher</h3>
@@ -121,48 +133,92 @@ weder eine Verbindung noch einen Download.</p>
 <p>Ein Auskunfts- oder Löschersuchen an uns ist dafür nicht nötig und würde auch
 nichts finden: es liegen hier keine Daten von dir.</p>
 
-<h3>4 · Berechtigungen</h3>
-<p>Die App fragt <strong>keine</strong> Systemberechtigung ab. Kein Standort,
-keine Kontakte, keine Fotos, kein Mikrofon, keine Kamera, keine Mitteilungen und
-kein Tracking-Dialog. Ton und Vibration nutzen keine Berechtigung.</p>
+<h3>4 · Werbung (Google AdMob)</h3>
+<p>Anbieter für den europäischen Wirtschaftsraum: Google Ireland Limited, Gordon
+House, Barrow Street, Dublin 4, Irland.</p>
+<p>Werbung erscheint an genau einer Stelle: als ganzseitige Anzeige beim Weitergehen
+zum nächsten Level. Nicht während du spielst, nicht auf dem Bildschirm mit deinem
+Ergebnis, und nicht in den ersten gelösten Leveln.</p>
+<p>Für die Auslieferung, Messung und Betrugsabwehr von Werbung verarbeitet Google
+unter anderem:</p>
+<ul>
+  <li>die <strong>Werbe-ID (IDFA)</strong> deines Geräts — <strong>nur</strong>,
+      wenn du sowohl dem Einwilligungsdialog als auch Apples Tracking-Abfrage
+      zugestimmt hast</li>
+  <li>eine <strong>grobe Standortschätzung</strong> aus deiner IP-Adresse
+      (Land, Region — keine GPS-Daten; die App fragt keine Ortungsberechtigung an)</li>
+  <li><strong>Geräte- und Nutzungssignale</strong> sowie <strong>Absturz- und
+      Leistungsdaten</strong> des Werbe-SDKs</li>
+  <li><strong>Werbedaten</strong>: welche Anzeigen dir gezeigt wurden und wie du
+      darauf reagiert hast</li>
+</ul>
+<p>Diese Daten können von Google auch <strong>app-übergreifend</strong> zur
+Profilbildung genutzt werden. Genau deshalb fragen wir vorher.</p>
+<p><strong>Deine Einwilligung ist jederzeit widerrufbar</strong>, ohne Angabe von
+Gründen: über „Datenschutz-Optionen“ im Abschnitt Werbung der App-Einstellungen.
+Apples Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
+Sicherheit → Tracking. Ein Widerruf gilt ab dem Zeitpunkt des Widerrufs; bis
+dahin erfolgte Verarbeitung bleibt rechtmäßig.</p>
+<p><strong>Werbung ganz abschalten:</strong> einmaliger In-App-Kauf „Werbung
+entfernen“. Danach wird das Werbe-SDK nicht mehr geladen, und es werden keine
+Werbedaten mehr erhoben.</p>
+<p>Weitere Informationen:
+<a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a>,
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen“</a>
+und
+<a href="https://policies.google.com/privacy/frameworks" rel="noopener">Googles Rahmenbedingungen für Datenübermittlungen</a>.</p>
 
-<h3>5 · Wenn du uns schreibst</h3>
+<h3>5 · In-App-Kauf</h3>
+<p>Der Kauf „Werbung entfernen“ wird über Apples App Store abgewickelt. Wir
+erhalten <strong>keine</strong> Zahlungsdaten — weder Name noch Adresse noch
+Kartennummer. Ob der Kauf besteht, fragt die App bei Apple ab; wir speichern dazu
+keine personenbezogenen Daten.</p>
+
+<h3>6 · Berechtigungen</h3>
+<p>Die App fragt <strong>keine</strong> Systemberechtigung für Standort, Kontakte,
+Fotos, Mikrofon, Kamera oder Mitteilungen ab. Ton und Vibration nutzen keine
+Berechtigung. Einzige Abfrage ist Apples <strong>Tracking-Dialog</strong>, der zur
+Werbung gehört und den du ablehnen kannst.</p>
+
+<h3>7 · Wenn du uns schreibst</h3>
 <p>Schreibst du an die oben genannte Adresse, verarbeiten wir deine E-Mail-Adresse
 und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f
 DSGVO — berechtigtes Interesse an der Beantwortung von Anfragen). Der Postfach-
 Anbieter ist Google; die Nachricht liegt dort so lange, wie sie für Rückfragen
 gebraucht wird, und wird danach gelöscht.</p>
 
-<h3>6 · Diese Website</h3>
+<h3>8 · Diese Website</h3>
 <p>Diese Seiten liegen bei GitHub Pages (GitHub, Inc.). Beim Aufruf überträgt
 dein Browser technisch notwendige Daten — IP-Adresse, Zeitpunkt, aufgerufene
 Seite, User-Agent — die GitHub in Server-Logs verarbeitet. Wir setzen auf diesen
 Seiten <strong>keine Cookies</strong>, binden keine Schriften oder Skripte von
 Dritten ein und führen keine Reichweitenmessung durch.</p>
 
-<h3>7 · Was wir nicht tun</h3>
-<p>Der Vollständigkeit halber, weil die Abwesenheit hier die eigentliche Aussage
-ist. Hakoro hat <strong>keinen Server</strong>, <strong>kein Konto</strong>,
-<strong>keine Rangliste</strong>, <strong>keine Werbung</strong>, <strong>keinen
-In-App-Kauf</strong>, <strong>keinen Analyse- oder Absturzberichts-Dienst</strong>
-und <strong>keine Netzwerkverbindung</strong>. Es findet kein Tracking statt und
-es werden keine Daten an Dritte weitergegeben oder verkauft — es gibt keine.</p>
+<h3>9 · Was wir nicht tun</h3>
+<p>Der Vollständigkeit halber, weil die Abwesenheit auch eine Aussage ist. Hakoro
+hat <strong>keinen eigenen Server</strong>, <strong>kein Konto</strong>,
+<strong>keine Rangliste</strong> und <strong>keinen Analyse- oder
+Absturzberichts-Dienst</strong>. Wir selbst erheben keine personenbezogenen Daten,
+geben keine weiter und verkaufen keine. Was Google im Rahmen der Werbung
+verarbeitet, steht vollständig in Abschnitt 4 — und nur dort.</p>
 
-<h3>8 · Deine Rechte</h3>
+<h3>10 · Deine Rechte</h3>
 <p>Dir stehen die Rechte aus Art. 15 bis 21 DSGVO zu: Auskunft, Berichtigung,
 Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, außerdem das Recht
 auf Beschwerde bei einer Aufsichtsbehörde. Zuständig ist für uns die Berliner
 Beauftragte für Datenschutz und Informationsfreiheit.</p>
 <p>Praktisch betreffen diese Rechte hier nur eine etwaige E-Mail von dir
-(Abschnitt 5). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
+(Abschnitt 7). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
 nicht haben — er liegt auf deinem Gerät, und nur dort.</p>
 
-<h3>9 · Kinder</h3>
+<h3>11 · Kinder</h3>
 <p>Die App richtet sich an alle Altersgruppen. Sie fragt kein Alter ab, erhebt
-keine Daten und enthält keine Werbung, keine Käufe und keine Möglichkeit, mit
-anderen Menschen in Kontakt zu treten.</p>
+selbst keine Daten und bietet keine Möglichkeit, mit anderen Menschen in Kontakt
+zu treten. Sie enthält <strong>Werbung</strong> (Abschnitt 4) und einen
+<strong>In-App-Kauf</strong> (Abschnitt 5); beides ist in der Altersfreigabe im
+App Store ausgewiesen.</p>
 
-<h3>10 · Änderungen dieser Erklärung</h3>
+<h3>12 · Änderungen dieser Erklärung</h3>
 <p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert — etwa,
 weil ein Dienst hinzukommt. Das Datum oben zeigt den letzten Stand. Wesentliche
 Änderungen kündigen wir in der App an.</p>
