@@ -1,0 +1,151 @@
+<!doctype html>
+<!--
+  Pasch — Hilfe und häufige Fragen. Zugleich die Support-URL in App Store Connect:
+  die Kontaktadresse muss ohne Scrollen zu finden sein.
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/Pasch) — wer eine ändert, ändert sie hier mit:
+    • 12 Materialien, Formen W6 bis W100                 (DieMaterial, DieShape in PaschCore/Content.swift)
+    • Skilltree 79 Knoten (63 + 16 im äußeren Ring)       (SkillTree.nodes)
+    • 9 Herausforderungen                                (Challenge.allCases)
+    • 22 Tischbeläge, 11 Ränder                          (Felt, Rim in PaschUI/Cosmetics.swift)
+    • Offline: 50 % bis 8 h, 75 % bis 12 h, 100 % bis 24 h (Engine.maxOffline, offlineMult;
+                                                           Knoten nachtschicht, dauerbetrieb)
+    • Werbung: 30 min ×3, stapelbar bis 2 h              (Engine.adBoostSeconds, adBoostMax)
+    • Tageswurf W20 ab dem ersten Kollaps                (Engine.dailyAvailable)
+    • Mitteilung: genau eine, „Auto-Wurf macht Pause“    (PaschApp/Benachrichtigungen.swift)
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasch — Hilfe &amp; Support</title>
+<meta name="description" content="Pasch: Würfel-Incremental für iPhone. Wischen, würfeln, Materialien vom Holz bis zum Meteoriten. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Pasch</h1>
+    <div class="sub">Würfel-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Pasch</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Ein Würfel. Ein großer Tisch. Und ein Wisch mit dem Finger.</p>
+
+<p>In <strong>Pasch</strong> wischst du über deine Würfel, und jedes Auge bringt
+Euro. Davon kaufst du mehr Würfel — aus Holz, Silber, Gold, Smaragd, Rubin,
+Saphir, Amethyst, Obsidian, Diamant, Platin und später Titan und Meteorit —,
+machst sie wertvoller, lässt sie von selbst würfeln und gibst ihnen mehr Seiten,
+vom W6 bis zum W100. Gleiche Zahlen in einem Wisch sind ein Pasch, und der zahlt
+sich aus.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Pasch">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Pasch geht. Ich antworte in der
+  Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Wie spiele ich?</h3>
+  <p>Wisch mit dem Finger über die Würfel auf dem Tisch — jeder Würfel, den du
+  triffst, rollt, und seine Augen werden zu Euro. Mit dem Geld kaufst du neue
+  Würfel und Verbesserungen: mehr Wert je Auge, öfter hohe Zahlen, Auto-Wurf und
+  mehr Seiten. Gleiche Zahlen in einem Wisch (Pasch), Straßen oder ein Full House
+  geben einen Bonus. Dazu kommen goldene Würfel zum Fangen, der Würfelbecher, der
+  alle Würfel auf einmal wirft, und leuchtende Felder, auf die du zielen kannst.
+  Neues wird beim ersten Mal erklärt.</p>
+
+  <h3>Was ist der Kollaps und die Dunkle Materie?</h3>
+  <p>Irgendwann wird das Wachstum zäh. Dann kannst du den Tisch kollabieren lassen:
+  Geld, Würfel und Verbesserungen fangen von vorn an, dafür bekommst du
+  <strong>Dunkle Materie</strong>. Sie bleibt, und mit ihr kaufst du Knoten im
+  Skilltree, die jeden weiteren Durchgang schneller machen. Ab dem ersten Kollaps
+  gibt es außerdem einmal am Tag einen Wurf mit dem W20.</p>
+
+  <h3>Was ist der Skilltree?</h3>
+  <p>Ein Baum aus 79 Knoten, die du mit Dunkler Materie freischaltest: mehr Ertrag,
+  schnellerer Auto-Wurf, automatisches Kaufen, neue Materialien, mehr
+  Offline-Zeit und vieles mehr. Ganz außen liegt ein Ring für das späte Spiel.</p>
+
+  <h3>Was sind Herausforderungen?</h3>
+  <p>Neun Durchgänge mit erschwerten Regeln, etwa nur mit Holzwürfeln oder ohne
+  Pasch. Wer eine schafft, bekommt eine dauerhafte Belohnung. Abbrechen kannst du
+  jederzeit.</p>
+
+  <h3>Was ist der Urknall und der Sternenstaub?</h3>
+  <p>Der zweite, größere Neuanfang, möglich nach dem letzten Knoten im äußeren
+  Ring. Er setzt auch die Dunkle Materie und den Skilltree zurück und gibt dir
+  <strong>Sternenstaub</strong>. Den gibst du im Sternenstaub-Laden aus — dort
+  gibt es unter anderem Titan- und Meteoritenwürfel.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du sie selbst startest: über den Knopf „×3 Werbung“ am Tisch. Ein
+  Video bringt dir 30 Minuten dreifachen Ertrag, auch offline. Mehrere Videos
+  addieren sich bis zu zwei Stunden. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Details in der
+  <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Pasch hat keine In-App-Käufe. Fortschritt gibt es nur durchs Spielen.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus. Internet
+  brauchst du nur für die freiwillige Werbung.</p>
+
+  <h3>Läuft das Spiel weiter, wenn ich es schließe?</h3>
+  <p>Ja, sobald deine Würfel von selbst würfeln. Wenn du zurückkommst, wird die
+  Zeit nachgerechnet: anfangs mit halbem Ertrag und bis zu acht Stunden. Knoten
+  im Skilltree erhöhen das auf 75 % und zwölf Stunden, später auf vollen Ertrag
+  und 24 Stunden.</p>
+
+  <h3>Was ist die Mitteilung?</h3>
+  <p>Es gibt genau eine: „Dein Auto-Wurf macht Pause“, wenn die Offline-Zeit
+  aufgebraucht ist und deine Würfel nichts mehr verdienen. Das Spiel fragt erst
+  nach deinem ersten Kollaps, ob es sie schicken darf. Abschalten kannst du sie in
+  den iOS-Einstellungen.</p>
+
+  <h3>Wie sichere ich meinen Spielstand oder ziehe ihn auf ein neues iPhone um?</h3>
+  <p>Einstellungen → „Exportieren“ kopiert den Spielstand als Text in die
+  Zwischenablage. Leg ihn irgendwo ab, etwa in einer Notiz, und kopiere ihn auf
+  dem neuen Gerät wieder in die Zwischenablage. Dann Einstellungen →
+  „Importieren“. Der Spielstand auf dem Gerät wird dabei ersetzt.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Einstellungen → „Alles zurücksetzen“. Gelöscht wird der gesamte
+  Spielstand, auch Skilltree, Erfolge, Statistik und Album; deine Einstellungen
+  bleiben. Rückgängig machen lässt sich das nicht — exportiere den Spielstand
+  vorher, wenn du ihn behalten willst.</p>
+
+  <h3>Sprache und dunkle Darstellung?</h3>
+  <p>Pasch gibt es auf Deutsch und Englisch. Es folgt der Sprache deines iPhones,
+  in den Einstellungen kannst du sie aber auch fest wählen. Genauso bei der
+  Darstellung: System, Hell oder Dunkel.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a>.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>
