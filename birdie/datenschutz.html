@@ -1,0 +1,237 @@
+<!doctype html>
+<!--
+  Birdie — Datenschutzerklärung. Stand 2026-10-02, App-Version 1.0, Bundle-ID pd.Birdie.
+
+  Keine Rechtsberatung. Aufbau und Wortlaut wie Pasch (pasch/datenschutz.html), Absatz für
+  Absatz gegen BIRDIES tatsächliche Datenflüsse abgeglichen (Repo ~/Birdie).
+
+  Gleich wie Pasch: Werbung nur freiwillig (belohnte Videos über Google AdMob mit UMP-
+  Einwilligung und ATT, keine Interstitials, keine Banner), kein In-App-Kauf, kein Game
+  Center, kein Server, kein Konto, keine Analyse, kein Crash-Reporter. Genau eine lokale
+  Mitteilung, nach Erlaubnis. Einstellungen liegen getrennt vom Spielstand in UserDefaults.
+
+  Was Birdie anders hat als Pasch:
+    • Mitteilung „Die Ballmaschine ist leer“, Abfrage nach der ERSTEN SAISON (nicht Kollaps).
+    • Bewertungsbitte nach der ZWEITEN SAISON.
+    • Das Werbe-SDK startet vorzeitig erst beim Tippen auf „Werbung ansehen“, nicht schon
+      beim Öffnen des Angebots.
+    • Nur drei UserDefaults-Schlüssel; kein Kombi-Zähler, das Entwicklermenü wird nicht
+      gespeichert.
+
+  ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
+    1. Abschnitt 2 ist die vollständige Liste: birdie.json (+ eine Sicherung birdie.json.bak)
+       in Application Support (Persistence in BirdieUI/GameStore.swift), dazu drei
+       UserDefaults-Schlüssel: birdie.settings, birdie.notif.asked, birdie.review.asked.
+    2. „Zurücksetzen behält die Einstellungen“ hängt an GameStore.reset(): ersetzt nur
+       engine.state, birdie.settings bleibt unberührt.
+    3. „Zwischenablage nur beim Tippen auf Einfügen“ hängt an RootView (.importState) und
+       SettingsList in MoreView (Exportieren schreibt nur).
+    4. „Werbe-SDK frühestens nach 90 Sekunden oder beim Tippen auf Werbung ansehen“ hängt an
+       BirdieApp.swift (Task.sleep 90 s → werbung.starten()) und GameStore.werbungAnsehen()
+       → AdMobWerbung.vorbereiten().
+    5. „Werbe-Einwilligung ändern“ in den Einstellungen muss es geben, solange Abschnitt 4
+       darauf verweist (AdMobWerbung.einwilligungAendern, sichtbar wenn einwilligungAenderbar).
+    6. „Einmal nach der zweiten Saison um Bewertung bitten“ hängt an BirdieApp.swift
+       (seasons >= 2, birdie.review.asked, AppStore.requestReview). Abschnitt 5.
+    7. Kommt Cloud-Sync, Game Center, Analyse oder ein Crash-Reporter dazu, ändern sich im
+       selben Schritt: diese Seite, privacy.html, PrivacyInfo.xcprivacy und die
+       App-Privacy-Auskunft in App Store Connect.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birdie — Datenschutzerklärung</title>
+<meta name="description" content="Datenschutzerklärung für das iPhone-Spiel Birdie: kein Konto, kein Server, freiwillige Werbung über Google AdMob mit Einwilligung.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Birdie</h1>
+    <div class="sub">Idle-Golf-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./">Birdie</a>
+  <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<h2>Datenschutzerklärung</h2>
+<p class="meta">Stand: 2. Oktober 2026 · gilt für Birdie ab Version 1.0</p>
+
+<div class="card mint">
+  <h3 style="margin-top:0">Kurzfassung</h3>
+  <p><strong>Birdie braucht kein Benutzerkonto</strong>, keine E-Mail-Adresse und
+  kein Passwort. Es gibt keinen eigenen Server und keine Analyse. Dein Spielstand
+  liegt ausschließlich auf deinem iPhone.</p>
+  <p><strong>Werbung siehst du nur, wenn du sie selbst startest</strong>: ein
+  Video gegen dreifaches Geld im Spiel. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Für <strong>personalisierte</strong>
+  Werbung fragen wir vorher um Erlaubnis — über Googles Einwilligungsdialog und
+  Apples Tracking-Abfrage.</p>
+  <p>Eine Mitteilung gibt es nur, wenn du sie erlaubst.</p>
+</div>
+
+<h3>1 · Verantwortlicher</h3>
+<p>
+  Pascal Dohmeier<br>
+  Gustav-Müller-Straße 20A<br>
+  10829 Berlin, Deutschland<br>
+  E-Mail: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  Telefon: <a href="tel:+4916095861111">+49 160 95861111</a>
+</p>
+<p>Ein Datenschutzbeauftragter ist nicht bestellt; die Voraussetzungen des
+Art. 37 DSGVO und des § 38 BDSG liegen nicht vor. Für alle Anliegen zum
+Datenschutz erreichst du mich direkt unter den Angaben oben.</p>
+
+<h3>2 · Daten, die dein Gerät nicht verlassen</h3>
+<p>Die App speichert auf deinem Gerät genau Folgendes — das ist die vollständige
+Liste, nicht eine Auswahl:</p>
+<ul>
+  <li><strong>den Spielstand</strong> als Datei im App-Speicher, mit einer
+  automatischen Sicherungskopie: dein Fortschritt in allen Bereichen des Spiels
+  (Schläger, Ausrüstung, Plätze, Pokale, Turniere, Saisons, Skills, Sponsoren,
+  Hall of Fame, Legenden-Tour und Golfclub), Erfolge, freigeschaltete Optik,
+  Spielstatistik (etwa Spielzeit, Anzahl der Schläge und perfekten Schläge,
+  Turnierergebnisse und Rekorde), wann du zuletzt gespielt hast (für den
+  Offline-Ertrag), an welchem Tag du zuletzt das Tagesturnier gespielt hast, wie
+  viele Werbevideos du angesehen hast (nur die Anzahl, für einen Erfolg) und bis
+  wann ein Werbe-Boost noch läuft;</li>
+  <li>in den App-Einstellungen (Apples <em>UserDefaults</em>):
+    <ul>
+      <li><strong>deine Einstellungen</strong>: Vibration, Töne, Geld-Zahlen auf
+      dem Platz, ob vor dem Saisonende nachgefragt wird, Darstellung, Sprache und
+      Zahlenformat;</li>
+      <li>ob schon um Erlaubnis für Mitteilungen gefragt wurde;</li>
+      <li>ob schon einmal um eine Bewertung gebeten wurde.</li>
+    </ul>
+  </li>
+</ul>
+<p>Es gibt <strong>keine Kennung</strong> von uns — keine Nutzer-ID, keine
+Geräte-ID — und nichts davon ist mit deiner Person verknüpft. Diese Daten werden
+von uns <strong>nicht übertragen</strong>.</p>
+<p>„Exportieren“ in den Einstellungen kopiert den Spielstand als Text in die
+Zwischenablage. Wohin du ihn einfügst, entscheidest du; „Importieren“ liest ihn
+von dort wieder ein. Die App liest die Zwischenablage nur, wenn du auf
+„Importieren“ und dann auf „Einfügen“ tippst.</p>
+
+<h3>3 · Daten löschen</h3>
+<ul>
+  <li><strong>In der App:</strong> Einstellungen → „Alles löschen“. Löscht
+  den gesamten Spielstand, auch Skills, Hall of Fame, Golfclub, Erfolge und
+  Statistik. Deine
+  Einstellungen bleiben erhalten.</li>
+  <li><strong>App löschen:</strong> entfernt restlos alles auf dem Gerät.</li>
+</ul>
+<p>Ein Löschersuchen an uns ist dafür nicht nötig und würde auch nichts finden:
+es liegen hier keine Daten von dir.</p>
+
+<h3>4 · Werbung (Google AdMob)</h3>
+<p>Anbieter für den europäischen Wirtschaftsraum: Google Ireland Limited, Gordon
+House, Barrow Street, Dublin 4, Irland.</p>
+<p>Werbung erscheint <strong>nur, wenn du sie selbst startest</strong>: über den
+Knopf „×3 Werbung“ als Video gegen eine Belohnung im Spiel — 30 Minuten
+dreifaches Geld; mehrere Videos addieren sich bis zu zwei Stunden. Es gibt
+keine Werbung zwischen Spielabschnitten und keine Banner. Googles Werbe-SDK
+startet frühestens 90 Sekunden nach dem Start der App oder wenn du vorher auf
+„Werbung ansehen“ tippst.</p>
+<p>Für die Auslieferung, Messung und Betrugsabwehr von Werbung verarbeitet Google
+unter anderem:</p>
+<ul>
+  <li>die <strong>Werbe-ID (IDFA)</strong> deines Geräts — <strong>nur</strong>,
+      wenn du sowohl dem Einwilligungsdialog als auch Apples Tracking-Abfrage
+      zugestimmt hast</li>
+  <li>eine <strong>grobe Standortschätzung</strong> aus deiner IP-Adresse
+      (Land, Region — keine GPS-Daten; die App fragt keine Ortungsberechtigung an)</li>
+  <li><strong>Geräte- und Nutzungssignale</strong> sowie <strong>Absturz- und
+      Leistungsdaten</strong> des Werbe-SDKs</li>
+  <li><strong>Werbedaten</strong>: welche Anzeigen dir gezeigt wurden und wie du
+      darauf reagiert hast</li>
+</ul>
+<p>Diese Daten können von Google auch <strong>app-übergreifend</strong> zur
+Profilbildung genutzt werden. Genau deshalb fragen wir vorher. Rechtsgrundlage
+ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); ohne sie zeigt Google nur
+nicht personalisierte Werbung.</p>
+<p><strong>Deine Einwilligung ist jederzeit widerrufbar</strong>, ohne Angabe von
+Gründen: über „Werbe-Einwilligung ändern“ in den Einstellungen des Spiels. Apples
+Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
+Sicherheit → Tracking. Ein Widerruf gilt ab dem Zeitpunkt des Widerrufs; bis
+dahin erfolgte Verarbeitung bleibt rechtmäßig.</p>
+<p>Weitere Informationen:
+<a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a>,
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen“</a>
+und
+<a href="https://policies.google.com/privacy/frameworks" rel="noopener">Googles Rahmenbedingungen für Datenübermittlungen</a>.</p>
+
+<h3>5 · Berechtigungen und Mitteilungen</h3>
+<p>Nach deiner ersten Saison fragt die App, ob sie <strong>Mitteilungen</strong>
+senden darf. Es gibt genau eine: „Die Ballmaschine ist leer“, wenn die
+Offline-Zeit aufgebraucht ist. Sie wird <strong>auf deinem Gerät</strong>
+geplant, wenn du die App verlässt, und wieder entfernt, wenn du zurückkommst —
+nicht von einem Server geschickt. Abschalten kannst du sie in den
+iOS-Einstellungen.</p>
+<p>Weitere Abfragen gibt es nur für Apples <strong>Tracking-Dialog</strong>, der
+zur Werbung gehört (Abschnitt 4). Die App fragt keine Berechtigung für Standort,
+Kontakte, Fotos, Mikrofon oder Kamera an.</p>
+<p>Nach deiner zweiten Saison bittet die App einmal über Apples
+Bewertungsdialog um eine Bewertung. Ob und wann der Dialog erscheint, entscheidet
+iOS; eine Bewertung geht an Apple, nicht an uns.</p>
+
+<h3>6 · Wenn du uns schreibst</h3>
+<p>Schreibst du an die oben genannte Adresse, verarbeiten wir deine E-Mail-Adresse
+und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f
+DSGVO — berechtigtes Interesse an der Beantwortung von Anfragen). Der Postfach-
+Anbieter ist Google; die Nachricht liegt dort so lange, wie sie für Rückfragen
+gebraucht wird, und wird danach gelöscht.</p>
+
+<h3>7 · Diese Website</h3>
+<p>Diese Seiten liegen bei GitHub Pages (GitHub, Inc.). Beim Aufruf überträgt
+dein Browser technisch notwendige Daten — IP-Adresse, Zeitpunkt, aufgerufene
+Seite, User-Agent — die GitHub in Server-Logs verarbeitet. Wir setzen auf diesen
+Seiten <strong>keine Cookies</strong>, binden keine Schriften oder Skripte von
+Dritten ein und führen keine Reichweitenmessung durch.</p>
+
+<h3>8 · Was wir nicht tun</h3>
+<p>Birdie hat <strong>keinen eigenen Server</strong>, <strong>kein
+Konto</strong>, <strong>keine In-App-Käufe</strong>, <strong>kein Game
+Center</strong> und <strong>keinen Analyse- oder Absturzberichts-Dienst</strong>.
+Wir selbst erheben keine personenbezogenen Daten, geben keine weiter und
+verkaufen keine. Was Google im Rahmen der Werbung verarbeitet, steht in
+Abschnitt 4.</p>
+
+<h3>9 · Deine Rechte</h3>
+<p>Dir stehen die Rechte aus Art. 15 bis 21 DSGVO zu: Auskunft, Berichtigung,
+Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, außerdem das Recht
+auf Beschwerde bei einer Aufsichtsbehörde. Zuständig ist für uns die Berliner
+Beauftragte für Datenschutz und Informationsfreiheit.</p>
+<p>Praktisch betreffen diese Rechte hier nur eine etwaige E-Mail von dir
+(Abschnitt 6). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
+nicht haben — er liegt auf deinem Gerät, und nur dort.</p>
+
+<h3>10 · Kinder</h3>
+<p>Das Spiel richtet sich an alle Altersgruppen. Es fragt kein Alter ab, erhebt
+selbst keine Daten und bietet keine Möglichkeit, mit anderen Menschen in Kontakt
+zu treten. Es enthält freiwillige <strong>Werbung</strong> (Abschnitt 4); das ist
+in der Altersfreigabe im App Store ausgewiesen.</p>
+
+<h3>11 · Änderungen dieser Erklärung</h3>
+<p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert — etwa,
+weil ein Dienst hinzukommt. Das Datum oben zeigt den letzten Stand.</p>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="./">Birdie</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<!--
+  Birdie — Hilfe und häufige Fragen. Zugleich die Support-URL in App Store Connect:
+  die Kontaktadresse muss ohne Scrollen zu finden sein.
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/Birdie, Überblick in docs/SPIELGUIDE.md) —
+     wer eine ändert, ändert sie hier mit:
+    • 9 Plätze; Platz 1–4 mit 6 Löchern, Platz 5–9 mit 9   (Courses, HoleCatalog in BirdieCore)
+    • 11 Gegner je Turnier, 2 Minuten Pause danach        (BirdieCore/Tournament.swift, tournamentReadyAt)
+    • Skilltree 7 Stufen × 3 Wege, Umskillen kostet 30 %   (Skills.swift, respecLoss)
+    • Saisonende: Schläger-Erfahrung −30 %                 (Engine.swift, keep = 0.7)
+    • 12 Ziele, 12 Sponsoren                               (BirdieCore/Content.swift)
+    • Ballmaschine offline: 2 h Grundwert                  (Engine.maxOffline)
+    • Werbung: 30 min ×3, stapelbar bis 2 h                (Engine.grantAdBoost, adBoostCanExtend)
+    • Mitteilung: genau eine, „Die Ballmaschine ist leer“,
+      Abfrage erst nach der ersten Saison                  (BirdieApp/Benachrichtigungen.swift)
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birdie — Hilfe &amp; Support</title>
+<meta name="description" content="Birdie: Idle-Golf-Incremental für iPhone. Auf der Driving Range üben, Turniere gewinnen, Saisons, Skilltree und eigener Golfclub. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Birdie</h1>
+    <div class="sub">Idle-Golf-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Birdie</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Eine Driving Range. Ein Korb Bälle. Und eine Nadel, die hin und her läuft.</p>
+
+<p>In <strong>Birdie</strong> übst du auf der Range und verdienst mit jedem Ball
+Geld — je weiter das Zielgrün und je näher an der Fahne, desto mehr. Deine
+Schläger werden mit jedem Schlag besser, eine Ballmaschine schlägt für dich weiter,
+und in <strong>Turnieren</strong> spielst du gegen ein Feld um Preisgeld, Pokale
+und den nächsten Platz — vom ersten Clubturnier bis zum Grand Slam und darüber
+hinaus.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Birdie">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Birdie geht. Ich antworte in der
+  Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Wie spiele ich?</h3>
+  <p>Unten auf der Range läuft eine Nadel hin und her. Tippe irgendwo auf die
+  Range, wenn sie im grünen Feld steht — das ist ein <strong>perfekter
+  Schwung</strong>: Der Ball streut weniger und bringt mehr Geld und mehr
+  Erfahrung. Daneben gibt es Slice, Hook oder einen Fehlschlag. Perfekte Schläge
+  in Folge erhöhen dein Geld zusätzlich. Mit dem Geld kaufst du im Shop bessere
+  Bälle, größere Zielgrüns, einen Schwungtrainer und Ausrüstung. Neues wird beim
+  ersten Mal erklärt.</p>
+
+  <h3>Wie werden meine Schläger besser?</h3>
+  <p>Durch Üben. Jeder Ball gibt dem Schläger in deiner Hand Erfahrung. Mit jeder
+  Stufe streut er weniger, fliegt etwas weiter, verzieht seltener, und sein grünes
+  Feld wird breiter. Neue Schläger gibt es im Pro-Shop, aber erst, wenn du den
+  passenden Platz erreicht hast — den Driver zum Beispiel erst mit dem vierten.</p>
+
+  <h3>Was macht die Ballmaschine?</h3>
+  <p>Sie schlägt von allein ab, auch wenn das Spiel geschlossen ist. Perfekt trifft
+  sie nie, und sie gibt nur wenig Erfahrung — üben musst du schon selbst.</p>
+
+  <h3>Wie funktionieren Turniere?</h3>
+  <p>Es gibt neun Plätze. Auf den ersten vier spielst du sechs Löcher, ab dem
+  fünften neun. Gegen dich treten elf Spieler an, Wind und Höhenmeter zählen mit,
+  und jeder Schlag läuft über die Nadel, auch der Putt. Ein Turnier kostet
+  Startgebühr, die besten Plätze bringen ein Vielfaches davon zurück. Der erste
+  Sieg auf einem Platz gibt dir einen Pokal, öffnet den nächsten Platz und neue
+  Schläger. Nach jedem Turnier gibt es zwei Minuten Pause. Einmal am Tag wartet
+  außerdem ein Tagesturnier ohne Startgebühr.</p>
+
+  <h3>Was ist eine Saison?</h3>
+  <p>Hast du in einer Saison ein Turnier gewonnen, kannst du sie beenden. Geld und
+  Range-Upgrades fangen dann von vorn an, deine Schläger verlieren 30 % ihrer
+  Erfahrung. Dafür bekommst du <strong>Trainingspunkte</strong> für dein bestes
+  Ergebnis auf jedem Platz. Schläger, Ausrüstung, Plätze, Pokale, Sponsoren und
+  Skills bleiben.</p>
+
+  <h3>Was ist der Skilltree?</h3>
+  <p>Sieben Stufen mit je drei Wegen, die du mit Trainingspunkten ausbaust — etwa
+  Longhitter, Putt-König oder Nachtschicht. Pro Stufe kannst du nur einen Weg
+  wählen, du musst dich also entscheiden. Umskillen geht jederzeit, kostet aber
+  30 % der Punkte.</p>
+
+  <h3>Was bringen Sponsoren?</h3>
+  <p>Zwölf Ziele schalten zwölf Sponsoren frei, zum Beispiel 25 perfekte Schläge in
+  Folge oder ein Turnier unter Par. Jeder Sponsor gibt einen eigenen Vorteil. Die
+  Zahl der Sponsorplätze ist begrenzt, du wählst also aus.</p>
+
+  <h3>Was kommt nach dem Grand Slam?</h3>
+  <p>Mit dem Sieg auf dem neunten Platz kannst du deine <strong>Karriere
+  beenden</strong>: Alles fängt von vorn an, dafür bekommst du Ruhm, der dauerhaft
+  mehr Geld bringt, und Vorteile in der <strong>Hall of Fame</strong>. Außerdem
+  öffnet sich die endlose <strong>Legenden-Tour</strong> mit Plätzen, die Stufe für
+  Stufe schwerer werden, und dein <strong>eigener Golfclub</strong>: Du baust Löcher,
+  Clubhaus und Anlagen, Mitglieder zahlen Beiträge, und in der Club-Open spielst du
+  auf deinem eigenen Platz.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du sie selbst startest: über den Knopf „×3 Werbung“ auf der Range.
+  Ein Video bringt dir 30 Minuten dreifaches Geld, auch offline. Mehrere Videos
+  addieren sich bis zu zwei Stunden. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Details in der
+  <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Birdie hat keine In-App-Käufe. Fortschritt gibt es nur durchs Spielen.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus. Internet
+  brauchst du nur für die freiwillige Werbung.</p>
+
+  <h3>Läuft das Spiel weiter, wenn ich es schließe?</h3>
+  <p>Ja, sobald du eine Ballmaschine hast. Wenn du zurückkommst, wird die Zeit
+  nachgerechnet: anfangs bis zu zwei Stunden. Ausrüstung, ein Sponsor und ein
+  Skill verlängern das.</p>
+
+  <h3>Was ist die Mitteilung?</h3>
+  <p>Es gibt genau eine: „Die Ballmaschine ist leer“, wenn die Offline-Zeit
+  aufgebraucht ist und die Maschine nichts mehr verdient. Das Spiel fragt erst
+  nach deiner ersten Saison, ob es sie schicken darf. Abschalten kannst du sie in
+  den iOS-Einstellungen.</p>
+
+  <h3>Wie sichere ich meinen Spielstand oder ziehe ihn auf ein neues iPhone um?</h3>
+  <p>Einstellungen → „Exportieren“ kopiert den Spielstand als Text in die
+  Zwischenablage. Leg ihn irgendwo ab, etwa in einer Notiz, und kopiere ihn auf
+  dem neuen Gerät wieder in die Zwischenablage. Dann Einstellungen →
+  „Importieren“. Der Spielstand auf dem Gerät wird dabei ersetzt.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Einstellungen → „Alles löschen“. Gelöscht wird der gesamte Spielstand,
+  auch Skills, Hall of Fame, Golfclub, Erfolge und Statistik; deine Einstellungen
+  bleiben. Rückgängig machen lässt sich das nicht — exportiere den Spielstand
+  vorher, wenn du ihn behalten willst.</p>
+
+  <h3>Sprache und dunkle Darstellung?</h3>
+  <p>Birdie gibt es auf Deutsch und Englisch. Es folgt der Sprache deines iPhones,
+  in den Einstellungen kannst du sie aber auch fest wählen. Genauso bei der
+  Darstellung: System, Hell oder Dunkel.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a>.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>
