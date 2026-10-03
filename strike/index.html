@@ -1,0 +1,175 @@
+<!doctype html>
+<!--
+  Strike Empire — Hilfe und häufige Fragen. Zugleich die Support-URL in App Store Connect:
+  die Kontaktadresse muss ohne Scrollen zu finden sein.
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/Bowling, Überblick in docs/SPIELGUIDE.md) —
+     wer eine ändert, ändert sie hier mit:
+    • bis zu 24 Bahnen, 9 Pin-Materialien, 4 Spezial-Pins, 7 Anlagen   (StrikeCore/Content.swift)
+    • 8 Ligen, Siege für den Titel 3/3/3/4/4/5/5/6, ab der Bundesliga größere Städte
+                                                                   (Leagues in Content.swift)
+    • 2 Minuten Pause nach einem Spieltag                         (Engine.matchPause)
+    • Filiale ab der Bezirksliga, 5 Städte                        (Leagues.branchLeague, City)
+    • Handbuch 7 Stufen × 3 Wege, Umplanen kostet 30 %            (Franchise.swift, respecLoss)
+    • Weltverband nach der WM, 5 Varianten                        (Franchise.swift)
+    • 12 Ziele, 12 Sponsoren                                       (Content.swift)
+    • Offline: 2 h Grundwert                                       (Engine.maxOffline)
+    • Werbung: 30 min ×3, stapelbar bis 2 h                       (Engine.grantAdBoost, adBoostCanExtend)
+    • Mitteilung: genau eine, „Deine Halle macht Feierabend“,
+      Abfrage erst nach der ersten Filiale                         (StrikeApp/Benachrichtigungen.swift)
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strike Empire — Hilfe &amp; Support</title>
+<meta name="description" content="Strike Empire: Idle-Bowling-Incremental für iPhone. Selbst werfen, eine Bowlinghalle ausbauen, Ligen bis zur Weltmeisterschaft gewinnen, Filialen und Weltverband. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Strike Empire</h1>
+    <div class="sub">Idle-Bowling-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Strike Empire</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Eine Bahn. Zehn Pins. Und eine Halle, die immer größer wird.</p>
+
+<p>In <strong>Strike Empire</strong> wirfst du selbst auf deiner Hausbahn,
+während Besucher auf den anderen Bahnen spielen — jeder umgefallene Pin bringt
+Geld. Du baust Bahnen, Pins und Anlagen aus, trainierst dein Team und gewinnst
+<strong>Ligen</strong> von der Hobbyliga bis zur Weltmeisterschaft. Danach eröffnest
+du Filialen in immer größeren Städten und gründest am Ende deinen eigenen
+Weltverband.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Strike%20Empire">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Strike Empire geht. Ich antworte in
+  der Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Wie werfe ich?</h3>
+  <p>Setz den Finger unten auf deiner Bahn auf — dort steht die Kugel an der
+  Foullinie. Dann wisch nach oben: Wohin die Linie zeigt, da kommt die Kugel an den
+  Pins an. Ein Bogen im Wisch gibt <strong>Drall</strong>: Die Kugel rutscht durchs
+  Öl und hakt hinten ein, so trifft sie die Pins mit mehr Winkel. Schnell wischen
+  gibt mehr Wucht. Beim Wischen siehst du den ganzen Weg; wird der Zielring grün,
+  ist es ein Strike-Kandidat. Ziel ist die Lücke zwischen Pin 1 und 3.</p>
+
+  <h3>Wie verdiene ich Geld?</h3>
+  <p>Jeder umgefallene Pin zahlt, Strikes und Spares zahlen ein Vielfaches. Deine
+  eigenen Würfe zählen für die ganze Halle, und mehrere Strikes in Folge erhöhen
+  dein Geld weiter. Auf den anderen Bahnen spielen Besucher von allein, auch wenn
+  das Spiel geschlossen ist.</p>
+
+  <h3>Was baue ich aus?</h3>
+  <p>Bis zu 24 Bahnen, Bahnpflege (Oberfläche, Ölmaschine, Ballrücklauf,
+  Anzeigetafel), Pin-Sätze in neun Materialien vom Ahorn bis zum Meteorit, vier
+  Spezial-Pins und sieben Anlagen: Schuhverleih, Bar, Disco-Bowling, Pro-Shop,
+  Tribüne, Trainingszentrum und Jugendabteilung. Mehr Ansehen bringt bessere
+  Besucher, Schuhverleih und Bar bringen mehr.</p>
+
+  <h3>Wie funktionieren die Ligen?</h3>
+  <p>Acht Ligen von der Hobbyliga bis zur Weltmeisterschaft. An einem Spieltag
+  spielst du mit deinen drei Stammspielern gegen vier andere Teams; deine zehn
+  Frames wirfst du selbst, eine Live-Tabelle zeigt den Stand. Für den Titel
+  brauchst du mehrere Spieltagssiege. Ein Titel bringt einen Pokal und schaltet
+  neue Pins, Anlagen und die nächste Liga frei. Nach jedem Spieltag gibt es zwei
+  Minuten Pause, einmal am Tag wartet ein kostenloses Tagesturnier.</p>
+
+  <h3>Wie wird mein Team besser?</h3>
+  <p>Deine Stammspieler trainieren von allein, auch offline — anfangs schnell, oben
+  immer langsamer. Trainingszentrum, Jugendabteilung, größere Städte und das
+  Franchise-Handbuch heben ihre Grenze.</p>
+
+  <h3>Was ist eine Filiale?</h3>
+  <p>Ab dem Titel in der Bezirksliga kannst du deine Halle verkaufen und in der
+  nächsten, größeren Stadt neu anfangen. Dafür gibt es <strong>Markenwert</strong>
+  für das Franchise-Handbuch: sieben Stufen mit je drei Wegen, pro Stufe nur einer.
+  Umplanen geht jederzeit, kostet aber 30 %. Die großen Ligen spielen erst in
+  größeren Städten. Pokale, Spezial-Pins, Sponsoren, Erfolge und Optik
+  bleiben.</p>
+
+  <h3>Und nach der Weltmeisterschaft?</h3>
+  <p>Gründe deinen eigenen <strong>Weltverband</strong>: Alles fängt von vorn an,
+  dafür gibt es Verbandsstimmen für dauerhafte Vorteile. Außerdem öffnen sich fünf
+  Varianten mit eigenen Regeln — Kegeln, Candlepin, Duckpin, 5-Pin und „Nur 3
+  Bahnen“ — mit je einer Belohnung für immer.</p>
+
+  <h3>Was bringen Sponsoren?</h3>
+  <p>Zwölf Ziele schalten zwölf Sponsoren frei, zum Beispiel ein Turkey oder ein
+  abgeräumter Split. Jeder gibt einen eigenen Vorteil, die Zahl der Plätze ist
+  begrenzt.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du sie selbst startest: über den Knopf „×3 Werbung“ oben links. Ein
+  Video bringt dir 30 Minuten dreifaches Geld, auch offline. Mehrere Videos
+  addieren sich bis zu zwei Stunden. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Details in der
+  <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Strike Empire hat keine In-App-Käufe. Fortschritt gibt es nur durchs
+  Spielen.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus. Internet
+  brauchst du nur für die freiwillige Werbung.</p>
+
+  <h3>Läuft das Spiel weiter, wenn ich es schließe?</h3>
+  <p>Ja. Wenn du zurückkommst, wird die Zeit nachgerechnet: Besucher zahlen anfangs
+  bis zu zwei Stunden lang, dein Team trainiert die ganze Zeit. Ein Skill und ein
+  Sponsor verlängern die Zeit.</p>
+
+  <h3>Was ist die Mitteilung?</h3>
+  <p>Es gibt genau eine: „Deine Halle macht Feierabend“, wenn die Offline-Zeit
+  aufgebraucht ist. Das Spiel fragt erst nach deiner ersten Filiale, ob es sie
+  schicken darf. Abschalten kannst du sie in den iOS-Einstellungen.</p>
+
+  <h3>Wie sichere ich meinen Spielstand oder ziehe ihn auf ein neues iPhone um?</h3>
+  <p>Mehr → Optionen → „Exportieren“ kopiert den Spielstand als Text in die
+  Zwischenablage. Leg ihn irgendwo ab, etwa in einer Notiz, und kopiere ihn auf dem
+  neuen Gerät wieder in die Zwischenablage. Dann „Importieren“. Der Spielstand auf
+  dem Gerät wird dabei ersetzt.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Mehr → Optionen → „Alles löschen“. Gelöscht wird der gesamte Spielstand,
+  auch Handbuch, Weltverband, Erfolge und Statistik; deine Einstellungen bleiben.
+  Rückgängig machen lässt sich das nicht — exportiere den Spielstand vorher, wenn
+  du ihn behalten willst.</p>
+
+  <h3>Sprache und dunkle Darstellung?</h3>
+  <p>Strike Empire gibt es auf Deutsch und Englisch. Es folgt der Sprache deines
+  iPhones, in den Optionen kannst du sie aber auch fest wählen. Genauso bei der
+  Darstellung: System, Hell oder Dunkel.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a>.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>
