@@ -1,0 +1,231 @@
+<!doctype html>
+<!--
+  Brickstorm – Idle Army — Datenschutzerklärung. Stand 2026-10-10, App-Version 1.0.
+
+  Keine Rechtsberatung. Aufbau wie Kugelregen, Absatz für Absatz gegen BRICKSTORMS
+  tatsächliche Datenflüsse abgeglichen (Angaben aus der Entwicklung, Stand 2026-10-10).
+
+  Was Brickstorm anders hat als Kugelregen:
+    • VIER Werbestellen statt einer: „×3 Werbung“, Tempo-Knopf (über 1× für 10 min),
+      Goldregen-Angebot am Rand des Schlachtfelds (wegklickbar, verschwindet selbst),
+      „Werbung“ im Karten-Tab (+5 Gems, max. 5 pro Tag).
+    • Ohne verfügbare Werbung gibt es die Belohnung trotzdem.
+    • Tagesgeschenk nach dem lokalen Datum des Geräts; keine Netzzeit.
+    • Nur Deutsch, daher keine Sprach-/Zahlenformat-Einstellung.
+  Gleich wie Kugelregen: keine Mitteilungen, Einstellungen im Spielstand, kein Export/Import,
+  keine Zwischenablage, nur belohnte Videos (keine Interstitials, keine Banner), kein In-App-Kauf,
+  kein Server, kein Konto, keine Analyse, kein Crash-Reporter, kein Game Center, kein Cloud-Sync.
+
+  ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
+    1. Abschnitt 2 ist die vollständige Liste: brickstorm.json (+ Sicherung brickstorm.json.bak)
+       in Application Support, dazu genau ein UserDefaults-Schlüssel: brick.review.asked.
+    2. „Neu anfangen behält Ton und Vibration“ hängt an der Reset-Funktion des Spielstands.
+    3. „Werbe-SDK (UMP-Einwilligung + ATT) frühestens nach ~90 Sekunden oder beim Öffnen eines
+       Werbeangebots“ hängt am verzögerten Start der Werbung im App-Einstieg.
+    4. „Werbe-Einwilligung“ in den Optionen muss es geben, solange Abschnitt 4 darauf verweist
+       (sichtbar, wenn die Einwilligung änderbar ist, also in der EU).
+    5. „Einmal nach dem 8. Lauf um Bewertung bitten“ hängt an brick.review.asked und
+       AppStore.requestReview.
+    6. Die vier Werbestellen und ihre Belohnungen (30 min ×3 bis 2 h, 10 min Tempo, Goldregen,
+       +5 Gems max. 5/Tag) stehen auch auf index.html.
+    7. Kommt Cloud-Sync, Mitteilungen, Game Center, Analyse, ein Crash-Reporter, ein In-App-Kauf
+       oder Export/Import dazu, ändern sich im selben Schritt: diese Seite, privacy.html,
+       PrivacyInfo.xcprivacy und die App-Privacy-Auskunft in App Store Connect.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brickstorm – Idle Army — Datenschutzerklärung</title>
+<meta name="description" content="Datenschutzerklärung für das iPhone-Spiel Brickstorm – Idle Army: kein Konto, kein Server, freiwillige Werbung über Google AdMob mit Einwilligung.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Brickstorm – Idle Army</h1>
+    <div class="sub">Idle-Roguelite</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./">Brickstorm</a>
+  <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<h2>Datenschutzerklärung</h2>
+<p class="meta">Stand: 10. Oktober 2026 · gilt für Brickstorm – Idle Army ab Version 1.0</p>
+
+<div class="card mint">
+  <h3 style="margin-top:0">Kurzfassung</h3>
+  <p><strong>Brickstorm braucht kein Benutzerkonto</strong>, keine E-Mail-Adresse und
+  kein Passwort. Es gibt keinen eigenen Server und keine Analyse. Dein Spielstand
+  liegt ausschließlich auf deinem iPhone.</p>
+  <p><strong>Werbung siehst du nur, wenn du sie selbst startest</strong>: ein
+  Video gegen eine Belohnung im Spiel. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Für <strong>personalisierte</strong>
+  Werbung fragen wir vorher um Erlaubnis, über Googles Einwilligungsdialog und
+  Apples Tracking-Abfrage.</p>
+  <p>Die App schickt keine Mitteilungen.</p>
+</div>
+
+<h3>1 · Verantwortlicher</h3>
+<p>
+  Pascal Dohmeier<br>
+  Gustav-Müller-Straße 20A<br>
+  10829 Berlin, Deutschland<br>
+  E-Mail: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  Telefon: <a href="tel:+4916095861111">+49 160 95861111</a>
+</p>
+<p>Ein Datenschutzbeauftragter ist nicht bestellt; die Voraussetzungen des
+Art. 37 DSGVO und des § 38 BDSG liegen nicht vor. Für alle Anliegen zum
+Datenschutz erreichst du mich direkt unter den Angaben oben.</p>
+
+<h3>2 · Daten, die dein Gerät nicht verlassen</h3>
+<p>Die App speichert auf deinem Gerät genau Folgendes. Das ist die vollständige
+Liste, nicht eine Auswahl:</p>
+<ul>
+  <li><strong>den Spielstand</strong> als Datei im App-Speicher, mit einer
+  automatischen Sicherungskopie: dein Fortschritt in allen Bereichen des Spiels
+  (Kronen, Werkstatt, Labor samt laufender Forschung, Karten, Gems, Welten),
+  Rekorde, der Stand des laufenden Durchgangs, wann du das tägliche Geschenk
+  zuletzt abgeholt hast (nach dem Datum deines Geräts), wie oft du heute im
+  Karten-Tab Werbung angesehen hast und bis wann ein Werbe-Boost oder eine
+  höhere Spielgeschwindigkeit noch läuft, Spielstatistiken (zum Beispiel Zahl der
+  Läufe und zerstörten Blöcke), welche Erklärungen dir schon gezeigt wurden, und
+  wann du das Spiel zuletzt verlassen hast (für die Kronen, die während deiner
+  Abwesenheit entstehen). Im Spielstand liegen auch
+  <strong>deine Einstellungen</strong>: Ton und Vibration;</li>
+  <li>in den App-Einstellungen (Apples <em>UserDefaults</em>) genau eine Angabe:
+  ob schon einmal um eine Bewertung gebeten wurde.</li>
+</ul>
+<p>Es gibt <strong>keine Kennung</strong> von uns, keine Nutzer-ID und keine
+Geräte-ID, und nichts davon ist mit deiner Person verknüpft. Diese Daten werden
+von uns <strong>nicht übertragen</strong> und nicht in einer Cloud gesichert. Die
+App liest die Zwischenablage nicht und bietet keinen Export oder Import.</p>
+
+<h3>3 · Daten löschen</h3>
+<ul>
+  <li><strong>In der App:</strong> Optionen → „Neu anfangen“. Löscht Kronen,
+  Werkstatt, Labor, Karten, Welten und Rekorde. Ton und Vibration bleiben
+  erhalten.</li>
+  <li><strong>App löschen:</strong> entfernt restlos alles auf dem Gerät.</li>
+</ul>
+<p>Ein Löschersuchen an uns ist dafür nicht nötig und würde auch nichts finden:
+es liegen hier keine Daten von dir.</p>
+
+<h3>4 · Werbung (Google AdMob)</h3>
+<p>Anbieter für den europäischen Wirtschaftsraum: Google Ireland Limited, Gordon
+House, Barrow Street, Dublin 4, Irland.</p>
+<p>Werbung erscheint <strong>nur, wenn du sie selbst startest</strong>, als Video
+gegen eine Belohnung im Spiel. Dafür gibt es vier Stellen:</p>
+<ul>
+  <li>der Knopf „×3 Werbung“: 30 Minuten dreifache Kronen; mehrere Videos addieren
+  sich bis zu zwei Stunden;</li>
+  <li>der Tempo-Knopf: eine Spielgeschwindigkeit über 1× gibt es jeweils für
+  zehn Minuten nach einem Video;</li>
+  <li>das Angebot „Goldregen – Werbung ansehen“, das während eines Durchgangs ab
+  und zu als kleine Karte am Rand des Schlachtfelds erscheint, für einen
+  einmaligen Goldbonus. Du kannst es mit ✕ schließen, nach einigen Sekunden
+  verschwindet es von selbst, und es wird nichts abgespielt, solange du nicht
+  darauf tippst;</li>
+  <li>„Werbung“ im Karten-Tab: 5 Gems, höchstens fünfmal am Tag.</li>
+</ul>
+<p>Ist gerade keine Werbung verfügbar, gibt es die Belohnung trotzdem. Es gibt
+keine Werbung zwischen Spielabschnitten und keine Banner. Googles Werbe-SDK
+startet, samt Einwilligungsdialog und Apples Tracking-Abfrage, frühestens etwa
+90 Sekunden nach dem Start der App oder wenn du vorher ein Werbeangebot
+öffnest.</p>
+<p>Für die Auslieferung, Messung und Betrugsabwehr von Werbung verarbeitet Google
+unter anderem:</p>
+<ul>
+  <li>die <strong>Werbe-ID (IDFA)</strong> deines Geräts, <strong>nur</strong>
+      wenn du sowohl dem Einwilligungsdialog als auch Apples Tracking-Abfrage
+      zugestimmt hast</li>
+  <li>eine <strong>grobe Standortschätzung</strong> aus deiner IP-Adresse
+      (Land, Region; keine GPS-Daten, die App fragt keine Ortungsberechtigung an)</li>
+  <li><strong>Geräte- und Nutzungssignale</strong> sowie <strong>Absturz- und
+      Leistungsdaten</strong> des Werbe-SDKs</li>
+  <li><strong>Werbedaten</strong>: welche Anzeigen dir gezeigt wurden und wie du
+      darauf reagiert hast</li>
+</ul>
+<p>Diese Daten können von Google auch <strong>app-übergreifend</strong> zur
+Profilbildung genutzt werden. Genau deshalb fragen wir vorher. Rechtsgrundlage
+ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); ohne sie zeigt Google nur
+nicht personalisierte Werbung.</p>
+<p><strong>Deine Einwilligung ist jederzeit widerrufbar</strong>, ohne Angabe von
+Gründen: über den Knopf „Werbe-Einwilligung“ in den Optionen des Spiels. Apples
+Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
+Sicherheit → Tracking. Ein Widerruf gilt ab dem Zeitpunkt des Widerrufs; bis
+dahin erfolgte Verarbeitung bleibt rechtmäßig.</p>
+<p>Weitere Informationen:
+<a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a>,
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen“</a>
+und
+<a href="https://policies.google.com/privacy/frameworks" rel="noopener">Googles Rahmenbedingungen für Datenübermittlungen</a>.</p>
+
+<h3>5 · Berechtigungen</h3>
+<p>Die einzige Abfrage ist Apples <strong>Tracking-Dialog</strong>, der zur
+Werbung gehört (Abschnitt 4). Die App schickt keine Mitteilungen und fragt keine
+Berechtigung für Standort, Kontakte, Fotos, Mikrofon oder Kamera an.</p>
+<p>Nach deinem achten Durchgang bittet die App einmal über Apples
+Bewertungsdialog um eine Bewertung. Ob und wann der Dialog erscheint, entscheidet
+iOS; eine Bewertung geht an Apple, nicht an uns.</p>
+
+<h3>6 · Wenn du uns schreibst</h3>
+<p>Schreibst du an die oben genannte Adresse, verarbeiten wir deine E-Mail-Adresse
+und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f
+DSGVO, berechtigtes Interesse an der Beantwortung von Anfragen). Der Postfach-
+Anbieter ist Google; die Nachricht liegt dort so lange, wie sie für Rückfragen
+gebraucht wird, und wird danach gelöscht.</p>
+
+<h3>7 · Diese Website</h3>
+<p>Diese Seiten liegen bei GitHub Pages (GitHub, Inc.). Beim Aufruf überträgt
+dein Browser technisch notwendige Daten (IP-Adresse, Zeitpunkt, aufgerufene
+Seite, User-Agent), die GitHub in Server-Logs verarbeitet. Wir setzen auf diesen
+Seiten <strong>keine Cookies</strong>, binden keine Schriften oder Skripte von
+Dritten ein und führen keine Reichweitenmessung durch.</p>
+
+<h3>8 · Was wir nicht tun</h3>
+<p>Brickstorm hat <strong>keinen eigenen Server</strong>, <strong>kein
+Konto</strong>, <strong>keine In-App-Käufe</strong>, <strong>kein Game
+Center</strong>, <strong>keine Cloud-Synchronisierung</strong>, <strong>keine
+Mitteilungen</strong> und <strong>keinen Analyse- oder
+Absturzberichts-Dienst</strong>. Wir selbst erheben keine personenbezogenen
+Daten, geben keine weiter und verkaufen keine. Was Google im Rahmen der Werbung
+verarbeitet, steht in Abschnitt 4.</p>
+
+<h3>9 · Deine Rechte</h3>
+<p>Dir stehen die Rechte aus Art. 15 bis 21 DSGVO zu: Auskunft, Berichtigung,
+Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, außerdem das Recht
+auf Beschwerde bei einer Aufsichtsbehörde. Zuständig ist für uns die Berliner
+Beauftragte für Datenschutz und Informationsfreiheit.</p>
+<p>Praktisch betreffen diese Rechte hier nur eine etwaige E-Mail von dir
+(Abschnitt 6). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
+nicht haben: er liegt auf deinem Gerät, und nur dort.</p>
+
+<h3>10 · Kinder</h3>
+<p>Das Spiel richtet sich an alle Altersgruppen. Es fragt kein Alter ab, erhebt
+selbst keine Daten und bietet keine Möglichkeit, mit anderen Menschen in Kontakt
+zu treten. Es enthält freiwillige <strong>Werbung</strong> (Abschnitt 4); das ist
+in der Altersfreigabe im App Store ausgewiesen.</p>
+
+<h3>11 · Änderungen dieser Erklärung</h3>
+<p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert, etwa
+weil ein Dienst hinzukommt. Das Datum oben zeigt den letzten Stand.</p>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="./">Brickstorm</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</footer>
+
+</div>
+</body>
+</html>
