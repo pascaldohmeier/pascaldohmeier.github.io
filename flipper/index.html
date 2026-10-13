@@ -1,0 +1,160 @@
+<!doctype html>
+<!--
+  Flipper — Hilfe und häufige Fragen. Zugleich die Support-URL in App Store Connect:
+  die Kontaktadresse muss ohne Scrollen zu finden sein. Die App verlinkt diese Seite
+  aus den Optionen (SupportConfig.helpURL).
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/Flipper) — wer eine ändert, ändert sie hier mit:
+    • Auto-Flipper übernimmt nach 4 s ohne Tippen         (docs/SPIELGUIDE.md, Steuerung)
+    • Rütteln: Werkstatt-Knoten, alle 4 s einmal           (SkillID, SPIELGUIDE)
+    • TILT ab 10 Mio. € in einem Lauf                      (Values.tiltAt)
+    • Tische Jahrmarkt / Strandbad / Bergwerk: 2 / 15 / 40 Pokale (Pokalschrank)
+    • Fieber 20 s, Fieber-Leiste 20 Punkte, nur Handspiel  (Values.feverTime, trickNeed)
+    • Offline: 50 % bis 2 h; Werkstatt bis 4/8/12 h, 75/100 %; Ruhmeshalle 24 h
+                                                           (Values.offlineMax/offlineShare, Engine.offlineMax)
+    • Werbung: 30 min ×3, stapelbar bis 2 h; Angebot 15 s sichtbar, ×10 für 30 s
+                                                           (Values.adBoostMax, adOffer*)
+    • Löschen behält Sprache, Zahlen, Aussehen, Geräusche, Vibration (GameStore.resetGame)
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flipper — Hilfe &amp; Support</title>
+<meta name="description" content="Flipper: Pixel-Flipper-Incremental für iPhone. Du flipperst selbst oder lässt den Auto-Flipper spielen und baust den Tisch Teil für Teil aus. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Flipper</h1>
+    <div class="sub">Pixel-Flipper-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Flipper</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Eine Kugel. Zwei Flipper. Und ein Tisch, der anfangs fast leer ist.</p>
+
+<p>In <strong>Flipper</strong> hältst du die Kugel mit zwei Flippern im Spiel, und
+jeder Treffer bringt Euro. Davon baust du den Tisch Teil für Teil auf — Bumper,
+Lanes, Targets, Spinner, Kickloch, Rampe —, machst jedes Teil wertvoller und
+holst mehr Kugeln aufs Feld. Wenn du nicht tippst, spielt der Auto-Flipper für
+dich weiter.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Flipper">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Flipper geht. Ich antworte in der
+  Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Wie spiele ich?</h3>
+  <p>Halt die linke Bildschirmhälfte gedrückt, um den linken Flipper hochzuschlagen,
+  die rechte für den rechten. Loslassen lässt ihn fallen. Nach jedem Verlust kommt
+  die Kugel von selbst wieder. Später lernst du in der Werkstatt das
+  <strong>Rütteln</strong>: Ein Wisch nach oben stößt den Tisch an und schubst
+  tiefe Kugeln nach oben, alle vier Sekunden einmal. Tippst du vier Sekunden lang
+  nicht, übernimmt der <strong>Auto-Flipper</strong> — anfangs ungeschickt, mit
+  Upgrades immer besser. Selbst spielen zahlt mehr.</p>
+
+  <h3>Wie baue ich den Tisch?</h3>
+  <p>Jeder Tisch beginnt leer, nur mit Flippern und Slingshots. Unter
+  Upgrades → „Tisch bauen“ steht immer genau das nächste Teil; unter dem Tisch ist
+  es der türkise Knopf mit dem Hammer. Gebaute Teile bleiben für immer, auch nach
+  TILT, Umzug und Meisterschaft. Die Upgrades für ein Teil erscheinen, sobald es
+  steht.</p>
+
+  <h3>Was ist TILT und was sind Jetons?</h3>
+  <p>Ab 10 Millionen Euro in einem Lauf kannst du TILT auslösen: Geld und Upgrades
+  fangen von vorn an, dafür bekommst du <strong>Jetons</strong>. Jeder Jeton macht
+  alles wertvoller, und mit ihnen kaufst du Knoten in der
+  <strong>Werkstatt</strong> — einem Skilltree für Bumper, Rampen, Kugeln,
+  Handspiel, Auto-Flipper und Offline-Zeit. Fang mit dem Werkstatt-Schlüssel in
+  der Mitte an.</p>
+
+  <h3>Was sind Hallenumzug, Pokale und neue Tische?</h3>
+  <p>Ab dem zweiten TILT gibt es den Pokale-Tab. Erreichst du auf einem Tisch sein
+  <strong>Meisterziel</strong> und genug Jetons, kannst du umziehen: Jetons,
+  Werkstatt, Geld und Upgrades gehen, dafür gibt es <strong>Pokale</strong>, die
+  alles dauerhaft wertvoller machen. Im Pokalschrank schaltest du damit neue Tische
+  frei — <strong>Jahrmarkt</strong>, <strong>Strandbad</strong> und
+  <strong>Bergwerk</strong>, jeder mit eigenen Regeln und eigenem Meisterziel.</p>
+
+  <h3>Was ist die Meisterschaft?</h3>
+  <p>Die dritte Ebene. Hast du in einer Saison alle Tische gemeistert und oft genug
+  umgezogen, setzt die Meisterschaft fast alles zurück und gibt dir
+  <strong>Sterne</strong>, die alles vervielfachen. Mit jeder Meisterschaft steigst
+  du eine Liga auf — von Amateur über Bronze bis Legende und dann ohne Ende weiter.
+  Die Meisterziele werden dabei schwerer. In der Ruhmeshalle kaufst du mit Sternen
+  Hilfen für die nächste Saison.</p>
+
+  <h3>Was ist Fieber?</h3>
+  <p>Solange du selbst flipperst, kommt alle paar Minuten ein
+  <strong>Fieber</strong>: 20 Sekunden lang zahlt ein Teil des Tisches ein
+  Vielfaches, oder es kommen Extra-Kugeln. Kunststücke wie Combos, Skill-Shots und
+  Jackpots füllen außerdem die Fieber-Leiste; ist sie voll, startet sofort eins.
+  Der Auto-Flipper löst kein Fieber aus.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du sie selbst startest. Der Knopf „×3“ bringt dir für ein Video
+  30 Minuten dreifachen Ertrag, auch offline; mehrere Videos addieren sich bis zu
+  zwei Stunden. Ab und zu erscheint außerdem für ein paar Sekunden ein Angebot auf
+  dem Tisch — ein Geldregen oder alles ×10 für 30 Sekunden. Lässt du es liegen,
+  verschwindet es wieder. Gibt es gerade keine Werbung, bekommst du die Belohnung
+  trotzdem. Es gibt keine Werbung, die sich dazwischenschiebt, und keine Banner.
+  Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Flipper hat keine In-App-Käufe. Fortschritt gibt es nur durchs Spielen.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus. Internet
+  brauchst du nur für die freiwillige Werbung.</p>
+
+  <h3>Läuft das Spiel weiter, wenn ich es schließe?</h3>
+  <p>Ja: Der Auto-Flipper spielt weiter. Wenn du zurückkommst, wird die Zeit
+  nachgerechnet — anfangs mit halbem Ertrag und bis zu zwei Stunden. Knoten in der
+  Werkstatt verlängern das auf bis zu zwölf Stunden und vollen Ertrag, die
+  Ruhmeshalle auf 24 Stunden. Wenn du es erlaubst, sagt dir eine Mitteilung
+  Bescheid, sobald die Offline-Zeit voll ist. Gefragt wird danach erst nach deinem
+  ersten TILT.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Optionen → „Spielstand löschen“. Gelöscht wird der gesamte Spielstand,
+  auch Werkstatt, Pokale, Sterne, Erfolge, Statistik und Album. Sprache,
+  Zahlenformat, Aussehen, Geräusche und Vibration bleiben. Rückgängig machen lässt
+  sich das nicht.</p>
+
+  <h3>Geräusche, Vibration, Sprache?</h3>
+  <p>Alles in den Optionen: Geräusche und Vibration lassen sich einzeln abschalten.
+  Flipper gibt es auf Deutsch und Englisch; es folgt der Sprache deines iPhones,
+  du kannst sie aber auch fest wählen. Genauso das Aussehen: System, Hell oder
+  Dunkel.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a>.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>
