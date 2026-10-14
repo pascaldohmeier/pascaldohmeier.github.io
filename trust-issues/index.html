@@ -1,0 +1,150 @@
+<!doctype html>
+<!--
+  Trust Issues — Hilfe und häufige Fragen. Zugleich die Support-URL in App Store Connect:
+  die Kontaktadresse muss ohne Scrollen zu finden sein.
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/RageJump, Überblick in docs/SPIELGUIDE.md) —
+     wer eine ändert, ändert sie hier mit:
+    • 5 Welten × 15 Level, dazu 5 Expertenwelten          (RageCore/Levels.swift)
+    • 15 Leben pro Welt-Durchgang, Experte 10              (GameModel.startLives, expertLives)
+    • Werbung: +5 Leben, höchstens 3× pro Durchgang        (GameModel.adLives, maxContinues)
+    • Level ohne Tod: +1 Leben                             (GameModel)
+    • Neustart 0,75 s nach dem Tod, Neustart-Knopf = Tod   (GameModel)
+    • 3 Sterne: geschafft, ohne Tod, unter der Zielzeit    (GameModel.stars, Targets.swift)
+    • Bewertungsbitte einmal nach der ersten Welt          (RageApp.swift, rj3.review.asked)
+    • Nur Deutsch in Version 1.0
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trust Issues — Hilfe &amp; Support</title>
+<meta name="description" content="Trust Issues: Rage-Jump'n'Run fürs iPhone. Fünf Welten voller Fallen, lügende Schilder und ein Friedhof aller Versuche. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Trust Issues</h1>
+    <div class="sub">Rage-Jump'n'Run</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Trust Issues</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Ein Bildschirm. Eine Fahne. Ein Schild, auf dem „einfach rüberlaufen :)“
+steht. Glaub ihm nicht.</p>
+
+<p>In <strong>Trust Issues</strong> läufst und springst du durch ein Gebäude, das
+der <strong>Architekt</strong> gebaut hat — und er hasst Besucher. Jedes Level
+hat einen gemeinen Trick: Boden, der keiner ist, Stacheln, die erst auftauchen,
+wenn du landest, eine Fahne, die wegläuft. Beim ersten Mal fällst du fast sicher
+herein. Ab dem zweiten Mal ist alles gleich und lernbar. Nach jedem geschafften
+Level laufen alle deine Versuche noch einmal gleichzeitig ab, auf dem
+<strong>Friedhof</strong>.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Level, das du für unfair hältst — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Trust%20Issues">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Trust Issues geht, und bei einem
+  Level die Nummer (etwa 2-7). Ich antworte in der Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Wie steuere ich?</h3>
+  <p>Das Spiel läuft im Querformat. Die <strong>linke Bildschirmhälfte</strong>
+  ist zum Laufen: links vom Spalt zwischen den Pfeiltasten geht es nach links,
+  rechts davon nach rechts, und dein Daumen darf zwischen den Tasten rutschen.
+  Die <strong>rechte Hälfte</strong> ist zum Springen: kurz tippen ist ein kleiner
+  Hüpfer, halten ein hoher Sprung. Laufen und Springen gehen gleichzeitig. Oben
+  links ist die Pause, oben rechts der Neustart. Wer lieber links springt, stellt
+  in den Einstellungen „Tasten tauschen“ ein.</p>
+
+  <h3>Wer ist der Architekt?</h3>
+  <p>Er hat das Gebäude gebaut, er stellt die Holzschilder auf, und er
+  kommentiert jeden deiner Tode. Seine Schilder lügen. Meistens. Ab der dritten
+  Welt sagen manche doch die Wahrheit — dann musst du entscheiden, ob du ihm
+  diesmal glaubst.</p>
+
+  <h3>Ist das Spiel unfair?</h3>
+  <p>Die Fallen sind gemein, die Steuerung nie. Jedes Level verhält sich bei
+  jedem Versuch genau gleich, es gibt keinen Zufall. Bevor ein Level ins Spiel
+  kommt, prüft ein Computerspieler, dass es schaffbar ist — und zwar mit
+  menschlicher Reaktionszeit, nicht nur pixelgenau. Wo du schon gestorben bist,
+  bleibt ein kleines rotes Kreuz, damit du dir die Stelle merkst.</p>
+
+  <h3>Wie funktionieren die Leben?</h3>
+  <p>Eine Welt hat 15 Level und wird am Stück gespielt. Du startest mit
+  <strong>15 Leben</strong>, jeder Tod kostet eins, der Neustart-Knopf auch. Ein
+  Level ganz ohne Tod gibt ein Leben zurück, ebenso ein echtes Herz im Level —
+  aber die meisten Herzen sind Köder. Sind alle Leben weg, fängt die Welt von
+  vorn an. Dein Stand in einer Welt bleibt gespeichert, auch wenn du das Spiel
+  schließt.</p>
+
+  <h3>Was ist der Friedhof?</h3>
+  <p>Nach jedem geschafften Level laufen <strong>alle deine Versuche
+  gleichzeitig</strong> als Geister ab: die gescheiterten blass und mit einem
+  Kreuz am Ende, der erfolgreiche kräftig. So siehst du, wie oft du an derselben
+  Stelle hereingefallen bist.</p>
+
+  <h3>Wofür gibt es Sterne?</h3>
+  <p>Pro Level drei: einen fürs Schaffen, einen fürs Schaffen ohne Tod und einen
+  für einen Lauf unter der Zielzeit. Den besten Stand pro Level merkt sich das
+  Spiel, dazu deine Bestzeit und wie oft du insgesamt gestorben bist.</p>
+
+  <h3>Was ist der Expertenmodus?</h3>
+  <p>Hast du eine Welt geschafft, öffnet sich ihre Expertenwelt: dieselben Level
+  gespiegelt, mit einer neuen Falle genau dort, wo du dich inzwischen sicher
+  fühlst. Dort gibt es nur 10 Leben. Zusammen sind das 75 normale und 75
+  Expertenlevel.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du keine Leben mehr hast — und nur, wenn du willst. Im Fenster
+  „Keine Leben mehr“ kannst du ein Video ansehen und bekommst
+  <strong>5 Leben</strong>, dann geht es im selben Level weiter. Das geht
+  höchstens dreimal pro Welt-Durchgang. Es gibt keine Werbung nach einem Tod,
+  nach einem Level oder beim Neustart, und keine Banner. Details in der
+  <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Trust Issues hat keine In-App-Käufe.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus.
+  Internet brauchst du nur für das freiwillige Werbevideo.</p>
+
+  <h3>Gibt es das Spiel auf Englisch?</h3>
+  <p>Noch nicht. Version 1.0 gibt es nur auf Deutsch, weil die Sprüche und
+  Schilder des Architekten zum Spiel gehören und erst gut übersetzt werden
+  sollen.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Einstellungen → „Spielstand zurücksetzen“. Gelöscht werden Fortschritt,
+  Sterne, Bestzeiten und der Todeszähler; deine Einstellungen bleiben.
+  Rückgängig machen lässt sich das nicht.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a>.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>
