@@ -1,0 +1,175 @@
+<!doctype html>
+<!--
+  Roulette („Rot & Schwarz: Roulette Idle“) — Hilfe und häufige Fragen. Zugleich die
+  Support-URL in App Store Connect: die Kontaktadresse muss ohne Scrollen zu finden sein.
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/iOS-Apps/Roulette) — wer eine ändert, ändert sie hier mit:
+    • Kessel startet mit 2 Fächern (1 rot, 2 schwarz), bis 36 + 0 + 00   (GameState.newGame, Wheel.slots)
+    • Quote = Anzahl Fächer im Kessel                                    (Engine, SPIELGUIDE „Fächer und Quote“)
+    • Bank sprengen ab 1 Mrd. €                                          (Engine.bankThreshold)
+    • Tableau: 6 Äste mit ∞-Knoten + Großer Saal                         (SkillID / Content.swift)
+    • 6 Hausregeln, ab 3× Sprengen                                       (Challenge.allCases)
+    • 6 Häuser: Hinterzimmer … Mondbasis                                 (GameState.house, SPIELGUIDE Ebene 2)
+    • Kette gründen ab Mondbasis + 25 Sternen, 6 Filialen                (Engine, Filiale.allCases)
+    • Kesselbau: 1 Baupunkt je Sprengen, kostenlos zurücksetzbar         (GameState.buildPoints, Engine.resetBuild)
+    • Sonderkugeln Gold, Splitter, Magnet                                (SpecialBall)
+    • 64 Erfolge                                                         (AchievementID in RouletteCore/Content.swift)
+    • Offline: 50 % bis 8 h, 75 %/12 h, 100 %/24 h, 48 h (Sterne-Laden)  (Engine.maxOffline, offlineShare)
+    • Werbung: 30 min ×3, stapelbar bis 2 h                              (Engine.grantAdBoost)
+    • Tagesrad ab dem ersten Sprengen                                    (BankView, Engine)
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rot &amp; Schwarz — Hilfe &amp; Support</title>
+<meta name="description" content="Rot &amp; Schwarz: Roulette Idle für iPhone. Ein Roulette-Kessel, der mit zwei Fächern beginnt — ohne Einsatz, jeder Dreh zahlt. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Rot &amp; Schwarz</h1>
+    <div class="sub">Roulette-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Rot &amp; Schwarz</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Ein Roulette-Kessel mit nur zwei Fächern: der 1 in Rot und der 2 in Schwarz.
+Jeder Dreh zahlt — nur wie viel, entscheidet die Kugel.</p>
+
+<p>In <strong>Rot &amp; Schwarz</strong> drehst du den Kessel, und das Fach, in dem
+die Kugel landet, zahlt Euro. Davon kaufst du neue Fächer, bis der Kessel mit allen
+36 Zahlen, der Null und der Doppelnull voll ist, machst sie wertvoller, holst dir
+einen Croupier, mehr Kugeln und Ansagen. Und irgendwann sprengst du die Bank.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Roulette">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Rot &amp; Schwarz (Roulette) geht. Ich
+  antworte in der Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Ist das Glücksspiel?</h3>
+  <p>Nein. Es gibt <strong>keinen Einsatz</strong> und nichts zu verlieren: Jeder
+  Dreh bringt Geld, nur die Höhe ist Zufall. Das Spielgeld lässt sich weder kaufen
+  noch auszahlen, und es gibt keine In-App-Käufe. Ansagen sind kostenlose
+  Markierungen auf dem Tableau — wer daneben liegt, verliert nichts.</p>
+
+  <h3>Wie spiele ich?</h3>
+  <p>Tipp auf „Drehen“ oder wisch über den Kessel. Die Kugel landet in einem Fach,
+  und das Fach zahlt. Mit dem Geld kaufst du neue Fächer (3, 4, 5 … bis 36) und
+  Stufen, die sie wertvoller machen. Im Tab „Tisch“ gibt es Verbesserungen wie den
+  Croupier, der von selbst dreht, mehr Kugeln und einen glatteren Kessel. Neues
+  wird beim ersten Mal erklärt.</p>
+
+  <h3>Warum zahlt die Kugel mal viel, mal wenig?</h3>
+  <p>Wegen der <strong>Quote</strong>: Sie ist die Anzahl aller Fächer im Kessel. Ein
+  Treffer zahlt den Wert des Fachs mal die Quote. Teure Fächer zahlen viel, die
+  ersten wenig — wo die Kugel landet, ist Zufall. Ein neues Fach lohnt sich aber
+  immer, weil es die Quote für alle anderen mit anhebt.</p>
+
+  <h3>Was bringen Ansagen?</h3>
+  <p>Mit dem Tisch-Upgrade „Ansagen“ setzt du eine Markierung auf das Tableau:
+  eine Zahl, ein Dutzend, eine Kolonne, Rot oder Schwarz und so weiter. Sie bleibt
+  für jeden Dreh liegen, auch für den Croupier. Trifft eine Kugel die Ansage, gibt
+  es einen Bonus — eine einzelne Zahl trifft selten und zahlt viel, Rot oft und
+  wenig. Jede Ansage sammelt dabei Erfahrung für ihre <strong>Meisterschaft</strong>,
+  die die abgedeckten Fächer dauerhaft stärker macht. Das Upgrade „Spielanalyse“
+  zeigt, welche Ansage sich gerade am meisten lohnt.</p>
+
+  <h3>Was heißt „Bank sprengen“?</h3>
+  <p>Ab 1 Milliarde Euro in einem Durchgang kannst du die Bank sprengen: Geld,
+  Fächer und Tisch fangen von vorn an, dafür bekommst du <strong>Jetons</strong>.
+  Mit ihnen kaufst du Knoten auf dem <strong>Tableau</strong>, einem Skilltree mit
+  sechs Ästen, jeder mit einem ∞-Knoten, und am Ende dem Großen Saal. Ab dem ersten
+  Sprengen gibt es einmal am Tag das Tagesrad, ab dem dritten die sechs
+  <strong>Hausregeln</strong> — Durchgänge mit Sonderregeln und dauerhafter
+  Belohnung.</p>
+
+  <h3>Was sind Umzug und Kette?</h3>
+  <p>Mit dem Großen Saal ziehst du um: Jetons und Tableau starten neu, dafür gibt es
+  <strong>Sterne</strong> und ein neues Haus mit eigener Neuerung — vom Hinterzimmer
+  über Spielsalon, Kurhaus, Grand Casino und Riviera-Palast bis zur Mondbasis. Ab
+  der Mondbasis und 25 Sternen gründest du eine <strong>Kette</strong> und bekommst
+  Lizenzen für sechs Filialen mit eigenen Kesselregeln: Mini-Kessel, Amerikanisch,
+  Französisch, Spiegelkessel, Turbo und Doppelkessel. Wer alle sechs besitzt, hat das
+  Spiel durchgespielt — der Kessel dreht danach trotzdem weiter.</p>
+
+  <h3>Kann ich den Kesselbau zurücksetzen?</h3>
+  <p>Ja, jederzeit und kostenlos. Jedes Bank-Sprengen gibt einen Baupunkt, den du im
+  Kesselbau verteilst: Fächergruppen werden im Kessel breiter (die Kugel trifft sie
+  öfter) oder wertvoller. „Zurücksetzen“ gibt dir alle Punkte zurück.</p>
+
+  <h3>Was sind Sonderkugeln und Tisch-Ereignisse?</h3>
+  <p>Sonderkugeln schaltest du auf dem Tableau frei: Die Goldkugel zahlt mehr, die
+  Splitterkugel teilt sich in drei, die Magnetkugel sucht sich das beste Fach. Sie
+  laden sich mit der Zeit auf. Mit dem Tisch-Upgrade „Abendprogramm“ gibt es ab und
+  zu Tisch-Ereignisse, etwa einen heißen Tisch oder eine Glückszahl.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du sie selbst startest: über den Knopf „×3 Werbung“ oben am Kessel.
+  Ein Video bringt dir 30 Minuten dreifachen Ertrag, auch offline. Mehrere Videos
+  addieren sich bis zu zwei Stunden. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner — abschalten musst du also nichts. Details in
+  der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Rot &amp; Schwarz hat keine In-App-Käufe. Fortschritt gibt es nur durchs
+  Spielen.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus. Internet
+  brauchst du nur für die freiwillige Werbung.</p>
+
+  <h3>Läuft das Spiel weiter, wenn ich es schließe?</h3>
+  <p>Ja, sobald du einen Croupier hast — er dreht auch offline. Wenn du
+  zurückkommst, wird die Zeit nachgerechnet: anfangs mit halbem Ertrag und bis zu
+  acht Stunden. Knoten auf dem Tableau erhöhen das auf 75 % und zwölf Stunden,
+  später auf vollen Ertrag und 24 Stunden; im Sterne-Laden gibt es 48 Stunden.</p>
+
+  <h3>Wie sichere oder übertrage ich meinen Spielstand?</h3>
+  <p>Der Spielstand liegt nur auf deinem iPhone, nicht bei uns. Er ist Teil des
+  normalen iPhone-Backups (iCloud oder Computer) und kommt mit, wenn du ein neues
+  iPhone aus diesem Backup einrichtest.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Optionen → „Spielstand löschen“. Gelöscht wird der gesamte Spielstand,
+  auch Tableau, Erfolge und Statistik. Sprache, Zahlenformat, Farben, Geräusche und
+  Vibration bleiben. Rückgängig machen lässt sich das nicht.</p>
+
+  <h3>Erfolge?</h3>
+  <p>Es gibt 64 Erfolge, einige davon geheim.</p>
+
+  <h3>Sprache und dunkle Darstellung?</h3>
+  <p>Rot &amp; Schwarz gibt es auf Deutsch und Englisch. Es folgt der Sprache deines
+  iPhones, in den Optionen kannst du sie aber auch fest wählen. Genauso bei den
+  Farben: System, Hell oder Dunkel.</p>
+
+  <h3>Wo werden meine Daten gespeichert?</h3>
+  <p>Nur auf deinem iPhone. Siehe die <a href="datenschutz.html">Datenschutz&shy;erklärung</a>.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>

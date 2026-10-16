@@ -1,0 +1,144 @@
+<!doctype html>
+<!--
+  Blackjack („Hausverbot: Blackjack Idle“) — Hilfe und häufige Fragen. Zugleich die
+  Support-URL in App Store Connect: die Kontaktadresse muss ohne Scrollen zu finden sein.
+
+  ⚠️ Jede Zahl hier steht so auch im Code (Repo ~/iOS-Apps/Blackjack) — wer eine ändert, ändert sie hier mit:
+    • Ertrag = Handwert × (1 + Ergebnis), Sieg 2, Gleich 1, Blackjack 2,5   (Engine.finishRound)
+    • 7 Plätze, 280 Felder in der Strategietabelle, 11 Lektionen          (Seats, Grid, Lessons)
+    • Feld gelernt nach 5 richtigen Entscheidungen, +1 % je Feld            (Engine.learnThreshold, selfLearnedBonus)
+    • Hausverbot ab 1 Mrd. €                                               (Engine.banThreshold)
+    • Spielsystem: 6 Äste mit ∞-Knoten, 8 Herausforderungen ab 3 Verboten  (SkillID, Challenge)
+    • Turnier ab dem ersten Hausverbot, 9 Tische, 3 Bosse                  (Tournament.swift)
+    • 42 Erfolge                                                           (AchID)
+    • Offline: 50 % bis 8 h, 75 %/12 h, 100 %/24 h                         (Engine.maxOffline, offlineShare)
+    • Werbung: 30 min ×3 bis 2 h, Offline ×2, Turnier-Tisch wiederholen   (Werbung.swift, OverlayView)
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hausverbot — Hilfe &amp; Support</title>
+<meta name="description" content="Hausverbot: Blackjack Idle für iPhone. Echtes Blackjack ohne Einsatz, eine Strategietabelle zum Lernen, Hausverbote und ein Turnier. Hilfe, häufige Fragen, Kontakt und Datenschutz.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Hausverbot</h1>
+    <div class="sub">Blackjack-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Hausverbot</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<p>Echtes Blackjack, ohne Einsatz: Du spielst Hand für Hand gegen den Geber und baust
+daraus ein ganzes System — bis dir das Casino Hausverbot gibt.</p>
+
+<p>In <strong>Hausverbot</strong> kaufst du Plätze am Tisch, bessere Regeln und Lektionen.
+Die Strategietabelle füllt sich Feld für Feld, Mitspieler spielen nach deiner Tabelle,
+und irgendwann kommst du mit Sonnenbrille und falschem Bart zurück.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Hilfe &amp; Kontakt</h2>
+  <p>Fragen, Fehler oder ein Vorschlag — schreib einfach:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Blackjack">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Bitte nenne dabei, dass es um Hausverbot (Blackjack) geht. Ich
+  antworte in der Regel innerhalb weniger Tage.</p>
+</div>
+
+<h2>Häufige Fragen</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Ist das Glücksspiel?</h3>
+  <p>Es ist ein Kartenspiel nach Casino-Regeln, aber <strong>ohne Einsatz und ohne
+  Echtgeld</strong>. Jede Hand bringt Spielgeld, das sich weder kaufen noch auszahlen
+  lässt, und es gibt keine In-App-Käufe. Weil es Casino-Regeln nachbildet, ist das Spiel
+  im App Store ab 18 Jahren eingestuft.</p>
+
+  <h3>Wie spiele ich?</h3>
+  <p>Tipp auf „Austeilen“. Du bekommst zwei Karten, der Geber eine offene. Ziel ist,
+  näher an 21 zu kommen als der Geber, ohne drüber zu gehen. Bilder zählen 10, das Ass
+  1 oder 11. „Ziehen“ gibt dir eine Karte, „Stehen“ beendet deine Hand. Später kommen
+  Verdoppeln, Teilen und Aufgeben dazu.</p>
+
+  <h3>Was bringt eine Hand?</h3>
+  <p>Jeder Platz hat einen <strong>Handwert</strong>. Ein Sieg bringt das Doppelte, ein
+  Unentschieden den Handwert, ein Blackjack das 2,5-Fache, eine Niederlage nichts. Nur
+  eine verdoppelte oder geteilte Hand, die verliert, kostet einen Handwert — sonst wäre
+  Verdoppeln immer richtig.</p>
+
+  <h3>Was ist die Strategietabelle?</h3>
+  <p>Sie zeigt für jede deiner Hände gegen jede Karte des Gebers, was richtig ist — die
+  echte Grundstrategie. Unbekannte Felder spielt der Tisch nach Faustregel (ziehen bis
+  17). Du kannst Lektionen kaufen oder ein Feld lernen, indem du es fünfmal selbst
+  richtig spielst. Selbst gelernte Felder bleiben für immer und machen alles 1 %
+  wertvoller. Tipp auf ein Feld, um zu sehen, was jede Aktion dort bringt.</p>
+
+  <h3>Was bedeutet „Vorteil“ und „Hebel“?</h3>
+  <p>Der Vorteil ist, wie viel eine Hand im Schnitt bringt — er hängt von deiner Tabelle
+  und den Regeln am Tisch ab. Der Hebel macht daraus einen Multiplikator auf alles: Jede
+  Lektion und jede bessere Regel macht dich spürbar reicher.</p>
+
+  <h3>Was heißt „Hausverbot“?</h3>
+  <p>Ab 1 Milliarde Euro in einem Durchgang kannst du dir Hausverbot holen: Geld, Plätze
+  und Upgrades fangen von vorn an, dafür bekommst du <strong>Ruf</strong> für das
+  <strong>Spielsystem</strong>, einen Skilltree mit sechs Ästen — darunter Kartenzählen.
+  Jedes Hausverbot bringt eine neue Verkleidung. Ab dem dritten gibt es acht
+  Herausforderungen mit Sonderregeln.</p>
+
+  <h3>Was ist das Turnier?</h3>
+  <p>Ab dem ersten Hausverbot spielst du im Keller ein Turnier: ein eigenes Deck, neun
+  Tische mit Punktezielen, drei Boss-Geber. Zwischen den Tischen wählst du Glücksbringer
+  oder veränderst dein Deck. Pokale aus dem Turnier stärken das Hauptspiel.</p>
+
+  <h3>Werbung?</h3>
+  <p>Nur, wenn du sie selbst startest: „×3 Werbung“ oben am Tisch (30 Minuten dreifacher
+  Ertrag, bis zu zwei Stunden), „×2“ im Fenster „Willkommen zurück“ und einmal pro
+  Turnier „Tisch wiederholen“. Keine Werbung, die sich dazwischenschiebt, keine Banner.
+  Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+  <h3>Kann ich etwas kaufen?</h3>
+  <p>Nein. Hausverbot hat keine In-App-Käufe.</p>
+
+  <h3>Brauche ich ein Konto? Internet?</h3>
+  <p>Nein. Das Spiel läuft komplett auf deinem iPhone, auch im Flugmodus. Internet
+  brauchst du nur für die freiwillige Werbung.</p>
+
+  <h3>Läuft das Spiel weiter, wenn ich es schließe?</h3>
+  <p>Ja, sobald der Geber selbst austeilt; dein eigener Platz spielt offline nur mit dem
+  Autopiloten mit. Anfangs gibt es halben Ertrag für bis zu acht Stunden, mit dem
+  Spielsystem 75 % für zwölf und später vollen Ertrag für 24 Stunden.</p>
+
+  <h3>Wie sichere oder übertrage ich meinen Spielstand?</h3>
+  <p>Der Spielstand liegt nur auf deinem iPhone. Er ist Teil des normalen iPhone-Backups
+  (iCloud oder Computer) und kommt mit, wenn du ein neues iPhone daraus einrichtest.</p>
+
+  <h3>Kann ich von vorn anfangen?</h3>
+  <p>Ja: Mehr → Optionen → „Spielstand löschen“. Gelöscht wird alles, auch gelernte
+  Felder, Spielsystem, Pokale und Erfolge. Sprache, Zahlenformat, Farben, Geräusche und
+  Vibration bleiben. Rückgängig machen lässt sich das nicht.</p>
+
+  <h3>Sprache und dunkle Darstellung?</h3>
+  <p>Deutsch und Englisch, standardmäßig wie dein iPhone, in den Optionen fest wählbar.
+  Genauso die Farben: System, Hell oder Dunkel.</p>
+</div>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="privacy.html">Privacy (EN)</a>
+  <a href="../impressum.html">Impressum</a>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<!--
+  Roulette („Rot & Schwarz: Roulette Idle“) — Datenschutzerklärung. Stand 2026-10-16, App-Version 1.0.
+
+  Keine Rechtsberatung. Aufbau wie die Geschwister-Apps (Pasch), Absatz für Absatz gegen ROULETTES
+  tatsächliche Datenflüsse abgeglichen (Repo ~/iOS-Apps/Roulette).
+
+  Gleich wie die Geschwister-Apps:
+    • GENAU EINE MITTEILUNG, lokal geplant, nach Erlaubnis (RouletteApp/Benachrichtigungen.swift). Abschnitt 5.
+      Ob schon gefragt wurde, steht im Spielstand (introduced: notif.asked), nicht in UserDefaults.
+    • EINSTELLUNGEN LIEGEN IM SPIELSTAND (GameState), nicht in UserDefaults.
+    • KEIN EXPORT/IMPORT, die App liest die Zwischenablage nie.
+    • Werbung nur freiwillig (belohnte Videos, keine Interstitials, keine Banner), kein
+      In-App-Kauf, kein Server, kein Konto, keine Analyse, kein Crash-Reporter.
+  Anders: kein Album, keine Brett-Looks; Spieltage und Werbevideos zählen nur für die Statistik.
+
+  ⚠️ ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
+    1. Abschnitt 2 ist die vollständige Liste: roulette.json (+ Sicherung roulette.json.bak)
+       in Application Support (Persistence in RouletteUI/GameStore.swift), dazu genau ein
+       UserDefaults-Schlüssel: roulette.review.asked (RouletteApp.swift).
+    2. „Löschen behält Sprache, Zahlenformat, Farben, Geräusche, Vibration“ hängt an
+       GameStore.resetGame().
+    3. „Werbe-SDK frühestens nach 90 Sekunden oder beim Öffnen des Angebots“ hängt an
+       RouletteApp.swift (Task.sleep 90 s → werbung.starten()) und AdMobWerbung.bereitmachen().
+    4. „Werbe-Einwilligung ändern“ in den Optionen muss es geben, solange Abschnitt 4
+       darauf verweist (StatsView, sichtbar wenn einwilligungAenderbar).
+    5. „Einmal nach dem zweiten Bank-Sprengen um Bewertung bitten“ hängt an RouletteApp.swift
+       (banks >= 2, roulette.review.asked, AppStore.requestReview).
+    6. Kommt Cloud-Sync, Mitteilungen, Game Center, Analyse oder ein Crash-Reporter dazu,
+       ändern sich im selben Schritt: diese Seite, privacy.html, PrivacyInfo.xcprivacy und
+       die App-Privacy-Auskunft in App Store Connect.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rot &amp; Schwarz — Datenschutzerklärung</title>
+<meta name="description" content="Datenschutzerklärung für das iPhone-Spiel Rot &amp; Schwarz: Roulette Idle: kein Konto, kein Server, freiwillige Werbung über Google AdMob mit Einwilligung.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Rot &amp; Schwarz</h1>
+    <div class="sub">Roulette-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./">Rot &amp; Schwarz</a>
+  <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">English</a>
+</nav>
+
+<h2>Datenschutzerklärung</h2>
+<p class="meta">Stand: 16. Oktober 2026 · gilt für Rot &amp; Schwarz: Roulette Idle ab Version 1.0</p>
+
+<div class="card mint">
+  <h3 style="margin-top:0">Kurzfassung</h3>
+  <p><strong>Rot &amp; Schwarz braucht kein Benutzerkonto</strong>, keine E-Mail-Adresse und
+  kein Passwort. Es gibt keinen eigenen Server und keine Analyse. Dein Spielstand
+  liegt ausschließlich auf deinem iPhone.</p>
+  <p><strong>Werbung siehst du nur, wenn du sie selbst startest</strong>: ein
+  Video gegen dreifachen Ertrag im Spiel. Es gibt keine Werbung, die sich
+  dazwischenschiebt, und keine Banner. Für <strong>personalisierte</strong>
+  Werbung fragen wir vorher um Erlaubnis — über Googles Einwilligungsdialog und
+  Apples Tracking-Abfrage.</p>
+  <p>Eine Mitteilung gibt es nur, wenn du sie erlaubst.</p>
+</div>
+
+<h3>1 · Verantwortlicher</h3>
+<p>
+  Pascal Dohmeier<br>
+  Gustav-Müller-Straße 20A<br>
+  10829 Berlin, Deutschland<br>
+  E-Mail: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a><br>
+  Telefon: <a href="tel:+4916095861111">+49 160 95861111</a>
+</p>
+<p>Ein Datenschutzbeauftragter ist nicht bestellt; die Voraussetzungen des
+Art. 37 DSGVO und des § 38 BDSG liegen nicht vor. Für alle Anliegen zum
+Datenschutz erreichst du mich direkt unter den Angaben oben.</p>
+
+<h3>2 · Daten, die dein Gerät nicht verlassen</h3>
+<p>Die App speichert auf deinem Gerät genau Folgendes — das ist die vollständige
+Liste, nicht eine Auswahl:</p>
+<ul>
+  <li><strong>den Spielstand</strong> als Datei im App-Speicher, mit einer
+  automatischen Sicherungskopie: dein Fortschritt in allen Bereichen des Spiels,
+  Erfolge, Spielstatistik (etwa Spielzeit, Anzahl der Drehs, Treffer je Fach,
+  Rekorde und deine letzten Durchgänge), wann du zuletzt gespielt hast (für den
+  Offline-Ertrag und das Tagesrad), an wie vielen Kalendertagen du gespielt hast
+  (nur als Anzahl, für die Statistik), wie viele Werbevideos du angesehen hast (nur
+  die Anzahl, für Statistik und einen Erfolg) und bis wann ein Werbe-Boost noch
+  läuft. Im Spielstand liegen auch <strong>deine Einstellungen</strong>: Sprache,
+  Zahlenformat, Farben, Geräusche, Vibration, Kaufmenge, ob vor dem Bank-Sprengen
+  nachgefragt wird und die Schalter der Automatik, außerdem welche Hinweise du
+  schon gesehen hast und ob schon um Erlaubnis für Mitteilungen gefragt wurde;</li>
+  <li>in den App-Einstellungen (Apples <em>UserDefaults</em>) genau eine Angabe:
+  ob schon einmal um eine Bewertung gebeten wurde.</li>
+</ul>
+<p>Es gibt <strong>keine Kennung</strong> von uns — keine Nutzer-ID, keine
+Geräte-ID — und nichts davon ist mit deiner Person verknüpft. Diese Daten werden
+von uns <strong>nicht übertragen</strong>. Die App liest die Zwischenablage nicht.</p>
+
+<h3>3 · Daten löschen</h3>
+<ul>
+  <li><strong>In der App:</strong> Optionen → „Spielstand löschen“. Löscht den
+  gesamten Spielstand, auch Tableau, Erfolge und Statistik. Sprache,
+  Zahlenformat, Farben, Geräusche und Vibration bleiben erhalten.</li>
+  <li><strong>App löschen:</strong> entfernt restlos alles auf dem Gerät.</li>
+</ul>
+<p>Ein Löschersuchen an uns ist dafür nicht nötig und würde auch nichts finden:
+es liegen hier keine Daten von dir.</p>
+
+<h3>4 · Werbung (Google AdMob)</h3>
+<p>Anbieter für den europäischen Wirtschaftsraum: Google Ireland Limited, Gordon
+House, Barrow Street, Dublin 4, Irland.</p>
+<p>Werbung erscheint <strong>nur, wenn du sie selbst startest</strong>: über den
+Knopf „×3 Werbung“ als Video gegen eine Belohnung im Spiel — 30 Minuten
+dreifacher Ertrag; mehrere Videos addieren sich bis zu zwei Stunden. Es gibt
+keine Werbung zwischen Spielabschnitten und keine Banner. Googles Werbe-SDK
+startet frühestens 90 Sekunden nach dem Start der App oder wenn du vorher das
+Werbeangebot öffnest.</p>
+<p>Für die Auslieferung, Messung und Betrugsabwehr von Werbung verarbeitet Google
+unter anderem:</p>
+<ul>
+  <li>die <strong>Werbe-ID (IDFA)</strong> deines Geräts — <strong>nur</strong>,
+      wenn du sowohl dem Einwilligungsdialog als auch Apples Tracking-Abfrage
+      zugestimmt hast</li>
+  <li>eine <strong>grobe Standortschätzung</strong> aus deiner IP-Adresse
+      (Land, Region — keine GPS-Daten; die App fragt keine Ortungsberechtigung an)</li>
+  <li><strong>Geräte- und Nutzungssignale</strong> sowie <strong>Absturz- und
+      Leistungsdaten</strong> des Werbe-SDKs</li>
+  <li><strong>Werbedaten</strong>: welche Anzeigen dir gezeigt wurden und wie du
+      darauf reagiert hast</li>
+</ul>
+<p>Diese Daten können von Google auch <strong>app-übergreifend</strong> zur
+Profilbildung genutzt werden. Genau deshalb fragen wir vorher. Rechtsgrundlage
+ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); ohne sie zeigt Google nur
+nicht personalisierte Werbung.</p>
+<p><strong>Deine Einwilligung ist jederzeit widerrufbar</strong>, ohne Angabe von
+Gründen: über „Werbe-Einwilligung ändern“ in den Optionen des Spiels. Apples
+Tracking-Zustimmung änderst du unter iOS-Einstellungen → Datenschutz &amp;
+Sicherheit → Tracking. Ein Widerruf gilt ab dem Zeitpunkt des Widerrufs; bis
+dahin erfolgte Verarbeitung bleibt rechtmäßig.</p>
+<p>Weitere Informationen:
+<a href="https://policies.google.com/privacy" rel="noopener">Googles Datenschutzerklärung</a>,
+<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">„Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen“</a>
+und
+<a href="https://policies.google.com/privacy/frameworks" rel="noopener">Googles Rahmenbedingungen für Datenübermittlungen</a>.</p>
+
+<h3>5 · Berechtigungen und Mitteilungen</h3>
+<p>Nach deinem ersten Bank-Sprengen fragt die App, ob sie <strong>Mitteilungen</strong>
+senden darf. Es gibt genau eine: „Der Croupier macht Feierabend“, wenn die
+Offline-Zeit aufgebraucht ist. Sie wird <strong>auf deinem Gerät</strong>
+geplant, wenn du die App verlässt, und wieder entfernt, wenn du zurückkommst —
+nicht von einem Server geschickt. Abschalten kannst du sie in den
+iOS-Einstellungen.</p>
+<p>Weitere Abfragen gibt es nur für Apples <strong>Tracking-Dialog</strong>, der
+zur Werbung gehört (Abschnitt 4). Die App fragt keine Berechtigung für Standort,
+Kontakte, Fotos, Mikrofon oder Kamera an.</p>
+<p>Nach deinem zweiten Bank-Sprengen bittet die App einmal über Apples
+Bewertungsdialog um eine Bewertung. Ob und wann der Dialog erscheint, entscheidet
+iOS; eine Bewertung geht an Apple, nicht an uns.</p>
+
+<h3>6 · Wenn du uns schreibst</h3>
+<p>Schreibst du an die oben genannte Adresse, verarbeiten wir deine E-Mail-Adresse
+und den Inhalt deiner Nachricht, um sie zu beantworten (Art. 6 Abs. 1 lit. f
+DSGVO — berechtigtes Interesse an der Beantwortung von Anfragen). Der Postfach-
+Anbieter ist Google; die Nachricht liegt dort so lange, wie sie für Rückfragen
+gebraucht wird, und wird danach gelöscht.</p>
+
+<h3>7 · Diese Website</h3>
+<p>Diese Seiten liegen bei GitHub Pages (GitHub, Inc.). Beim Aufruf überträgt
+dein Browser technisch notwendige Daten — IP-Adresse, Zeitpunkt, aufgerufene
+Seite, User-Agent — die GitHub in Server-Logs verarbeitet. Wir setzen auf diesen
+Seiten <strong>keine Cookies</strong>, binden keine Schriften oder Skripte von
+Dritten ein und führen keine Reichweitenmessung durch.</p>
+
+<h3>8 · Was wir nicht tun</h3>
+<p>Rot &amp; Schwarz hat <strong>keinen eigenen Server</strong>, <strong>kein
+Konto</strong>, <strong>keine In-App-Käufe</strong>, <strong>kein Game
+Center</strong>, <strong>keine Mitteilungen von einem Server</strong> und <strong>keinen Analyse-
+oder Absturzberichts-Dienst</strong>. Wir selbst erheben keine personenbezogenen
+Daten, geben keine weiter und verkaufen keine. Was Google im Rahmen der Werbung
+verarbeitet, steht in Abschnitt 4.</p>
+
+<h3>9 · Deine Rechte</h3>
+<p>Dir stehen die Rechte aus Art. 15 bis 21 DSGVO zu: Auskunft, Berichtigung,
+Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, außerdem das Recht
+auf Beschwerde bei einer Aufsichtsbehörde. Zuständig ist für uns die Berliner
+Beauftragte für Datenschutz und Informationsfreiheit.</p>
+<p>Praktisch betreffen diese Rechte hier nur eine etwaige E-Mail von dir
+(Abschnitt 6). Zu deinem Spielstand können wir keine Auskunft geben, weil wir ihn
+nicht haben — er liegt auf deinem Gerät, und nur dort.</p>
+
+<h3>10 · Kinder</h3>
+<p>Das Spiel richtet sich an alle Altersgruppen. Es fragt kein Alter ab, erhebt
+selbst keine Daten und bietet keine Möglichkeit, mit anderen Menschen in Kontakt
+zu treten. Es enthält freiwillige <strong>Werbung</strong> (Abschnitt 4); das ist
+in der Altersfreigabe im App Store ausgewiesen.</p>
+
+<h3>11 · Änderungen dieser Erklärung</h3>
+<p>Wir aktualisieren diese Erklärung, wenn sich die Verarbeitung ändert — etwa,
+weil ein Dienst hinzukommt. Das Datum oben zeigt den letzten Stand.</p>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="./">Rot &amp; Schwarz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</footer>
+
+</div>
+</body>
+</html>
