@@ -164,3 +164,6 @@ playwire.com, 1018531, RESELLER
 themediagrid.com, JVHG38, RESELLER, 9fac4a4a87c2a44f
 triplelift.com, 13883, RESELLER, 6c33edb13117fd86
 triplelift.com, 8614, RESELLER, 6c33edb13117fd86
+
+# Liftoff Monetize (Vungle), Mediation über AdMob
+vungle.com, 6af2600f072353e2c43d6f14, DIRECT, c107d686becd2d77
