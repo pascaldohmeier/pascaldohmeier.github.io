@@ -76,6 +76,49 @@ a { color: var(--ink); text-underline-offset: 3px; }
 }
 .card.mint { background: var(--mint); }
 
+/* App-Karte: Icon links, Text rechts. Icon mit derselben Tuschelinie wie
+   die Karten, Ecken wie ein iOS-Icon. */
+.card.app {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.card.app h3 { margin: 2px 0 6px; font-size: 1.2rem; }
+.card.app p { margin: 0 0 10px; }
+.card.app .links { font-size: 0.92rem; }
+.icon {
+  width: 76px; height: 76px;
+  border-radius: 18px;
+  border: 1.5px solid var(--line);
+  display: block;
+  background: var(--tint);
+}
+.store-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  margin: 14px 0 0 !important;
+}
+.store {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--ink); color: #FFFFFF;
+  border: 1.5px solid var(--line);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 0.88rem; font-weight: 600;
+  text-decoration: none;
+}
+.store::after { content: "↗"; font-weight: 400; }
+.store:hover { background: var(--accent); color: var(--ink); }
+.soon {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1.5px dashed var(--line);
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.75rem; opacity: 0.7;
+}
+
 /* Sichtbarer Platzhalter: fällt auf der LIVE-Seite sofort auf, damit ein
    versehentliches Deployen mit unausgefüllten Feldern nicht still passiert. */
 .todo {
@@ -110,4 +153,11 @@ footer {
 @media (max-width: 520px) {
   body { font-size: 16px; }
   .brand h1 { font-size: 1.6rem; }
+  .card.app { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; padding: 18px; }
+  .icon { width: 56px; height: 56px; border-radius: 13px; }
 }
+
+/* Apps, die aus dem Store genommen wurden: Seiten bleiben (Datenschutz für
+   alle, die sie noch installiert haben), aber sichtbar zurückgenommen. */
+.card.app.retired .icon { filter: grayscale(1); opacity: 0.6; }
+.card.app.retired h3, .card.app.retired p:not(.links):not(.store-row) { opacity: 0.7; }

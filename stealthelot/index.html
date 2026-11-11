@@ -1,0 +1,73 @@
+<!doctype html>
+<!--
+  Steal the Lot — Hilfe. Stand 2026-11-09, App-Version 1.0 (Repo ~/iOS-Apps/Hinterhof, Bundle pd.Hinterhof).
+  ZUSAGEN, DIE AN CODE HÄNGEN — nicht ohne Prüfung ändern:
+    1. Gespeichert wird nur hinterhof.json (+ hinterhof.json.bak) in Application Support, Einstellungen darin
+       (HofUI/Store.swift, SaveFile). Keine UserDefaults, keine Zwischenablage, keine Mitteilungen, kein Bewertungsdialog.
+    2. „Spiel zurücksetzen“ behält die Einstellungen (GameStore.resetGame()).
+    3. Werbe-SDK erst nach 90 s Spielzeit oder beim ersten Tipp auf einen Werbeknopf (GameStore.prepareAds, AdMobAds).
+    4. „Werbe-Einwilligung ändern“ in den Einstellungen, sichtbar wenn Google sie verlangt (AdMobAds.canChangeConsent).
+    5. Kommt Game Center, Mitteilungen, Analyse o. Ä. dazu: diese Seite, privacy.html, PrivacyInfo.xcprivacy und die
+       App-Privacy-Angaben in App Store Connect im selben Schritt ändern.
+-->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steal the Lot — Hilfe</title>
+<meta name="description" content="Steal the Lot: Autoknacker-Incremental fürs iPhone. Hilfe, Fragen und Antworten, Kontakt.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="./">
+    <h1>Steal the Lot</h1>
+    <div class="sub">Autoknacker-Incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../">Alle Apps</a>
+  <a href="./" aria-current="page">Steal the Lot</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</nav>
+
+<h2>Wischen, knacken, abkassieren</h2>
+<p>Ein Parkplatz voller Autos. Wisch mit dem Finger über die Reihen, knack die Schlösser und kassier beim Hehler bar. Je besser
+dein Werkzeug, desto edler die Beute. Kein Kauf in der App, Werbung nur, wenn du sie selbst startest.</p>
+
+<h3>So läuft's</h3>
+<ul>
+  <li><strong>Wischen:</strong> Jeder Treffer zieht Schloss-Punkte ab. Mehrere Autos in einem Wisch geben Kombos bis ×3.</li>
+  <li><strong>Werkzeug:</strong> Ein graues Vorhängeschloss zeigt die Werkzeugstufe, die du brauchst.</li>
+  <li><strong>Geschäfte und Orte:</strong> Geschäfte locken Kunden an, später ziehst du auf größere Parkplätze um.</li>
+  <li><strong>Komplizen</strong> knacken ganze Reihen, auch wenn das Spiel zu ist.</li>
+  <li><strong>Untertauchen:</strong> Neustart mit Kontakten, die alles stärker machen und den Skilltree kaufen.</li>
+  <li><strong>Lackierer und Tuning</strong> öffnen sich bei 400 bzw. 1.400 Kontakten insgesamt.</li>
+</ul>
+
+<h3>Fragen und Antworten</h3>
+<p><strong>Geht mein Spielstand verloren, wenn ich das Handy wechsle?</strong> Der Spielstand liegt nur auf dem Gerät. Mit einem
+iPhone-Backup bzw. beim Umzug per Schnellstart wird er mitgenommen.</p>
+<p><strong>Der Werbeknopf lädt und dann passiert nichts?</strong> Kommt binnen 10 Sekunden keine Werbung, bekommst du die
+Belohnung trotzdem. Schreib uns, falls es anders ist.</p>
+<p><strong>Wie ändere ich meine Werbe-Einwilligung?</strong> Einstellungen → „Werbe-Einwilligung ändern“ (erscheint, wenn
+Google sie verlangt) und iOS-Einstellungen → Datenschutz &amp; Sicherheit → Tracking.</p>
+
+<h3>Kontakt</h3>
+<p>Fragen, Fehler, Ideen: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a></p>
+
+<footer>
+  <a href="../">Alle Apps</a>
+  <a href="./">Steal the Lot</a>
+  <a href="../impressum.html">Impressum</a>
+  <a href="privacy.html">Privacy (EN)</a>
+</footer>
+
+</div>
+</body>
+</html>
