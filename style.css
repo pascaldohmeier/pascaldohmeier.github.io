@@ -76,30 +76,23 @@ a { color: var(--ink); text-underline-offset: 3px; }
 }
 .card.mint { background: var(--mint); }
 
-/* App-Karte: Icon links, Text rechts. Icon mit derselben Tuschelinie wie
-   die Karten, Ecken wie ein iOS-Icon. */
-.card.app {
-  display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
-}
-.card.app h3 { margin: 2px 0 6px; font-size: 1.2rem; }
+/* App-Karte (Variante A, 11.11.2026): Kopfzeile mit Icon + Name + Status,
+   darunter Text über die volle Breite, unten der Store-Knopf. Das Icon hat die
+   iPhone-Form (Squircle als Maske), keinen Rahmen. */
+.card.app { padding: 22px; }
+.app-head { display: flex; align-items: center; gap: 18px; margin-bottom: 12px; }
+.app-head h3 { margin: 0; font-size: 1.3rem; line-height: 1.25; }
+.app-head .meta { margin: 3px 0 0; }
 .card.app p { margin: 0 0 10px; }
 .card.app .links { font-size: 0.92rem; }
 .icon {
-  width: 76px; height: 76px;
-  border-radius: 18px;
-  border: 1.5px solid var(--line);
-  display: block;
-  background: var(--tint);
-}
-.store-row {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
-  margin: 14px 0 0 !important;
+  width: 84px; height: 84px; flex: none; display: block;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,32 C0,6 6,0 32,0 H68 C94,0 100,6 100,32 V68 C100,94 94,100 68,100 H32 C6,100 0,94 0,68 Z'/%3E%3C/svg%3E") center / 100% 100%;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,32 C0,6 6,0 32,0 H68 C94,0 100,6 100,32 V68 C100,94 94,100 68,100 H32 C6,100 0,94 0,68 Z'/%3E%3C/svg%3E") center / 100% 100%;
 }
 .store {
   display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 4px;
   padding: 8px 16px;
   border-radius: 999px;
   background: var(--ink); color: #FFFFFF;
@@ -110,14 +103,6 @@ a { color: var(--ink); text-underline-offset: 3px; }
 }
 .store::after { content: "↗"; font-weight: 400; }
 .store:hover { background: var(--accent); color: var(--ink); }
-.soon {
-  display: inline-block;
-  padding: 7px 14px;
-  border-radius: 999px;
-  border: 1.5px dashed var(--line);
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 0.75rem; opacity: 0.7;
-}
 
 /* Sichtbarer Platzhalter: fällt auf der LIVE-Seite sofort auf, damit ein
    versehentliches Deployen mit unausgefüllten Feldern nicht still passiert. */
@@ -153,11 +138,13 @@ footer {
 @media (max-width: 520px) {
   body { font-size: 16px; }
   .brand h1 { font-size: 1.6rem; }
-  .card.app { grid-template-columns: 56px minmax(0, 1fr); gap: 14px; padding: 18px; }
-  .icon { width: 56px; height: 56px; border-radius: 13px; }
+  .icon { width: 64px; height: 64px; }
+  .app-head { gap: 14px; }
+  .app-head h3 { font-size: 1.15rem; }
+  .card.app { padding: 18px; }
 }
 
 /* Apps, die aus dem Store genommen wurden: Seiten bleiben (Datenschutz für
    alle, die sie noch installiert haben), aber sichtbar zurückgenommen. */
 .card.app.retired .icon { filter: grayscale(1); opacity: 0.6; }
-.card.app.retired h3, .card.app.retired p:not(.links):not(.store-row) { opacity: 0.7; }
+.card.app.retired h3, .card.app.retired p:not(.links) { opacity: 0.7; }
