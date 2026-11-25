@@ -54,7 +54,7 @@ header { padding: 48px 0 8px; }
   opacity: 0.55; margin-top: 2px;
 }
 
-nav { margin: 24px 0 40px; display: flex; flex-wrap: wrap; gap: 8px; }
+nav { margin: 24px 0 40px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 nav a {
   font-size: 0.9rem; text-decoration: none; color: var(--ink);
   padding: 7px 14px; border: 1.5px solid var(--line); border-radius: 999px;
@@ -68,11 +68,15 @@ nav a.coffee {
   margin-left: auto;
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 18px;
-  font-size: 1rem; font-weight: 700;
+  /* Explicit font + line-height: Safari and Chrome otherwise size the
+     Georgia fallback and the inline SVG differently. */
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem; font-weight: 700; line-height: 1.2;
+  -webkit-appearance: none; appearance: none;
   background: var(--coffee); color: var(--ink);
   border: 2px solid var(--line);
 }
-nav a.coffee .cup { flex: none; }
+nav a.coffee .cup { flex: none; display: block; width: 18px; height: 18px; }
 nav a.coffee::after { content: "↗"; font-weight: 400; }
 nav a.coffee:hover { background: var(--ink); color: #FFFFFF; }
 
