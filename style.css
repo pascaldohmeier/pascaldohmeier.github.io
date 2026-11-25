@@ -25,6 +25,7 @@
   --accent: #B7C1D8;
   --mint: #B9D5C2;
   --warn: #DEA8A8;
+  --coffee: #F4C95D;      /* only for the coffee button */
   --radius: 20px;
 }
 
@@ -60,13 +61,20 @@ nav a {
   background: var(--surface);
 }
 nav a[aria-current="page"] { background: var(--accent); }
-/* Support link, pinned to the right end of the nav row. */
+/* Support link, pinned to the right end of the nav row. Warm amber so it
+   stands out against the white pills, but flat like everything else: ink
+   outline only, no shadow. */
 nav a.coffee {
   margin-left: auto;
-  background: var(--ink); color: #FFFFFF; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 18px;
+  font-size: 1rem; font-weight: 700;
+  background: var(--coffee); color: var(--ink);
+  border: 2px solid var(--line);
 }
-nav a.coffee::after { content: " ↗"; font-weight: 400; }
-nav a.coffee:hover { background: var(--accent); color: var(--ink); }
+nav a.coffee .cup { flex: none; }
+nav a.coffee::after { content: "↗"; font-weight: 400; }
+nav a.coffee:hover { background: var(--ink); color: #FFFFFF; }
 
 /* Inhalt */
 h2 { font-size: 1.35rem; margin: 40px 0 12px; }
