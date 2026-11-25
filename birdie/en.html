@@ -1,0 +1,177 @@
+<!doctype html>
+<!--
+  Birdie — help and FAQ. Also the support URL in App Store Connect:
+  the contact address must be visible without scrolling.
+  English version of index.html — keep both in sync.
+
+  ⚠️ Every number here also appears in the code (repo ~/Birdie, overview in docs/SPIELGUIDE.md) —
+     if you change one, change it here too:
+    • 9 courses; courses 1–4 with 6 holes, courses 5–9 with 9 (Courses, HoleCatalog in BirdieCore)
+    • 11 opponents per tournament, 2 minutes break after   (BirdieCore/Tournament.swift, tournamentReadyAt)
+    • Skill tree 7 tiers × 3 paths, respec costs 30 %       (Skills.swift, respecLoss)
+    • End of season: club experience −30 %                  (Engine.swift, keep = 0.7)
+    • 12 goals, 12 sponsors                                 (BirdieCore/Content.swift)
+    • Ball machine offline: 2 h base value                  (Engine.maxOffline)
+    • Ads: 30 min ×3, stackable up to 2 h                   (Engine.grantAdBoost, adBoostCanExtend)
+    • Notification: exactly one, "The ball machine is empty",
+      permission asked only after the first season          (BirdieApp/Benachrichtigungen.swift)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birdie — Help &amp; Support</title>
+<meta name="description" content="Birdie: idle golf incremental for iPhone. Practice on the driving range, win tournaments, seasons, skill tree and your own golf club. Help, FAQ, contact and privacy.">
+<link rel="alternate" hreflang="de" href="https://pascaldohmeier.github.io/birdie/">
+<link rel="alternate" hreflang="en" href="https://pascaldohmeier.github.io/birdie/en.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="en.html">
+    <h1>Birdie</h1>
+    <div class="sub">Idle golf incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../en.html">All apps</a>
+  <a href="en.html" aria-current="page">Birdie</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</nav>
+
+<p>A driving range. A basket of balls. And a needle swinging back and forth.</p>
+
+<p>In <strong>Birdie</strong> you practice on the range and earn money with every ball
+— the farther the target green and the closer to the flag, the more. Your
+clubs get better with every shot, a ball machine keeps hitting for you,
+and in <strong>tournaments</strong> you play against a field for prize money, trophies
+and the next course — from your first club tournament to the Grand Slam and
+beyond.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Help &amp; contact</h2>
+  <p>Questions, bugs or a suggestion — just write:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Birdie">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Please mention that it's about Birdie. I usually reply
+  within a few days. German or English is fine.</p>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">How do I play?</h3>
+  <p>At the bottom of the range a needle swings back and forth. Tap anywhere on the
+  range while it is in the green zone — that's a <strong>perfect
+  swing</strong>: the ball scatters less and brings more money and more
+  experience. Otherwise you get a slice, a hook or a miss. Perfect shots
+  in a row increase your money even further. With the money you buy better
+  balls, bigger target greens, a swing trainer and equipment in the shop. Anything
+  new is explained the first time it appears.</p>
+
+  <h3>How do my clubs get better?</h3>
+  <p>By practicing. Every ball gives experience to the club in your hand. With every
+  level it scatters less, flies a bit farther, pulls off line less often, and its green
+  zone gets wider. New clubs are in the pro shop, but only once you have reached the
+  matching course — the driver, for example, only with the fourth.</p>
+
+  <h3>What does the ball machine do?</h3>
+  <p>It hits balls on its own, even when the game is closed. It never hits
+  perfectly, and it gives only a little experience — you still have to practice yourself.</p>
+
+  <h3>How do tournaments work?</h3>
+  <p>There are nine courses. On the first four you play six holes, from the
+  fifth on nine. Eleven players compete against you, wind and elevation count too,
+  and every shot uses the needle, including the putt. A tournament has an
+  entry fee; the top places pay back many times that. Your first
+  win on a course gives you a trophy and opens the next course and new
+  clubs. After each tournament there is a two-minute break. Once a day there is
+  also a daily tournament with no entry fee.</p>
+
+  <h3>What is a season?</h3>
+  <p>Once you have won a tournament in a season, you can end it. Money and
+  range upgrades then start over, and your clubs lose 30 % of their
+  experience. In return you get <strong>training points</strong> for your best
+  result on each course. Clubs, equipment, courses, trophies, sponsors and
+  skills stay.</p>
+
+  <h3>What is the skill tree?</h3>
+  <p>Seven tiers with three paths each that you build up with training points — such as
+  Long Hitter, Putt King or Night Shift. You can only choose one path per tier,
+  so you have to decide. You can respec at any time, but it costs
+  30 % of the points.</p>
+
+  <h3>What do sponsors do?</h3>
+  <p>Twelve goals unlock twelve sponsors, for example 25 perfect shots in
+  a row or a tournament under par. Each sponsor gives its own advantage. The
+  number of sponsor slots is limited, so you choose.</p>
+
+  <h3>What comes after the Grand Slam?</h3>
+  <p>With a win on the ninth course you can <strong>end your
+  career</strong>: everything starts over, and in return you get fame, which permanently
+  brings more money, and perks in the <strong>Hall of Fame</strong>. It also
+  opens the endless <strong>Legends Tour</strong> with courses that get harder
+  tier by tier, and your <strong>own golf club</strong>: you build holes,
+  a clubhouse and facilities, members pay fees, and in the Club Open you play
+  on your own course.</p>
+
+  <h3>Ads?</h3>
+  <p>Only if you start them yourself: with the "×3 ad" button on the range.
+  One video gives you 30 minutes of triple money, offline too. Several videos
+  add up to two hours. There are no ads that pop up in between
+  and no banners. Details in the
+  <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>Can I buy anything?</h3>
+  <p>No. Birdie has no in-app purchases. Progress comes only from playing.</p>
+
+  <h3>Do I need an account? Internet?</h3>
+  <p>No. The game runs entirely on your iPhone, even in airplane mode. You only
+  need internet for the optional ads.</p>
+
+  <h3>Does the game keep running when I close it?</h3>
+  <p>Yes, as soon as you have a ball machine. When you come back, the time away
+  is calculated: at first for up to two hours. Equipment, a sponsor and a
+  skill extend that.</p>
+
+  <h3>What is the notification?</h3>
+  <p>There is exactly one: "The ball machine is empty", when the offline time
+  has run out and the machine isn't earning anything anymore. The game only asks
+  after your first season whether it may send it. You can turn it off in
+  the iOS Settings.</p>
+
+  <h3>How do I back up my save or move it to a new iPhone?</h3>
+  <p>Settings → "Export" copies your save as text to the
+  clipboard. Store it somewhere, for example in a note, and on the new device
+  copy it to the clipboard again. Then Settings →
+  "Import". The save on the device is replaced.</p>
+
+  <h3>Can I start over?</h3>
+  <p>Yes: Settings → "Delete everything". This deletes the entire save,
+  including skills, Hall of Fame, golf club, achievements and statistics; your settings
+  are kept. This cannot be undone — export your save
+  first if you want to keep it.</p>
+
+  <h3>Language and dark mode?</h3>
+  <p>Birdie is available in German and English. It follows your iPhone's language,
+  but you can also set it in the settings. The same goes for the
+  appearance: System, Light or Dark.</p>
+
+  <h3>Where is my data stored?</h3>
+  <p>Only on your iPhone. See the <a href="privacy.html">privacy policy</a>.</p>
+</div>
+
+<footer>
+  <a href="../en.html">All apps</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<!--
+  Shingoki — help and frequently asked questions. The app's own home page;
+  the overview of all apps is one level up.
+  English version of index.html — keep both in sync.
+
+  ⚠️ The answers describe what the app ACTUALLY does. Every number here
+  (three hints, one attempt, one missed day per month) is in the code too —
+  whoever changes one of them changes it here as well.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shingoki — Help &amp; Support</title>
+<meta name="description" content="Shingoki: a daily loop puzzle for iPhone. Help, frequently asked questions, contact and privacy.">
+<link rel="alternate" hreflang="de" href="https://pascaldohmeier.github.io/shingoki/">
+<link rel="alternate" hreflang="en" href="https://pascaldohmeier.github.io/shingoki/en.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="en.html">
+    <h1>Shingoki</h1>
+    <div class="sub">One loop</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../en.html">All apps</a>
+  <a href="en.html" aria-current="page">Shingoki</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</nav>
+
+<p>A grid of dots, a few circles with numbers. Find the one closed
+loop that fits them all.</p>
+
+<p><strong>Shingoki</strong> is a loop puzzle for iPhone. A new daily puzzle
+every day, the same for everyone worldwide, plus unlimited practice in three
+sizes. What counts is your time — no points, no levels.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Help &amp; contact</h2>
+  <p>Questions, bugs, a suggestion or a report about a display name —
+  just write:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">I usually reply within a few days. German or English is fine.</p>
+</div>
+
+<h2>The rules, complete</h2>
+
+<div class="card">
+  <p>The board is a grid of <strong>dots</strong>. Edges run only
+  horizontally and vertically between directly adjacent dots. You are looking for
+  <strong>exactly one closed loop</strong>.</p>
+  <ul>
+    <li>Every dot has <strong>0 or exactly 2</strong> loop edges — no
+    branching, no crossing.</li>
+    <li>All drawn edges belong to <strong>one</strong> loop. Two
+    separate loops are wrong.</li>
+    <li><strong>The loop passes through every circle.</strong> Dots without a circle may
+    stay empty.</li>
+    <li><strong>White circle:</strong> the loop goes straight through it.</li>
+    <li><strong>Black circle:</strong> the loop turns there.</li>
+    <li><strong>The number</strong> is the sum of the lengths of the two straight
+    arms, each up to the next turn, counted in edges. For a white circle that is
+    the total length of the straight line it sits on; for a black one, arm A plus
+    arm B. The smallest possible number is 2.</li>
+    <li>A circle can also appear <strong>without a number</strong> — then only
+    the shape rule applies.</li>
+  </ul>
+  <p class="meta">That is the complete list. Shingoki is not Masyu: there
+  is no extra rule for the cells next to a circle.</p>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">Do I need an account?</h3>
+  <p>No. No email, no password. An anonymous profile is created automatically
+  on first launch; you only choose a display name for the leaderboards.</p>
+
+  <h3>Why can I only play the daily puzzle once?</h3>
+  <p>Because everyone worldwide gets the same puzzle — one attempt per day keeps
+  the comparison fair. The clock only starts with the first line you draw, so you
+  can look at the puzzle at your leisure without it counting. If you want to keep
+  playing, there is practice, which is unlimited.</p>
+
+  <h3>I solved the daily puzzle and can't open it again.</h3>
+  <p>You can — you'll see your recorded time instead of a new board.
+  A second run would mean the best time could be rerolled as often as you
+  like, and then the leaderboard would be worthless.</p>
+
+  <h3>I lost my streak even though I only missed one day.</h3>
+  <p>The app automatically repairs one missed day per calendar month. Two
+  or more days in a row end the streak — otherwise the number wouldn't be
+  honest.</p>
+
+  <h3>Why does a hint cost a video?</h3>
+  <p>Because the app is funded by ads and there would otherwise be no reason
+  to show them at all. It is only fair because of a second decision:
+  <strong>the clock stops while the ad is playing</strong> — a video never costs
+  you the time you spent watching it. There are never more than three hints per
+  puzzle.</p>
+
+  <h3>The ad failed to load and I got the hint anyway.</h3>
+  <p>That's how it should be. A broken ad request is our problem, not yours.</p>
+
+  <h3>How do I get rid of the ads?</h3>
+  <p>Settings → "Remove ads". A one-time purchase; after that, no ad SDK is
+  loaded anymore and hints come without a video. The hint counter keeps
+  running and the limit of three still applies — otherwise it would be a bought
+  advantage. Use "Restore purchases" to bring the purchase to a new device.</p>
+
+  <h3>How do I change my ad consent?</h3>
+  <p>You can withdraw your consent to personalized ads at any time via the
+  privacy options in the consent dialog. You change Apple's tracking
+  permission under iOS Settings → Privacy &amp; Security → Tracking.</p>
+
+  <h3>How do I delete my data?</h3>
+  <p>Settings → "Delete profile". Your display name, leaderboard entries and
+  streak are removed from the server and the name becomes available again. You
+  then continue playing as a new, anonymous player.</p>
+
+  <h3>Someone is using an offensive name.</h3>
+  <p>Press and hold the row in the leaderboard → "Report name" or "Block
+  player". Blocked players no longer appear in any leaderboard.</p>
+</div>
+
+<footer>
+  <a href="../en.html">All apps</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</footer>
+
+</div>
+</body>
+</html>

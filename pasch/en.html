@@ -1,0 +1,154 @@
+<!doctype html>
+<!--
+  Pasch — help and frequently asked questions. Also the support URL in App Store Connect:
+  the contact address must be findable without scrolling.
+  English version of index.html — keep both in sync.
+
+  ⚠️ Every number here is in the code too (repo ~/Pasch) — whoever changes one changes it here as well:
+    • 12 materials, shapes D6 to D100                    (DieMaterial, DieShape in PaschCore/Content.swift)
+    • Skill tree 79 nodes (63 + 16 in the outer ring)     (SkillTree.nodes)
+    • 9 challenges                                       (Challenge.allCases)
+    • 22 table felts, 11 rims                            (Felt, Rim in PaschUI/Cosmetics.swift)
+    • Offline: 50 % up to 8 h, 75 % up to 12 h, 100 % up to 24 h (Engine.maxOffline, offlineMult;
+                                                           nodes nachtschicht, dauerbetrieb)
+    • Ads: 30 min ×3, stackable up to 2 h                (Engine.adBoostSeconds, adBoostMax)
+    • Daily D20 roll from the first collapse on          (Engine.dailyAvailable)
+    • Notification: exactly one, "Your auto-roll is taking a break" (PaschApp/Benachrichtigungen.swift)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasch — Help &amp; Support</title>
+<meta name="description" content="Pasch: a dice incremental for iPhone. Swipe, roll, materials from wood to meteorite. Help, frequently asked questions, contact and privacy.">
+<link rel="alternate" hreflang="de" href="https://pascaldohmeier.github.io/pasch/">
+<link rel="alternate" hreflang="en" href="https://pascaldohmeier.github.io/pasch/en.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="en.html">
+    <h1>Pasch</h1>
+    <div class="sub">Dice incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../en.html">All apps</a>
+  <a href="en.html" aria-current="page">Pasch</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</nav>
+
+<p>One die. A big table. And a swipe of your finger.</p>
+
+<p>In <strong>Pasch</strong> you swipe across your dice, and every pip earns
+euros. With them you buy more dice — made of wood, silver, gold, emerald, ruby,
+sapphire, amethyst, obsidian, diamond, platinum and later titanium and meteorite —,
+make them more valuable, let them roll by themselves and give them more sides,
+from the D6 to the D100. Equal numbers in one swipe are doubles, and they
+pay off.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Help &amp; contact</h2>
+  <p>Questions, bugs or a suggestion — just write:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Pasch">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Please mention that it's about Pasch. I usually reply
+  within a few days. German or English is fine.</p>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">How do I play?</h3>
+  <p>Swipe your finger across the dice on the table — every die you
+  hit rolls, and its pips turn into euros. With the money you buy new
+  dice and upgrades: more value per pip, high numbers more often, auto-roll and
+  more sides. Equal numbers in one swipe (doubles), straights or a full house
+  give a bonus. On top of that there are golden dice to catch, the dice cup that
+  throws all dice at once, and glowing fields you can aim for.
+  New things are explained the first time.</p>
+
+  <h3>What are the collapse and dark matter?</h3>
+  <p>At some point growth gets sluggish. Then you can let the table collapse:
+  money, dice and upgrades start over, and in return you get
+  <strong>dark matter</strong>. It stays, and with it you buy nodes in the
+  skill tree that make every further run faster. From the first collapse on
+  there is also a D20 roll once a day.</p>
+
+  <h3>What is the skill tree?</h3>
+  <p>A tree of 79 nodes that you unlock with dark matter: more income,
+  faster auto-roll, automatic buying, new materials, more
+  offline time and much more. On the very outside lies a ring for the late game.</p>
+
+  <h3>What are challenges?</h3>
+  <p>Nine runs with tougher rules, for example only with wooden dice or without
+  doubles. If you complete one, you get a permanent reward. You can quit
+  at any time.</p>
+
+  <h3>What are the Big Bang and stardust?</h3>
+  <p>The second, bigger fresh start, possible after the last node in the outer
+  ring. It also resets dark matter and the skill tree and gives you
+  <strong>stardust</strong>. You spend it in the stardust shop — where
+  you'll find titanium and meteorite dice, among other things.</p>
+
+  <h3>Ads?</h3>
+  <p>Only when you start them yourself: via the "×3 ad" button at the table. A
+  video gives you 30 minutes of triple income, also offline. Several videos
+  add up to two hours. There are no ads that
+  interrupt you and no banners. Details in the
+  <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>Can I buy anything?</h3>
+  <p>No. Pasch has no in-app purchases. Progress comes only from playing.</p>
+
+  <h3>Do I need an account? Internet?</h3>
+  <p>No. The game runs entirely on your iPhone, even in airplane mode. You only
+  need internet for the optional ads.</p>
+
+  <h3>Does the game keep running when I close it?</h3>
+  <p>Yes, as soon as your dice roll by themselves. When you come back, the
+  elapsed time is calculated: at first at half income and for up to eight hours.
+  Nodes in the skill tree raise this to 75 % and twelve hours, later to full income
+  and 24 hours.</p>
+
+  <h3>What is the notification?</h3>
+  <p>There is exactly one: "Your auto-roll is taking a break", when the offline
+  time is used up and your dice aren't earning anything anymore. The game only asks
+  after your first collapse whether it may send it. You can turn it off in
+  the iOS settings.</p>
+
+  <h3>How do I back up my save or move it to a new iPhone?</h3>
+  <p>Settings → "Export" copies your save as text to the
+  clipboard. Store it somewhere, for example in a note, and copy it back to the
+  clipboard on the new device. Then Settings →
+  "Import". This replaces the save on the device.</p>
+
+  <h3>Can I start over?</h3>
+  <p>Yes: Settings → "Reset everything". This deletes your entire
+  save, including skill tree, achievements, statistics and album; your settings
+  stay. This cannot be undone — export your save
+  first if you want to keep it.</p>
+
+  <h3>Language and dark mode?</h3>
+  <p>Pasch is available in German and English. It follows your iPhone's language,
+  but you can also set it in the settings. The same goes for the
+  appearance: System, Light or Dark.</p>
+
+  <h3>Where is my data stored?</h3>
+  <p>Only on your iPhone. See the <a href="privacy.html">privacy policy</a>.</p>
+</div>
+
+<footer>
+  <a href="../en.html">All apps</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</footer>
+
+</div>
+</body>
+</html>

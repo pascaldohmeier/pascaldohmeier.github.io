@@ -1,0 +1,143 @@
+<!doctype html>
+<!--
+  Kugelregen — help and FAQ. Also the support URL in App Store Connect:
+  the contact address must be visible without scrolling.
+  English version of index.html — keep both in sync.
+
+  ⚠️ Every number here also appears in the code (repo ~/Kugelregen) — if you change one, change it here too:
+    • 12 ball types                                        (Sorts in KugelCore/Content.swift)
+    • Workshop 82 nodes (66 + 16 in the ring)              (SkillID / Skills)
+    • 9 challenges                                         (Challenge.allCases)
+    • 6 machines in the arcade, arcade from 2 comets       (Machine, Engine.hallNeed)
+    • 14 surfaces, 8 frames                                (BoardLook, BoardFrame)
+    • Melting down from 10 B €                             (Engine.meltThreshold)
+    • Offline: 50 % up to 8 h, 75 % up to 12 h, 100 % up to 24 h (Engine.maxOffline, offlineShare)
+    • Ads: 30 min ×3, stackable up to 2 h                  (Engine.grantAdBoost)
+    • Daily drop from the first meltdown                   (Engine.dailyAvailable)
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kugelregen — Help &amp; Support</title>
+<meta name="description" content="Kugelregen: a ball-drop incremental for iPhone. Balls fall through pegs into slots, and the edges pay the most. Help, FAQ, contact and privacy.">
+<link rel="alternate" hreflang="de" href="https://pascaldohmeier.github.io/kugelregen/">
+<link rel="alternate" hreflang="en" href="https://pascaldohmeier.github.io/kugelregen/en.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="en.html">
+    <h1>Kugelregen</h1>
+    <div class="sub">Ball-drop incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../en.html">All apps</a>
+  <a href="en.html" aria-current="page">Kugelregen</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</nav>
+
+<p>One ball. A triangle of pegs. And slots at the bottom that pay the most at the edges.</p>
+
+<p>In <strong>Kugelregen</strong> you swipe across the balls in the chute, and they
+fall from peg to peg into the slots. Every slot pays euros; the outer ones are
+rare and pay huge. With that you buy more balls — made of clay, glass, steel,
+copper, silver, gold, jade, ruby, diamond and later plasma, neutrons and
+black holes —, make them more valuable and let them drop on their own.</p>
+
+<div class="card mint">
+  <h2 style="margin-top:0">Help &amp; contact</h2>
+  <p>Questions, bugs or a suggestion — just write:</p>
+  <p><strong><a href="mailto:pathfindermemory.support@gmail.com?subject=Kugelregen">pathfindermemory.support@gmail.com</a></strong></p>
+  <p class="meta">Please mention that it's about Kugelregen. I usually reply
+  within a few days. German or English is fine.</p>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">How do I play?</h3>
+  <p>Swipe your finger across the balls in the chute at the top. Every ball you
+  hit rolls a little in the direction of your swipe and then falls through the
+  board of pegs. Where it lands is random — the slots at the edges are rare but
+  pay many times more. All the balls from one swipe form a volley: if several land
+  in the same slot, you get a bonus. With the money you buy new balls and
+  upgrades: more value, spin (the ball keeps its direction and lands at the edge
+  more often), a dropper machine and more rows. Anything new is explained the
+  first time it appears.</p>
+
+  <h3>What is melting down and what are sparks?</h3>
+  <p>Once you have 10 billion euros in one run, you can melt down: money, balls
+  and upgrades start over, and in return you get <strong>sparks</strong>. Every
+  spark you have ever earned makes everything more valuable, and you spend them on
+  nodes in the workshop — a skill tree with 82 nodes, with a ring on the very
+  outside for the late game. From your first meltdown on there is also a daily drop
+  once a day.</p>
+
+  <h3>What are challenges?</h3>
+  <p>Nine runs with harder rules, such as clay balls only or a tilted board.
+  Complete one and you get a permanent reward. You can quit at any time.</p>
+
+  <h3>What is the comet?</h3>
+  <p>The second, bigger restart, available after the last node in the ring. It
+  resets sparks and the workshop and gives you <strong>comets</strong>. They
+  make everything permanently more valuable, and in the observatory you spend them
+  on new ball types and helpers.</p>
+
+  <h3>What is the arcade?</h3>
+  <p>The third layer, from two comets on. A new arcade resets comets and everything
+  below them and gives you <strong>tokens</strong>. With them you buy six
+  machines, each with its own board rule: Mirror, Storm, Twin, Cascade and
+  Gold Rush alongside the classic board. Once you own them all, you have finished
+  the game — but the balls keep falling anyway.</p>
+
+  <h3>Ads?</h3>
+  <p>Only if you start them yourself: with the "×3 ad" button at the top of the
+  board. One video gives you 30 minutes of triple earnings, offline too. Several
+  videos add up to two hours. There are no ads that pop up in between and no
+  banners. Details in the
+  <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>Can I buy anything?</h3>
+  <p>No. Kugelregen has no in-app purchases. Progress comes only from playing.</p>
+
+  <h3>Do I need an account? Internet?</h3>
+  <p>No. The game runs entirely on your iPhone, even in airplane mode. You only
+  need internet for the optional ads.</p>
+
+  <h3>Does the game keep running when I close it?</h3>
+  <p>Yes, as soon as you have a machine that drops balls on its own. When you
+  come back, the time away is calculated: at first at half earnings and for up
+  to eight hours. Workshop nodes raise that to 75 % and twelve hours, later to
+  full earnings and 24 hours.</p>
+
+  <h3>Can I start over?</h3>
+  <p>Yes: Options → "Delete save". This deletes the entire save, including the
+  workshop, achievements, statistics and album. Language, number format, colors,
+  sounds and vibration are kept. This cannot be undone.</p>
+
+  <h3>Language and dark mode?</h3>
+  <p>Kugelregen is available in German and English. It follows your iPhone's
+  language, but you can also set it in the options. The same goes for the
+  colors: System, Light or Dark.</p>
+
+  <h3>Where is my data stored?</h3>
+  <p>Only on your iPhone. See the <a href="privacy.html">privacy policy</a>.</p>
+</div>
+
+<footer>
+  <a href="../en.html">All apps</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</footer>
+
+</div>
+</body>
+</html>

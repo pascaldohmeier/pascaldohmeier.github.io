@@ -1,0 +1,77 @@
+<!doctype html>
+<!--
+  Steal the Lot — help (English). As of 2026-11-09, app version 1.0 (repo ~/iOS-Apps/Hinterhof, bundle pd.Hinterhof).
+  English version of index.html — keep both in sync.
+  PROMISES THAT DEPEND ON CODE — do not change without checking:
+    1. Only hinterhof.json (+ hinterhof.json.bak) in Application Support is saved, settings included
+       (HofUI/Store.swift, SaveFile). No UserDefaults, no clipboard, no notifications, no rating dialog.
+    2. "Reset game" keeps the settings (GameStore.resetGame()).
+    3. Ad SDK only after 90 s of play time or on the first tap on an ad button (GameStore.prepareAds, AdMobAds).
+    4. "Change ad consent" in the settings, visible when Google requires it (AdMobAds.canChangeConsent).
+    5. If Game Center, notifications, analytics or the like are added: change this page, privacy.html, PrivacyInfo.xcprivacy
+       and the App Privacy details in App Store Connect in the same step.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steal the Lot — Help</title>
+<meta name="description" content="Steal the Lot: car-cracking incremental for iPhone. Help, questions and answers, contact.">
+<link rel="alternate" hreflang="de" href="https://pascaldohmeier.github.io/stealthelot/">
+<link rel="alternate" hreflang="en" href="https://pascaldohmeier.github.io/stealthelot/en.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="en.html">
+    <h1>Steal the Lot</h1>
+    <div class="sub">Car-cracking incremental</div>
+  </a>
+</header>
+
+<nav>
+  <a href="../en.html">All apps</a>
+  <a href="en.html" aria-current="page">Steal the Lot</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</nav>
+
+<h2>Swipe, crack, cash in</h2>
+<p>A parking lot full of cars. Swipe your finger across the rows, crack the locks and get cash from the fence. The better
+your tools, the classier the loot. No in-app purchases, ads only when you start them yourself.</p>
+
+<h3>How it works</h3>
+<ul>
+  <li><strong>Swiping:</strong> Every hit takes lock points off. Several cars in one swipe give combos up to ×3.</li>
+  <li><strong>Tools:</strong> A grey padlock shows the tool level you need.</li>
+  <li><strong>Shops and locations:</strong> Shops attract customers, later you move on to bigger parking lots.</li>
+  <li><strong>Crew</strong> members crack whole rows, even when the game is closed.</li>
+  <li><strong>Going underground:</strong> A restart with contacts that make everything stronger and buy the skill tree.</li>
+  <li><strong>Paint shop and tuning</strong> open at 400 and 1,400 contacts in total.</li>
+</ul>
+
+<h3>Questions and answers</h3>
+<p><strong>Will I lose my progress when I switch phones?</strong> Your save is stored only on the device. It comes along
+with an iPhone backup or when you move over with Quick Start.</p>
+<p><strong>The ad button loads and then nothing happens?</strong> If no ad arrives within 10 seconds, you get the
+reward anyway. Write to us if that's not the case.</p>
+<p><strong>How do I change my ad consent?</strong> Settings → "Change ad consent" (appears when Google requires it)
+and iOS Settings → Privacy &amp; Security → Tracking.</p>
+
+<h3>Contact</h3>
+<p>Questions, bugs, ideas: <a href="mailto:pathfindermemory.support@gmail.com">pathfindermemory.support@gmail.com</a> (German or English is fine)</p>
+
+<footer>
+  <a href="../en.html">All apps</a>
+  <a href="en.html">Steal the Lot</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../impressum.html">Legal notice</a>
+  <a href="./" lang="de">Deutsch</a>
+</footer>
+
+</div>
+</body>
+</html>

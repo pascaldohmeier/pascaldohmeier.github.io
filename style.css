@@ -60,6 +60,13 @@ nav a {
   background: var(--surface);
 }
 nav a[aria-current="page"] { background: var(--accent); }
+/* Support link, pinned to the right end of the nav row. */
+nav a.coffee {
+  margin-left: auto;
+  background: var(--ink); color: #FFFFFF; font-weight: 600;
+}
+nav a.coffee::after { content: " ↗"; font-weight: 400; }
+nav a.coffee:hover { background: var(--accent); color: var(--ink); }
 
 /* Inhalt */
 h2 { font-size: 1.35rem; margin: 40px 0 12px; }
